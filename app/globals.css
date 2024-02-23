@@ -1,6 +1,12 @@
+@import '@radix-ui/colors/black-alpha.css';
+@import '@radix-ui/colors/indigo.css';
+@import '@radix-ui/colors/mauve.css';
+@import '@radix-ui/colors/purple.css';
+@import '@radix-ui/colors/violet.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -13,21 +19,40 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --cursorDefault: https: //sweezy-cursors.com/wp-content/uploads/cursor/earth/earth-pointer-1-32x32.png;
   }
 }
 
+
+
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  cursor: url('/cursor.png'), default !important;
+
 }
+
+
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.head {
+  height: 20vh;
+}
+
+.homepage-layout {
+  @apply bg-gradient-to-b from-[#040514] to-[#3a3e75] via-[#03063a];
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-x: hidden;
+  align-items: center;
 }
