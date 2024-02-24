@@ -71,7 +71,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  opacity: 0.4;
-  filter: blur(10px);
+  opacity: 0.15;
+  filter: blur(8px);
 
 }

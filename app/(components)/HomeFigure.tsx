@@ -80,9 +80,9 @@ const HomeFigure = () => {
                                                       bottom: 5,
                                                 }}
                                           >
-                                                <XAxis dataKey="name" strokeWidth={3} />
+                                                <XAxis dataKey="name" strokeWidth={3} stroke="#CCD4CF" />
 
-                                                <YAxis strokeWidth={3} />
+                                                <YAxis strokeWidth={3} stroke="#CCD4CF" />
 
                                                 <Legend />
                                                 <Line type="monotone" dataKey="pv" stroke="#8884d8" strokeWidth={5} activeDot={{ r: 5 }} animationBegin={0} />
