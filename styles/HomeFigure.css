@@ -109,7 +109,6 @@
       .left {
             visibility: hidden;
             flex: 0;
-            display: flex;
             width: 0;
             animation: flexExpand 2s ease-in-out 5s forwards;
       }
@@ -136,12 +135,24 @@
             animation: flexShrinkleft 3s ease-in-out 0s forwards;
       }
 
-      #leftFigHome.leftgrow {
-            animation: flexExpand 3s ease-in-out 0s forwards;
+      @keyframes flexExpandright {
+            0% {
+                  visibility: hidden;
+                  width: 0;
+                  flex: 0;
+            }
+
+            100% {
+                  visibility: visible;
+                  width: 100%;
+                  flex: 1;
+            }
 
       }
 
-
+      #leftFigHome.leftgrow {
+            animation: flexExpandright 3s ease-in-out 0s forwards;
+      }
 
 
       .right {

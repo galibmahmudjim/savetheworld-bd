@@ -50,8 +50,7 @@ const data = [
 
 const HomeFigure = () => {
       const [isVisible, setIsVisible] = useState(false);
-      const [clickedGraph, setClickedGraph] = useState(false);
-      const [leftGrow, setLeftGrow] = useState(true);
+      const [clickedGraph, setClickedGraph] = useState(0);
       useEffect(() => {
             const timer = setTimeout(() => {
                   setIsVisible(true);
@@ -63,16 +62,16 @@ const HomeFigure = () => {
       useEffect(() => {
             const leftelement = document.getElementById("leftFigHome")!;
             const rightelement = document.getElementById("RightFigHome")!;
-            if (clickedGraph) {
+            if (clickedGraph === 1) {
                   if (leftelement) {
                         // leftelement.classList.remove("left");
                         leftelement.classList.remove("leftgrow");
                         leftelement.classList.add("leftshrink");
                   }
-            } else {
+            } else if (clickedGraph === 2) {
                   if (leftelement) {
-                        leftelement.classList.add("leftgrow");
                         leftelement.classList.remove("leftshrink");
+                        leftelement.classList.add("leftgrow");
                   }
             }
       }
@@ -84,13 +83,20 @@ const HomeFigure = () => {
 
                   <div className="HomeFigure">
                         <div className=" box-container">
-                              <div id="leftFigHome" className='left' o>Left Box</div>
+                              <div id="leftFigHome" className='left'>Left Box</div>
                               <div id="RightFigHome" className=" right pointer" >
                                     <ResponsiveContainer width="100%" height="90%" className={`transition-container  custom-cursor ${isVisible ? 'visible' : ''}`}
                                     >
                                           <LineChart
                                                 className="custom-cursor-chart"
-                                                onClick={() => setClickedGraph(!clickedGraph)}
+                                                onClick={() => {
+                                                      if (clickedGraph === 1 || clickedGraph === 0) {
+                                                            setClickedGraph(2);
+                                                      }
+                                                      else {
+                                                            setClickedGraph(1);
+                                                      }
+                                                }}
                                                 width={500}
                                                 height={250}
                                                 data={data}
