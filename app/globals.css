@@ -56,3 +56,22 @@ body {
   overflow-x: hidden;
   align-items: center;
 }
+
+.cover-div {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.cover-bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
+  filter: blur(10px);
+
+}

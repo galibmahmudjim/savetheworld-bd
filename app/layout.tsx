@@ -46,7 +46,16 @@ export default function RootLayout({
         <NavBar />
         <nav>
         </nav>
-        
+        <div className="cover-div">
+          <Image src="/plasticwaste.jpeg" alt="plastic waste"
+            layout="fill"
+            objectFit="cover"
+            className="cover-bg"
+          >
+
+          </Image>
+        </div>
+
         <main className="w-full">{children}</main>
       </body>
     </html >
