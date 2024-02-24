@@ -19,71 +19,73 @@ const NavBar: React.FC = () => {
             setCurrent(e.key);
       };
 
-      setTimeout(() => {
-            if (typeof window !== 'undefined') {
-                  const element = document.getElementById('navbar');
-                  if (element) {
-                        element.classList.add('visible');
-                  }
-            }
-      }, 10);
+      // setTimeout(() => {
+      //       if (typeof window !== 'undefined') {
+      //             const element = document.getElementById('navbar');
+      //             if (element) {
+      //                   element.classList.add('flex');
+      //             }
+      //       }
+      // }, 100);
 
       return (
-            <NavigationMenu.Root className="NavigationMenuRoot invisible" id='navbar'>
-                  <NavigationMenu.List className="NavigationMenuList">
-                        <NavigationMenu.Item>
-                              <Link className="NavigationMenuLink" href="/">
-                                    Home
-                              </Link>
+            <div className="nav-container">
+                  <NavigationMenu.Root className=" NavigationMenuRoot  " id='navbar'>
+                        <NavigationMenu.List className="NavigationMenuList">
+                              <NavigationMenu.Item>
+                                    <Link className="NavigationMenuLink" href="/">
+                                          Home
+                                    </Link>
 
-                        </NavigationMenu.Item>
-                        <NavigationMenu.Item>
-                              <Link className="NavigationMenuLink" href="/about">
-                                    Global Impact
-                              </Link>
+                              </NavigationMenu.Item>
+                              <NavigationMenu.Item>
+                                    <Link className="NavigationMenuLink" href="/about">
+                                          Global Impact
+                                    </Link>
 
-                        </NavigationMenu.Item>
+                              </NavigationMenu.Item>
 
-                        <NavigationMenu.Item>
-                              <Link className="NavigationMenuLink" href="/">
-                                    Interactive Map
-                              </Link>
-                        </NavigationMenu.Item>
-                        <NavigationMenu.Item>
-                              <Link className="NavigationMenuLink" href="/">
-                                    News ans Update
-                              </Link>
-                        </NavigationMenu.Item>
+                              <NavigationMenu.Item>
+                                    <Link className="NavigationMenuLink" href="/">
+                                          Interactive Map
+                                    </Link>
+                              </NavigationMenu.Item>
+                              <NavigationMenu.Item>
+                                    <Link className="NavigationMenuLink" href="/">
+                                          News ans Update
+                                    </Link>
+                              </NavigationMenu.Item>
 
-                        <NavigationMenu.Item>
-                              <NavigationMenu.Trigger className="NavigationMenuTrigger">
-                                    Plastic Waste <CaretDownIcon className="CaretDown" aria-hidden />
-                              </NavigationMenu.Trigger>
-                              <NavigationMenu.Content className="NavigationMenuContent">
-                                    <ul className="List ">
-                                          <ListItem title="Global" isActive={true} href="/"  >
-                                          </ListItem>
-                                          <ListItem title="Bangladesh" isActive={true} href="/"  >
-                                          </ListItem>
-                                    </ul>
-                              </NavigationMenu.Content>
-                        </NavigationMenu.Item>
+                              <NavigationMenu.Item>
+                                    <NavigationMenu.Trigger className="NavigationMenuTrigger">
+                                          Plastic Waste <CaretDownIcon className="CaretDown" aria-hidden />
+                                    </NavigationMenu.Trigger>
+                                    <NavigationMenu.Content className="NavigationMenuContent">
+                                          <ul className="List ">
+                                                <ListItem title="Global" isActive={true} href="/"  >
+                                                </ListItem>
+                                                <ListItem title="Bangladesh" isActive={true} href="/"  >
+                                                </ListItem>
+                                          </ul>
+                                    </NavigationMenu.Content>
+                              </NavigationMenu.Item>
 
-                        <NavigationMenu.Item>
-                              <NavigationMenu.Link className="NavigationMenuLink" href="https://github.com/radix-ui">
-                                    FAQ
-                              </NavigationMenu.Link>
-                        </NavigationMenu.Item>
+                              <NavigationMenu.Item>
+                                    <NavigationMenu.Link className="NavigationMenuLink" href="https://github.com/radix-ui">
+                                          FAQ
+                                    </NavigationMenu.Link>
+                              </NavigationMenu.Item>
 
-                        <NavigationMenu.Indicator className="NavigationMenuIndicator">
-                              <div className="Arrow" />
-                        </NavigationMenu.Indicator>
-                  </NavigationMenu.List>
+                              <NavigationMenu.Indicator className="NavigationMenuIndicator">
+                                    <div className="Arrow" />
+                              </NavigationMenu.Indicator>
+                        </NavigationMenu.List>
 
-                  <div className="ViewportPosition">
-                        <NavigationMenu.Viewport className="NavigationMenuViewport" />
-                  </div>
-            </NavigationMenu.Root>
+                        <div className="ViewportPosition">
+                              <NavigationMenu.Viewport className="NavigationMenuViewport" />
+                        </div>
+                  </NavigationMenu.Root>
+            </div>
       );
 };
 

@@ -8,32 +8,49 @@
       }
 }
 
+@keyframes fadeIn {
+      from {
+            visibility: hidden;
+      }
+
+      to {
+            visibility: visible;
+      }
+}
+
+
+
 
 .HomeFigure {
       width: 100%;
+      padding-left: 1%;
+      padding-right: 1%;
+      padding-top: 1%;
+      padding-bottom: 1%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       flex: 1;
       justify-items: center;
+      width: 100%;
+      visibility: hidden;
+      animation: fadeIn 2s ease-in-out 2s forwards;
 
 }
 
-.HomeFigure .container {
-      /* display: flex;
-      width: 100%;
-      flex: 1;
 
-      transition: flex 2s ease-in-out; */
+.HomeFigure .box-container {
+
       width: 100%;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
       flex: 1;
-      background-color: white;
       justify-items: center;
+      visibility: hidden;
+      animation: fadeIn 2s ease-in-out 1s forwards;
 }
 
 .HomeFigure .left {
@@ -44,14 +61,15 @@
       text-align: center;
       color: #fff;
       margin: 10px;
-      cursor: pointer;
+      text-wrap: nowrap;
 }
 
 .HomeFigure .right {
-      background-color: #2ecc71;
+      background-color: transparent;
       padding: 20px;
       text-align: center;
       width: 100%;
+      height: 80vh;
       color: #fff;
       margin: 10px;
       cursor: pointer;
@@ -79,16 +97,45 @@
 
 }
 
-.HomeFigure .container:hover {
+
+.HomeFigure .box-container {
 
       .left {
-            animation: flexExpand 2s ease-in-out;
-            flex: 1;
+            animation: flexExpand 2s ease-in-out 5s forwards;
       }
 
       .right {
-            flex: 1;
-            animation: flexShrink 2s ease-in-out;
+            animation: flexShrink 3s ease-in-out 5s forwards;
+            cursor: pointer;
       }
 
+}
+
+.transition-container {
+      visibility: hidden;
+      opacity: 0;
+      display: none;
+      transition: opacity 0.5s ease-in-out;
+      /* background-color: #3498db; */
+      padding: 2%;
+      cursor: pointer;
+      cursor: url('/cursor.png'), default !important;
+}
+
+.transition-container:hover {
+      transform: scale(1.01);
+      transition: transform 0.5s ease-in-out;
+}
+
+.transition-container.visible {
+      visibility: visible;
+      display: flex;
+      cursor: url('/cursor.png'), default !important;
+      opacity: 1;
+}
+
+
+
+.custom-cursor-chart {
+      cursor: url('/pointer.png'), pointer !important;
 }
