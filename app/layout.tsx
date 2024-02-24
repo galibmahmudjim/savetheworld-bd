@@ -48,8 +48,7 @@ export default function RootLayout({
         </nav>
         <div className="cover-div">
           <Image src="/plasticwaste.jpeg" alt="plastic waste"
-            layout="fill"
-            objectFit="cover"
+            fill
             className="cover-bg"
           >
 
