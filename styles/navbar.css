@@ -29,6 +29,7 @@ p {
 .nav-container {
       width: 100%;
       visibility: hidden;
+      z-index: 1000;
       animation: fadeIn 1s ease-in-out 0.5s forwards;
 }
 

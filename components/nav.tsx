@@ -29,7 +29,7 @@ const NavBar: React.FC = () => {
       // }, 100);
 
       return (
-            <div className="nav-container">
+            <div className="nav-container ">
                   <NavigationMenu.Root className=" NavigationMenuRoot  " id='navbar'>
                         <NavigationMenu.List className="NavigationMenuList">
                               <NavigationMenu.Item>
