@@ -50,7 +50,8 @@ const data = [
 
 const HomeFigure = () => {
       const [isVisible, setIsVisible] = useState(false);
-
+      const [clickedGraph, setClickedGraph] = useState(false);
+      const [leftGrow, setLeftGrow] = useState(true);
       useEffect(() => {
             const timer = setTimeout(() => {
                   setIsVisible(true);
@@ -59,17 +60,37 @@ const HomeFigure = () => {
             return () => clearTimeout(timer);
       }, []);
 
+      useEffect(() => {
+            const leftelement = document.getElementById("leftFigHome")!;
+            const rightelement = document.getElementById("RightFigHome")!;
+            if (clickedGraph) {
+                  if (leftelement) {
+                        // leftelement.classList.remove("left");
+                        leftelement.classList.remove("leftgrow");
+                        leftelement.classList.add("leftshrink");
+                  }
+            } else {
+                  if (leftelement) {
+                        leftelement.classList.add("leftgrow");
+                        leftelement.classList.remove("leftshrink");
+                  }
+            }
+      }
+            , [clickedGraph]);
+
+
       return (
             <>
 
                   <div className="HomeFigure">
                         <div className=" box-container">
-                              <div className=" left">Left Box</div>
-                              <div className=" right pointer" >
+                              <div id="leftFigHome" className='left' o>Left Box</div>
+                              <div id="RightFigHome" className=" right pointer" >
                                     <ResponsiveContainer width="100%" height="90%" className={`transition-container  custom-cursor ${isVisible ? 'visible' : ''}`}
                                     >
                                           <LineChart
                                                 className="custom-cursor-chart"
+                                                onClick={() => setClickedGraph(!clickedGraph)}
                                                 width={500}
                                                 height={250}
                                                 data={data}
