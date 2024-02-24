@@ -27,11 +27,61 @@ p {
 }
 
 .nav-container {
-      width: 100%;
-      visibility: hidden;
       z-index: 1000;
-      animation: fadeIn 1s ease-in-out 0.5s forwards;
+      position: fixed;
+      visibility: hidden;
 }
+
+#navcontainer.animationnav {
+      top: 17vh;
+      animation: fadeIn 1s ease-in-out 0s forwards;
+}
+
+#navcontainer.widthnav {
+      width: 100vw;
+      left: 0;
+}
+
+
+@keyframes moveInNav {
+      0% {
+            top: 17vh;
+            width: 100vw;
+            left: 0;
+      }
+
+      100% {
+            top: 5vh;
+            width: 90vw;
+            left: 15vw;
+      }
+}
+
+#navcontainer.moveinnav {
+      animation: moveInNav 0.5s ease-in-out 0s forwards;
+}
+
+@keyframes moveOutNav {
+      0% {
+            top: 5vh;
+            width: 90vw;
+            left: 15vw;
+      }
+
+      100% {
+            top: 17vh;
+            width: 100vw;
+            left: 0;
+      }
+}
+
+#navcontainer.moveoutnav {
+      animation: moveOutNav 0.5s ease-in-out 0s forwards;
+}
+
+
+
+
 
 @keyframes fadeIn {
       from {
@@ -44,34 +94,66 @@ p {
 }
 
 .NavigationMenuRoot {
-      position: relative;
       display: flex;
       justify-content: center;
-      width: 100vw;
+      width: auto;
       font-family: 'Inter', sans-serif;
       font-weight: 500;
       font-size: 15px;
       z-index: 1;
-      animation: slideUp 1s ease 0.5s forwards;
 }
 
-/* .visibleAnimation {
+#navbar.animationroot {
+      animation: slideUp 1s ease 0s forwards;
+}
 
-      visibility: hidden;
-      animation: fadeIn 2s ease-in-out 2s forwards;
-} */
 
 .NavigationMenuList {
       display: flex;
-      width: 80vw;
       /* flex-grow: inherit; */
       justify-content: space-between;
       padding-bottom: -2px;
       background-color: transparent;
       list-style: none;
-      border-bottom: 0.5px solid rgba(255, 255, 255, 0.172);
       color: white;
       margin: 0;
+}
+
+#navbarlist.widthnav {
+      width: 80vw;
+      border-bottom: 0.5px solid rgba(255, 255, 255, 0.172);
+}
+
+@keyframes widthShrink {
+      0% {
+            width: 80vw;
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.172);
+      }
+
+      100% {
+            width: 68vw;
+            border-bottom: 0px;
+      }
+}
+
+#navbarlist.widthshrink {
+      animation: widthShrink 0.5s ease-in-out 0s forwards;
+}
+
+@keyframes widthGrow {
+      0% {
+            width: 68vw;
+            border-bottom: 0px;
+      }
+
+      100% {
+            width: 80vw;
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.172);
+      }
+}
+
+#navbarlist.widthgrow {
+      animation: widthGrow 0.5s ease-in-out 0s forwards;
 }
 
 .NavigationMenuList .selected {

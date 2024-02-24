@@ -1,11 +1,12 @@
 'use client';
-import React, { HTMLAttributes, useState } from 'react';
+import React, { HTMLAttributes, useEffect, useState } from 'react';
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import classNames from 'classnames';
 import { CaretDownIcon } from '@radix-ui/react-icons';
 import '../styles/navbar.css';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import { setTimeout } from 'timers/promises';
 
 
 const NavBar: React.FC = () => {
@@ -19,19 +20,68 @@ const NavBar: React.FC = () => {
             setCurrent(e.key);
       };
 
-      // setTimeout(() => {
-      //       if (typeof window !== 'undefined') {
-      //             const element = document.getElementById('navbar');
-      //             if (element) {
-      //                   element.classList.add('flex');
-      //             }
-      //       }
-      // }, 100);
+
+      useEffect(() => {
+            const handleScroll = () => {
+
+                  const element = document.getElementById('navcontainer');
+                  const navbar = document.getElementById('navbar');
+                  const navbarlist = document.getElementById('navbarlist');
+                  if (navbar && element) {
+                        navbar.classList.remove('animationroot')
+                        element.classList.remove('animationnav')
+                  }
+                  if (window.scrollY === 0) {
+                        if (element && navbar && navbarlist) {
+
+                              navbarlist.classList.remove('widthshrink')
+                              element.classList.remove('moveinnav')
+                              element.classList.add('moveoutnav')
+                              navbarlist.classList.add('widthgrow')
+                        }
+                  } else {
+                        if (element && navbar && navbarlist) {
+                              element.classList.remove('moveoutnav')
+                              navbarlist.classList.remove('widthgrow')
+                              element.classList.add('moveinnav')
+                              navbarlist.classList.add('widthshrink')
+                        }
+                  }
+            };
+
+            window.addEventListener('scroll', handleScroll);
+
+            return () => {
+                  window.removeEventListener('scroll', handleScroll);
+            };
+      }, []);
+
+
+
+      useEffect(() => {
+            const element = document.getElementById('navcontainer');
+            const navbar = document.getElementById('navbar');
+            const navbarlist = document.getElementById('navbarlist');
+
+            const timer = global.setTimeout(() => {
+                  if (navbar && element && navbarlist) {
+                        navbar.classList.add('animationroot')
+                        element.classList.add('animationnav')
+                        element.classList.add('widthnav')
+                        navbarlist.classList.add('widthnav')
+                        element.classList.add('visible')
+                  }
+            }, 100);
+
+            return () => global.clearTimeout(timer);
+      }, []);
+
+
 
       return (
-            <div className="nav-container ">
-                  <NavigationMenu.Root className=" NavigationMenuRoot  " id='navbar'>
-                        <NavigationMenu.List className="NavigationMenuList">
+            <div id='navcontainer' className="nav-container ">
+                  <NavigationMenu.Root className=" NavigationMenuRoot " id='navbar'>
+                        <NavigationMenu.List className="NavigationMenuList " id='navbarlist'>
                               <NavigationMenu.Item>
                                     <Link className="NavigationMenuLink" href="/">
                                           Home
