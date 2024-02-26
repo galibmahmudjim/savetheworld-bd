@@ -36,25 +36,31 @@ export default function RootLayout({
       <head>
         <title>{metadata.title.default}</title>
 
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
 
       <body className="homepage-layout">
 
-        <header className="h-[20vh]">
+        <header className="h-[19vh] w-[100vw]">
           <Headers />
         </header>
         <NavBar />
         <nav>
         </nav>
-        <div className="cover-div">
-          <Image src="/plasticwaste.jpeg" alt="plastic waste"
-            fill
+        {/* <div className="cover-div">
+          <img src="/BottleT.svg" alt="plastic waste"
             className="cover-bg"
           >
+          </img>
+          <img src="/BottleT.svg" alt="plastic waste"
+            className="cover-bg-rev"
+          >
+          </img>
+        </div> */}
 
-          </Image>
+        <div className="background-container">
+          <div className="background"></div>
         </div>
-
         <main className="w-full">{children}</main>
       </body>
     </html >

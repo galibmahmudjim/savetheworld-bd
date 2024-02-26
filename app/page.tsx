@@ -6,8 +6,8 @@ const Home: React.FC = () => {
 
   return (
     <div className="w-full flex flex-col justify-center items-center">
-     
-      <HomeFigure />
+
+      {/* <HomeFigure /> */}
     </div>
   );
 };

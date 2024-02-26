@@ -30,7 +30,6 @@ body {
   background: linear-gradient(to bottom,
       transparent,
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
-  cursor: url('/cursor.png'), default !important;
 
 }
 
@@ -43,13 +42,13 @@ body {
 }
 
 .head {
-  height: 20vh;
+  height: 25vh;
 }
 
 .homepage-layout {
-  @apply bg-gradient-to-b from-[#040514] to-[#3a3e75] via-[#03063a];
+  @apply bg-gradient-to-b from-[#e0e9f1e0] to-[#0d1098] via-[#b3d1ec];
   width: 100%;
-  min-height: 100vh;
+  min-height: 150vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -61,18 +60,78 @@ body {
   width: 100%;
   height: 100%;
   position: fixed;
-  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: flex-start;
+  top: 10vh;
   left: 0;
+  z-index: -99;
 }
 
 .cover-bg {
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: 50%;
+  position: relative;
+  /* object-fit: cover; */
+  opacity: 1;
+  z-index: -99;
+  /* filter: blur(8px); */
+
+}
+
+.cover-bg-rev {
+  width: auto;
+
+  height: 50%;
+  position: relative;
+  /* object-fit: cover; */
+  opacity: 1;
+  z-index: -99;
+  transform: scaleY(-1);
+  /* filter: blur(8px); */
+
+}
+
+.background-container {
+
   position: fixed;
-  object-fit: cover;
-  top: 0;
-  left: 0;
-  opacity: 0.15;
-  filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  justify-items: flex-start;
+  height: 100vh;
+  width: 100vw;
+  z-index: -100;
+}
+
+.background {
+  background-image: url("/BottleT.svg");
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  background-position: bottom;
+  width: 60vw;
+  height: 60vh;
+  top: 5vh;
+  position: relative;
+  filter: grayscale(100%) blur(3px);
+  z-index: -100;
+
+}
+
+
+.background::after {
+  background-repeat: no-repeat;
+  background-image: inherit;
+  /* background-size: cover; */
+  background-position: center;
+  content: "";
+  bottom: -85%;
+  width: inherit;
+  height: inherit;
+  transform: rotateX(180deg);
+  position: absolute;
+  filter: grayscale(100%) blur(3px);
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  z-index: -100;
 
 }

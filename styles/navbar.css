@@ -170,7 +170,7 @@ p {
       padding-bottom: 20px;
       font-size: 15px;
       color: rgba(255, 245, 245, 0.839);
-      cursor: url('/pointer.png'), pointer !important;
+      cursor: pointer;
 }
 
 
@@ -183,7 +183,7 @@ p {
       line-height: 1;
       padding-bottom: 20px;
       color: rgba(255, 245, 245, 0.839);
-      cursor: url('/pointer.png'), pointer !important;
+      cursor: pointer;
 }
 
 .NavigationMenuTrigger:focus,
@@ -349,13 +349,13 @@ p {
       border-radius: 6px;
       font-size: 15px;
       line-height: 1;
-      cursor: url('/pointer.png'), default !important;
+      cursor: pointer;
 }
 
 .ListItemLinkActive {
       color: black;
       background-color: black;
-      cursor: url('/pointer.png'), default !important;
+      cursor: pointer;
 }
 
 .ListItemLink:focus {
@@ -551,13 +551,13 @@ p {
 .tab {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.614);
-  cursor: url('/pointer.png'), pointer !important;
+  cursor: pointer;
 }
 
 .selectedTab .tab {
   text-decoration: none;
   color: white;
-  cursor: url('/pointer.png'), pointer !important;
+  cursor: pointer;
 }
 
 .tab:hover {

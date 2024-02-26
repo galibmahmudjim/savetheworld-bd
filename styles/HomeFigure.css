@@ -132,7 +132,12 @@
             visibility: visible;
             width: 100%;
             flex: 1;
-            animation: flexShrinkleft 3s ease-in-out 0s forwards;
+            animation: flexShrinkleft 1s ease-in-out 0s forwards;
+      }
+
+      #leftFigHome {
+
+            cursor: pointer
       }
 
       @keyframes flexExpandright {
@@ -151,13 +156,54 @@
       }
 
       #leftFigHome.leftgrow {
-            animation: flexExpandright 3s ease-in-out 0s forwards;
+            animation: flexExpandright 1s ease-in-out 0s forwards;
       }
 
 
       .right {
             animation: flexShrink 3s ease-in-out 5s forwards;
             cursor: pointer;
+      }
+
+      @keyframes rightFlexShrink {
+            0% {
+                  visibility: visible;
+                  width: 100%;
+                  flex: 1;
+            }
+
+            100% {
+                  visibility: hidden;
+                  width: 0;
+                  flex: 0;
+            }
+
+      }
+
+      #RightFigHome.rightshrink {
+            visibility: visible;
+            width: 100%;
+            flex: 1;
+            animation: rightFlexShrink 1s ease-in-out 0s forwards;
+      }
+
+      @keyframes rightFlexExpand {
+            0% {
+                  visibility: hidden;
+                  width: 0;
+                  flex: 0;
+            }
+
+            100% {
+                  visibility: visible;
+                  width: 100%;
+                  flex: 1;
+            }
+
+      }
+
+      #RightFigHome.rightgrow {
+            animation: rightFlexExpand 1s ease-in-out 0s forwards;
       }
 
 }
@@ -170,7 +216,6 @@
       /* background-color: #3498db; */
       padding: 2%;
       cursor: pointer;
-      cursor: url('/cursor.png'), default !important;
 }
 
 .transition-container:hover {
@@ -181,12 +226,11 @@
 .transition-container.visible {
       visibility: visible;
       display: flex;
-      cursor: url('/cursor.png'), default !important;
       opacity: 1;
 }
 
 
 
 .custom-cursor-chart {
-      cursor: url('/pointer.png'), pointer !important;
+      cursor: pointer
 }

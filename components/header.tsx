@@ -3,6 +3,7 @@ import { useRouter } from 'next/navigation';
 import "../styles/header.css";
 import "../app/globals.css";
 import { useEffect } from 'react';
+import Image from 'next/image';
 
 function handleClick() {
       alert('Image clicked!');
@@ -44,19 +45,23 @@ const Headers = (): JSX.Element => {
                         <div className="left">
 
                               <img onClick={() => router.push("/")}
-                                    className="logo hover:w-96" src="/logo.png" alt="logo" />
+                                    className="logo hover:w-96" src="/logo.svg" alt="logo">
+
+                              </img>
 
                         </div>
                         <div id='center-header' className="center" onClick={() => { }}>
-                              <h1 className="title">A plastic pollution Awareness: Students'  Outreach Program 2024</h1>
+                              <h1 className="title-h1">A Plastic Pollution Awareness Portal</h1>
                         </div>
                         <div id='right-header' className="right" >
-                              <a href="https://www.du.ac.bd" target="_blank" className='w-full flex-[2] flex flex-row justify-end '>
-                                    <img className="du" src="/du.png" alt="university-logo" />
-                              </a>
-                              <a href="https://www.ewubd.edu/" target="_blank" className=' flex flex-1 flex-row justify-start '>
-                                    <img className="ewu" src="/ewu.png" alt="East West university" />
-                              </a>
+                              <div className="w-full h-[60%] gap-2 flex flex-row justify-around items-start items-end ">
+                                    <a href="https://www.du.ac.bd" target="_blank" className='w-full flex-1 flex flex-row justify-end '>
+                                          <img className="du" src="/du.png" alt="university-logo" />
+                                    </a>
+                                    <a href="https://www.ewubd.edu/" target="_blank" className='w-full flex flex-1 flex-row justify-start'>
+                                          <img className="ewu" src="/ewu.png" alt="East West university" />
+                                    </a>
+                              </div>
                         </div>
                   </div>
             </div>
