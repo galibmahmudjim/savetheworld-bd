@@ -47,6 +47,8 @@ p {
       position: fixed;
       font-size: 20px;
 
+
+
 }
 
 #navcontainer.animationnav {
@@ -119,6 +121,8 @@ p {
       font-weight: 700;
       font-size: 20px;
       z-index: 100;
+
+
 }
 
 #navbar.animationroot {
@@ -141,15 +145,122 @@ p {
       /* border-bottom: 0.5px solid rgba(255, 255, 255, 0.172); */
 }
 
-@keyframes widthShrink {
-      0% {
+
+@media screen and (max-width: 1500px) {
+      @keyframes widthShrink {
+            0% {
+                  width: 100vw;
+                  font-size: 12px;
+            }
+
+            100% {
+                  width: 80vw;
+                  font-size: 10px;
+
+
+            }
+      }
+
+      @keyframes widthGrow {
+            0% {
+                  width: 80vw;
+                  font-size: 10px;
+            }
+
+            100% {
+                  width: 100vw;
+                  font-size: 12px;
+            }
+      }
+
+      #navbarlist.widthgrow {
+            animation: widthGrow 0.5s ease-in-out 0s forwards;
+      }
+
+      #navbarlist.widthshrink {
+            animation: widthShrink 0.5s ease-in-out 0s forwards;
+      }
+
+      .nav-container {
+            z-index: 1000;
+            top: 20.5vh;
             width: 100vw;
+            visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            font-size: 12px;
+      }
+
+      .NavigationMenuRoot {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            font-weight: 700;
+            font-size: 12px;
+            z-index: 100;
+      }
+}
+
+@media screen and (min-width: 1500px) and (max-width: 1800px) {
+      @keyframes widthShrink {
+            0% {
+                  width: 100vw;
+                  font-size: 20px;
+            }
+
+            100% {
+                  width: 80vw;
+                  font-size: 16px;
+
+
+            }
+      }
+
+      @keyframes widthGrow {
+            0% {
+                  width: 80vw;
+                  font-size: 16px;
+            }
+
+            100% {
+                  width: 100vw;
+                  font-size: 20px;
+            }
+      }
+
+      #navbarlist.widthgrow {
+            animation: widthGrow 0.5s ease-in-out 0s forwards;
+      }
+
+      #navbarlist.widthshrink {
+            animation: widthShrink 0.5s ease-in-out 0s forwards;
+      }
+
+      .nav-container {
+            z-index: 1000;
+            top: 20.5vh;
+            width: 100vw;
+            visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
             font-size: 20px;
       }
 
-      100% {
-            width: 80vw;
-            font-size: 17px;
+      .NavigationMenuRoot {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            font-weight: 700;
+            font-size: 20px;
+            z-index: 100;
       }
 }
 
@@ -157,17 +268,6 @@ p {
       animation: widthShrink 0.5s ease-in-out 0s forwards;
 }
 
-@keyframes widthGrow {
-      0% {
-            width: 80vw;
-            font-size: 17px;
-      }
-
-      100% {
-            width: 100vw;
-            font-size: 20px;
-      }
-}
 
 #navbarlist.widthgrow {
       animation: widthGrow 0.5s ease-in-out 0s forwards;
@@ -190,6 +290,10 @@ p {
       font-size: 20px;
       color: rgba(255, 245, 245, 0.839);
       cursor: pointer;
+
+      @media screen and (max-width: 1500px) {
+            font-size: 12px;
+      }
 }
 
 
@@ -304,6 +408,10 @@ p {
       font-style: normal;
       font-family: "Plus Jakarta Sans", sans-serif;
       color: #00000094;
+
+      @media screen and (max-width: 1500px) {
+            font-size: 12px;
+      }
 }
 
 .ListItemText {

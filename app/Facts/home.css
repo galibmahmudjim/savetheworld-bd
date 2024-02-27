@@ -1,0 +1,293 @@
+@keyframes slideRight {
+      0% {
+            transform: translateX(0%);
+      }
+
+      100% {
+            transform: translateX(100%);
+      }
+}
+
+@keyframes fadeIn {
+      from {
+            visibility: hidden;
+      }
+
+      to {
+            visibility: visible;
+      }
+}
+
+
+
+
+.HomeFigure {
+      width: 100%;
+      padding-left: 1%;
+      padding-right: 1%;
+      padding-top: 2%;
+      padding-bottom: 1%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      justify-items: center;
+      width: 100%;
+      visibility: hidden;
+      font-family: sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      padding-left: 5%;
+      padding-right: 5%;
+      animation: fadeIn 2s ease-in-out 2s forwards;
+
+}
+
+
+.HomeFigure .box-container {
+
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      justify-items: center;
+      visibility: hidden;
+      border-radius: 15px;
+      animation: fadeIn 2s ease-in-out 1s forwards;
+}
+
+/* .HomeFigure .left {
+      flex: 0;
+
+      background-color: #3498db;
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      margin: 10px;
+      text-wrap: nowrap;
+} */
+
+.HomeFigure .left {
+      background-color: transparent;
+      padding: 20px;
+      text-align: center;
+      width: 100%;
+      height: 80vh;
+      color: #fff;
+      margin: 10px;
+}
+
+.HomeFigure .right {
+      background-color: transparent;
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      justify-items: center;
+      width: 100%;
+      height: 80vh;
+      color: #fff;
+      margin: 10px;
+      padding-top: 15%;
+
+      @keyframes textUptoDownAppear {
+            0% {
+                  opacity: 0;
+                  transform: scaleY(0);
+            }
+
+            100% {
+                  opacity: 1;
+                  transform: scaleY(1);
+            }
+
+      }
+
+      .Description {
+            width: 100%;
+            transform: scaleY(0);
+            transform-origin: top;
+            font-weight: 700;
+            font-size: 30px;
+            text-align: left;
+            color: rgb(54, 54, 54);
+            /* font-family: "Open Sans", sans-serif; */
+            font-family: acumin-pro, "Acumin Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            line-height: 35px;
+            animation: textUptoDownAppear 1s ease-in-out 1s forwards;
+      }
+
+      .detailsPreview {
+            width: 100%;
+            transform: scaleY(0);
+            transform-origin: top;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 25px;
+            margin-top: 30px;
+            text-align: left;
+            color: rgba(0, 0, 0, 0.87);
+            font-family: acumin-pro, "Acumin Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            animation: textUptoDownAppear 1s ease-in-out 1.2s forwards;
+
+      }
+}
+
+
+@keyframes flexExpand {
+      0% {
+            visibility: hidden;
+            width: 0;
+            flex: 0;
+      }
+
+      100% {
+            visibility: visible;
+            display: flex;
+            width: 100%;
+            flex: 1;
+      }
+
+}
+
+@keyframes flexShrink {
+      0% {
+            flex: 1;
+      }
+
+      100% {
+            flex: 1;
+      }
+
+}
+
+
+
+.HomeFigure .box-container {
+
+      /* .left {
+            visibility: hidden;
+            flex: 0;
+            width: 0;
+            animation: flexExpand 2s ease-in-out 5s forwards;
+      } */
+      /* 
+      @keyframes flexShrinkleft {
+            0% {
+                  visibility: visible;
+                  width: 100%;
+                  flex: 1;
+            }
+
+            100% {
+                  visibility: hidden;
+                  width: 0;
+                  flex: 0;
+            }
+
+      }
+
+      #leftFigHome.leftshrink {
+            visibility: visible;
+            width: 100%;
+            flex: 1;
+            animation: flexShrinkleft 1s ease-in-out 0s forwards;
+      } */
+
+      #leftFigHome {
+
+            /* cursor: pointer */
+      }
+
+      @keyframes flexExpandleft {
+            0% {
+                  visibility: hidden;
+                  width: 0;
+                  flex: 0;
+            }
+
+            100% {
+                  visibility: visible;
+                  width: 100%;
+                  flex: 1;
+            }
+
+      }
+
+      /* #leftFigHome.leftgrow {
+            animation: flexExpandright 1s ease-in-out 0s forwards;
+      } */
+
+
+      .left {
+            animation: flexShrink 3s ease-in-out 5s forwards;
+            cursor: pointer;
+      }
+
+      @keyframes leftFlexShrink {
+            0% {
+                  visibility: visible;
+                  width: 100%;
+                  flex: 1;
+            }
+
+            100% {
+                  visibility: hidden;
+                  width: 0;
+                  flex: 0;
+            }
+
+      }
+
+      #leftFigHome.leftshrink {
+            visibility: visible;
+            width: 100%;
+            flex: 1;
+            animation: rightFlexShrink 1s ease-in-out 0s forwards;
+      }
+
+      @keyframes leftFlexExpand {
+            0% {
+                  visibility: hidden;
+                  width: 0;
+                  flex: 0;
+            }
+
+            100% {
+                  visibility: visible;
+                  width: 100%;
+                  flex: 1;
+            }
+
+      }
+
+      #leftFigHome.leftgrow {
+            animation: rightFlexExpand 1s ease-in-out 0s forwards;
+      }
+
+}
+
+.transition-container {
+      visibility: hidden;
+      opacity: 0;
+      display: none;
+      transition: opacity 0.5s ease-in-out;
+      /* background-color: #3498db; */
+      padding: 2%;
+      cursor: pointer;
+}
+
+.transition-container:hover {
+      transform: scale(1.01);
+      transition: transform 0.5s ease-in-out;
+}
+
+.transition-container.visible {
+      visibility: visible;
+      display: flex;
+      opacity: 1;
+}
