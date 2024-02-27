@@ -1,0 +1,341 @@
+button,
+p {
+      all: unset;
+}
+
+@keyframes slideUp {
+
+      0% {
+            display: flex;
+            transform: translateY(300%);
+            opacity: 0;
+      }
+
+      100% {
+            display: flex;
+            transform: translateY(0);
+            opacity: 1;
+      }
+
+
+}
+
+
+
+#navbar.invisible {
+      visibility: hidden;
+}
+
+#navcontainer.visible {
+      visibility: visible;
+}
+
+.nav-container {
+      z-index: 1000;
+      top: 22vh;
+      width: 100vw;
+      visibility: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      font-size: 20px;
+
+}
+
+#navcontainer.animationnav {
+      top: 22vh;
+      animation: fadeIn 1s ease-in-out 0s forwards;
+}
+
+#navcontainer.widthnav {
+      width: 100vw;
+      left: 0;
+}
+
+
+@keyframes moveInNav {
+      0% {
+            top: 22vh;
+            width: 100vw;
+            left: 0;
+      }
+
+      100% {
+            top: 7vh;
+            width: 80vw;
+            left: 22vw;
+      }
+}
+
+#navcontainer.moveinnav {
+      animation: moveInNav 0.5s ease-in-out 0s forwards;
+}
+
+@keyframes moveOutNav {
+      0% {
+            top: 7vh;
+            width: 80vw;
+            left: 22vw;
+      }
+
+      100% {
+            top: 22vh;
+            width: 100vw;
+            left: 0;
+      }
+}
+
+#navcontainer.moveoutnav {
+      animation: moveOutNav 0.5s ease-in-out 0s forwards;
+}
+
+
+
+
+
+@keyframes fadeIn {
+      from {
+            visibility: hidden;
+      }
+
+      to {
+            visibility: visible;
+      }
+}
+
+.NavigationMenuRoot {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      font-family: 'Inter', sans-serif;
+      position: relative;
+      font-weight: 700;
+      font-size: 20px;
+      z-index: 100;
+}
+
+#navbar.animationroot {
+      animation: slideUp 1s ease 0s forwards;
+}
+
+
+.NavigationMenuList {
+      display: flex;
+      flex-grow: inherit;
+      width: 100%;
+      justify-content: space-around;
+      list-style: none;
+      color: white;
+      margin: 0;
+}
+
+#navbarlist.widthnav {
+      width: 100vw;
+      /* border-bottom: 0.5px solid rgba(255, 255, 255, 0.172); */
+}
+
+@keyframes widthShrink {
+      0% {
+            width: 100vw;
+            font-size: 20px;
+      }
+
+      100% {
+            width: 80vw;
+            font-size: 17px;
+      }
+}
+
+#navbarlist.widthshrink {
+      animation: widthShrink 0.5s ease-in-out 0s forwards;
+}
+
+@keyframes widthGrow {
+      0% {
+            width: 80vw;
+            font-size: 17px;
+      }
+
+      100% {
+            width: 100vw;
+            font-size: 20px;
+      }
+}
+
+#navbarlist.widthgrow {
+      animation: widthGrow 0.5s ease-in-out 0s forwards;
+}
+
+.NavigationMenuList .selected {
+      /* border-bottom: 2px solid white; */
+}
+
+.NavigationMenuLink, .NavigationMenuTrigger {
+      padding: 8px 12px;
+      outline: none;
+      user-select: none;
+      font-weight: 900;
+      line-height: 1;
+      text-wrap: nowrap;
+      padding-bottom: 20px;
+      background-color: blue;
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: 20px;
+      color: rgba(255, 245, 245, 0.839);
+      cursor: pointer;
+}
+
+
+
+.NavigationMenuTrigger:focus,
+.NavigationMenuLink:focus {
+      color: rgb(255, 255, 255);
+
+}
+
+.NavigationMenuTrigger:hover,
+.NavigationMenuLink:hover {
+      /* border-bottom: 1px solid white; */
+      color: white;
+      filter: brightness(120%);
+}
+
+.NavigationMenuTriggerActive,
+.NavigationMenuLinkActive {
+      /* border-bottom: 1px solid white; */
+      color: white;
+      filter: brightness(120%);
+}
+
+
+
+.NavigationMenuContent {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 0px 20px 0px;
+      border-radius: 15px;
+      min-width: 190px;
+      animation-duration: slidedown 200ms;
+      animation-timing-function: cubic-bezier(0, 1.23, 1, 1);
+}
+
+.NavigationMenuContent[data-motion='from-start'] {
+      animation-name: enterFromLeft;
+}
+
+.NavigationMenuContent[data-motion='from-end'] {
+      animation-name: enterFromRight;
+}
+
+.NavigationMenuContent[data-motion='to-start'] {
+      animation-name: exitToLeft;
+}
+
+.NavigationMenuContent[data-motion='to-end'] {
+      animation-name: exitToRight;
+}
+
+@media only screen and (min-width: 600px) {
+      .NavigationMenuContent {
+            width: auto;
+      }
+}
+
+
+
+@keyframes slideDown1 {
+      0% {
+            transform: translateY(-50%);
+      }
+
+      100% {
+            transform: translateY(0);
+      }
+}
+
+.NavigationMenuViewport[data-state='open'] {
+      animation: slideDown1 250ms cubic-bezier(0, 1.23, 1, 1);
+}
+
+.NavigationMenuViewport[data-state='closed'] {
+      animation: scaleOut 200ms ease;
+}
+
+@media only screen and (min-width: 600px) {
+      .NavigationMenuViewport {
+            width: var(--radix-navigation-menu-viewport-width);
+      }
+}
+
+
+
+
+
+.ListItemLinkActive {
+      color: black;
+      background-color: black;
+      cursor: pointer;
+}
+
+.ListItemLink:focus {
+      /* box-shadow: 0 0 0 2px var(--violet-7); */
+}
+
+.ListItemLink:hover {
+      background-color: var(--mauve-3);
+}
+
+.ListItemHeading {
+      font-weight: 500;
+      line-height: 1.2;
+      /* margin-bottom: 5px; */
+      font-size: 20px;
+      font-optical-sizing: auto;
+      font-weight: 900;
+      font-style: normal;
+      font-family: "Plus Jakarta Sans", sans-serif;
+      color: #00000094;
+}
+
+.ListItemText {
+      color: var(--mauve-11);
+      line-height: 1.4;
+      font-weight: initial;
+}
+
+
+
+
+@keyframes fadeOut {
+      from {
+            opacity: 1;
+      }
+
+      to {
+            opacity: 0;
+      }
+}
+
+
+.nav {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      flex-shrink: inherit;
+      position: relative;
+      justify-content: space-around;
+      align-items: center;
+      margin-left: 7%;
+      margin-right: 7%;
+      z-index: 1000;
+}
+
+.selected {}
+
+.nav-item:hover {
+      transform: scale(1.05);
+      transition: transform 0.5s;
+}
