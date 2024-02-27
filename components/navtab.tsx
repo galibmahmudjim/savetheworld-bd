@@ -2,14 +2,22 @@
 import { useEffect, useState } from 'react';
 import '../styles/navtab.css';
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 
 function NavTab() {
       const handleSelect = (eventKey: any) => alert(`selected ${eventKey}`);
 
       const [children, setChildren] = useState(null);
-      const [current, setCurrent] = useState('/');
+      const [current, setCurrent] = useState('');
       const currentPath = usePathname();
       const [activeKey, setActiveKey] = useState('1');
+
+      useEffect(() => {
+            if (currentPath === '/Home' || currentPath === '/') {
+                  setActiveKey('1');
+            }
+      }
+            , [currentPath]);
 
       const handleClick = (e: any) => {
             setCurrent(currentPath);
@@ -66,7 +74,7 @@ function NavTab() {
                         element.classList.add('visible')
                         element.classList.add('widthnav')
                   }
-            }, 100);
+            }, 50);
 
             return () => global.clearTimeout(timer);
       }, []);
@@ -81,7 +89,8 @@ function NavTab() {
                         <div className='NavigationMenuList' id='navbarlist'>
                               <ul className=" nav nav-pills">
                                     <li className="nav-item">
-                                          <a className={`nav-link ${activeKey === '1' ? 'active shadow-blue-400 shadow-xl' : 'active'}`} aria-current="page" href="#">Home</a>
+                                          <Link href="/Home"
+                                          ><div className={`nav-link ${activeKey === '1' ? 'active shadow-blue-400 shadow-xl' : 'active'}`} aria-current="page" >Home</div></Link>
                                     </li>
                                     <li className="nav-item">
                                           <a className={`nav-link ${activeKey === '2' ? 'active shadow-blue-400' : 'active'}`} href="#"> Plastic threat</a>
