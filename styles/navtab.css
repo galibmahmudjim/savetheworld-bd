@@ -38,7 +38,7 @@ p {
 
 .nav-container {
       z-index: 1000;
-      top: 22vh;
+      top: 20.5vh;
       width: 100vw;
       visibility: hidden;
       display: flex;
@@ -50,7 +50,7 @@ p {
 }
 
 #navcontainer.animationnav {
-      top: 22vh;
+      top: 20.5vh;
       animation: fadeIn 1s ease-in-out 0s forwards;
 }
 
@@ -62,7 +62,7 @@ p {
 
 @keyframes moveInNav {
       0% {
-            top: 22vh;
+            top: 20.5vh;
             width: 100vw;
             left: 0;
       }
@@ -86,7 +86,7 @@ p {
       }
 
       100% {
-            top: 22vh;
+            top: 20.5vh;
             width: 100vw;
             left: 0;
       }
