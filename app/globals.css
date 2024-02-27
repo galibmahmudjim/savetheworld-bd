@@ -54,6 +54,7 @@ body {
   justify-content: flex-start;
   overflow-x: hidden;
   align-items: center;
+  z-index: -100;
 }
 
 .cover-div {

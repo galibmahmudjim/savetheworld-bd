@@ -67,9 +67,9 @@ const NavBar: React.FC = () => {
                   if (navbar && element && navbarlist) {
                         navbar.classList.add('animationroot')
                         element.classList.add('animationnav')
+                        element.classList.add('visible')
                         element.classList.add('widthnav')
                         navbarlist.classList.add('widthnav')
-                        element.classList.add('visible')
                   }
             }, 100);
 
@@ -79,7 +79,7 @@ const NavBar: React.FC = () => {
 
 
       return (
-            <div id='navcontainer' className="nav-container ">
+            <div id='navcontainer' className="nav-container z-[1000] ">
                   <NavigationMenu.Root className=" NavigationMenuRoot " id='navbar'>
                         <NavigationMenu.List className="NavigationMenuList " id='navbarlist'>
                               <NavigationMenu.Item>
@@ -90,29 +90,25 @@ const NavBar: React.FC = () => {
                               </NavigationMenu.Item>
                               <NavigationMenu.Item>
                                     <Link className="NavigationMenuLink" href="/about">
-                                          Global Impact
+                                          Plastic threat
                                     </Link>
 
                               </NavigationMenu.Item>
 
                               <NavigationMenu.Item>
                                     <Link className="NavigationMenuLink" href="/">
-                                          Interactive Map
+                                          Facts &amp; Figures
                                     </Link>
                               </NavigationMenu.Item>
-                              <NavigationMenu.Item>
-                                    <Link className="NavigationMenuLink" href="/">
-                                          News ans Update
-                                    </Link>
-                              </NavigationMenu.Item>
+
 
                               <NavigationMenu.Item>
                                     <NavigationMenu.Trigger className="NavigationMenuTrigger">
-                                          Plastic Waste <CaretDownIcon className="CaretDown" aria-hidden />
+                                          Reduce, Reuse, Recycle (3R) <CaretDownIcon className="CaretDown" aria-hidden />
                                     </NavigationMenu.Trigger>
                                     <NavigationMenu.Content className="NavigationMenuContent">
                                           <ul className="List ">
-                                                <ListItem title="Global" isActive={true} href="/"  >
+                                                <ListItem title="Reduce" isActive={true} href="/"  >
                                                 </ListItem>
                                                 <ListItem title="Bangladesh" isActive={true} href="/"  >
                                                 </ListItem>
@@ -121,8 +117,18 @@ const NavBar: React.FC = () => {
                               </NavigationMenu.Item>
 
                               <NavigationMenu.Item>
+                                    <Link className="NavigationMenuLink" href="/">
+                                          Kids’ Corner
+                                    </Link>
+                              </NavigationMenu.Item>
+                              <NavigationMenu.Item>
+                                    <Link className="NavigationMenuLink" href="/">
+                                          Kids’ Corner
+                                    </Link>
+                              </NavigationMenu.Item>
+                              <NavigationMenu.Item>
                                     <NavigationMenu.Link className="NavigationMenuLink" href="https://github.com/radix-ui">
-                                          FAQ
+                                          Countries banned plastic:
                                     </NavigationMenu.Link>
                               </NavigationMenu.Item>
 

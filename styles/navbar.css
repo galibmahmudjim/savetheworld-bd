@@ -26,14 +26,21 @@ p {
       visibility: hidden;
 }
 
+#navcontainer.visible {
+      visibility: visible;
+}
+
 .nav-container {
       z-index: 1000;
-      position: fixed;
+      top: 22vh;
+      width: 100vw;
       visibility: hidden;
+      position: fixed;
+
 }
 
 #navcontainer.animationnav {
-      top: 17vh;
+      top: 22vh;
       animation: fadeIn 1s ease-in-out 0s forwards;
 }
 
@@ -45,7 +52,7 @@ p {
 
 @keyframes moveInNav {
       0% {
-            top: 17vh;
+            top: 22vh;
             width: 100vw;
             left: 0;
       }
@@ -69,7 +76,7 @@ p {
       }
 
       100% {
-            top: 17vh;
+            top: 22vh;
             width: 100vw;
             left: 0;
       }
@@ -95,12 +102,12 @@ p {
 
 .NavigationMenuRoot {
       display: flex;
-      justify-content: center;
+      justify-content: space-around;
       width: auto;
       font-family: 'Inter', sans-serif;
       font-weight: 500;
       font-size: 15px;
-      z-index: 1;
+      z-index: 100;
 }
 
 #navbar.animationroot {
@@ -110,28 +117,26 @@ p {
 
 .NavigationMenuList {
       display: flex;
-      /* flex-grow: inherit; */
-      justify-content: space-between;
-      padding-bottom: -2px;
-      background-color: transparent;
+      flex-grow: inherit;
+      justify-content: space-around;
       list-style: none;
       color: white;
       margin: 0;
 }
 
 #navbarlist.widthnav {
-      width: 80vw;
-      border-bottom: 0.5px solid rgba(255, 255, 255, 0.172);
+      width: 90vw;
+      /* border-bottom: 0.5px solid rgba(255, 255, 255, 0.172); */
 }
 
 @keyframes widthShrink {
       0% {
-            width: 80vw;
-            border-bottom: 0.5px solid rgba(255, 255, 255, 0.172);
+            width: 90vw;
+            /* border-bottom: 0.5px solid rgba(255, 255, 255, 0.172); */
       }
 
       100% {
-            width: 68vw;
+            width: vw;
             border-bottom: 0px;
       }
 }
@@ -142,13 +147,13 @@ p {
 
 @keyframes widthGrow {
       0% {
-            width: 68vw;
+            width: 75vw;
             border-bottom: 0px;
       }
 
       100% {
-            width: 80vw;
-            border-bottom: 0.5px solid rgba(255, 255, 255, 0.172);
+            width: 90vw;
+            /* border-bottom: 0.5px solid rgba(255, 255, 255, 0.172); */
       }
 }
 
@@ -157,34 +162,39 @@ p {
 }
 
 .NavigationMenuList .selected {
-      border-bottom: 2px solid white;
+      /* border-bottom: 2px solid white; */
 }
 
-.NavigationMenuLink {
+.NavigationMenuLink, .NavigationMenuTrigger {
       padding: 8px 12px;
       outline: none;
       user-select: none;
-      font-weight: 500;
+      font-weight: 900;
       line-height: 1;
       text-wrap: nowrap;
       padding-bottom: 20px;
-      font-size: 15px;
+      background-color: blue;
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: 20px;
       color: rgba(255, 245, 245, 0.839);
       cursor: pointer;
 }
 
 
-.NavigationMenuTrigger {
+/* .NavigationMenuTrigger {
       padding: 8px 12px;
       outline: none;
       user-select: none;
-      font-weight: 500;
+      font-weight: 900;
       font-size: 15px;
       line-height: 1;
       padding-bottom: 20px;
+      background-color: blue;
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: 20px;
       color: rgba(255, 245, 245, 0.839);
       cursor: pointer;
-}
+} */
 
 .NavigationMenuTrigger:focus,
 .NavigationMenuLink:focus {
@@ -194,33 +204,19 @@ p {
 
 .NavigationMenuTrigger:hover,
 .NavigationMenuLink:hover {
-      border-bottom: 1px solid white;
+      /* border-bottom: 1px solid white; */
       color: white;
-      margin-bottom: -2px;
       filter: brightness(120%);
 }
 
 .NavigationMenuTriggerActive,
 .NavigationMenuLinkActive {
-      border-bottom: 1px solid white;
+      /* border-bottom: 1px solid white; */
       color: white;
-      margin-bottom: -2px;
       filter: brightness(120%);
 }
 
-.NavigationMenuTrigger {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2px;
-}
 
-.NavigationMenuLink {
-      display: block;
-      text-decoration: none;
-      font-size: 15px;
-      line-height: 1;
-}
 
 .NavigationMenuContent {
       position: absolute;
@@ -285,7 +281,6 @@ p {
       border-radius: 10px;
       /* border-radius: 6px; */
       overflow: hidden;
-      border-bottom: 5px solid white;
       /* box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px; */
       height: var(--radix-navigation-menu-viewport-height);
       transition: width, height, 0.5s ease-in-out;
@@ -369,10 +364,10 @@ p {
 .ListItemHeading {
       font-weight: 500;
       line-height: 1.2;
-      margin-bottom: 5px;
-      font-size: 18px;
+      /* margin-bottom: 5px; */
+      font-size: 20px;
       font-optical-sizing: auto;
-      font-weight: 500;
+      font-weight: 900;
       font-style: normal;
       font-family: "Plus Jakarta Sans", sans-serif;
       color: #00000094;
