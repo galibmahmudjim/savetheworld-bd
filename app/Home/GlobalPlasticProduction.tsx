@@ -57,15 +57,16 @@ const GlobalPlasticProduction = () => {
                                                       style={{ borderRadius: '10px' }}
                                                 />
                                           </div>
-                                          <a className={`absolute bottom-[7%] right-[50%] p-4 text-white  normal-case normal opacity-50 no-underline text-[90%]" href="www.freepik.com ${leftGrow !== 2 ? 'block' : 'none'}`}>
+                                          <a className={`${leftGrow !== 2 ? 'absolute bottom-[7%] right-[50%] p-4 text-white  normal-case normal opacity-50 no-underline text-[90%]' : 'hidden'}`}
+                                                href="https://www.freepik.com/">
                                                 Designed by Freepik
                                           </a>
                                     </div>
                               </div>
-                              <div className="w-full h-full mt-[10%]">
+                              <div className={`w-full h-full ${leftGrow === 2 ? 'mt-[5%]' : 'mt-[10%]'}`}>
                                     <div id="rightFigHome" className=" right " >
 
-                                          <div className=" Description">
+                                          <div className={`${leftGrow === 2 ? 'Description text-center' : 'Description'}`}>
                                                 {Description}
                                           </div>
                                           <div className={`${leftGrow === 2 ? 'hidden' : 'mt-[30px] text-[22px] cursor-pointer text-blue-700'}`}
@@ -79,6 +80,18 @@ const GlobalPlasticProduction = () => {
                                                 }}
                                           >
                                                 Learn More
+                                          </div>
+
+                                          <div className={`${leftGrow !== 2 ? 'hidden' : 'detailsPreview'}`}>
+                                                <ul >
+                                                      <li className="checkmark">It is estimated that around 343 million tonnes (MT) of plastic is produced every year.</li>
+                                                      <li className="checkmark">Plastic Wastes (PW) are produced by massive manufacturing, processing, and packaging industries.</li>
+                                                      <li className="checkmark">More than 20 billion plastic bottles are tossed on earth.</li>
+                                                      <li className="checkmark">Only approximately 10% of total world plastic is recycled.</li>
+                                                      <li className="checkmark">Plastic visibility is increasing due to plastic accumulation and its harmful influence on the environment and human health.</li>
+
+                                                </ul>
+
                                           </div>
 
 
