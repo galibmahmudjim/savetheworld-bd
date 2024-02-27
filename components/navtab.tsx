@@ -9,7 +9,8 @@ function NavTab() {
       const [children, setChildren] = useState(null);
       const [current, setCurrent] = useState('/');
       const currentPath = usePathname();
-      const [selectedKey, setSelectedKey] = useState('1');
+      const [activeKey, setActiveKey] = useState('1');
+
       const handleClick = (e: any) => {
             setCurrent(currentPath);
             console.log('click ', e);
@@ -79,15 +80,15 @@ function NavTab() {
                   <div className='NavigationMenuRoot' id='navbar'>
                         <div className='NavigationMenuList' id='navbarlist'>
                               <ul className=" nav nav-pills">
-                                    <li className="nav-item ">
-                                          <a className={`nav-link ${selectedKey === '1' ? 'active shadow-gray-950' : 'active'}`} aria-current="page" href="#">Home</a>
+                                    <li className="nav-item">
+                                          <a className={`nav-link ${activeKey === '1' ? 'active shadow-blue-400 shadow-xl' : 'active'}`} aria-current="page" href="#">Home</a>
                                     </li>
                                     <li className="nav-item">
-                                          <a className="nav-link active" href="#"> Plastic threat</a>
+                                          <a className={`nav-link ${activeKey === '2' ? 'active shadow-blue-400' : 'active'}`} href="#"> Plastic threat</a>
                                     </li>
 
                                     <li className="nav-item dropdown">
-                                          <a className="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Global plastic waste generation</a>
+                                          <a className={`nav-link ${activeKey === '3' ? 'active shadow-blue-400' : 'active'} dropdown-toggle `} data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Global plastic waste generation</a>
                                           <ul className="dropdown-menu bg-[#d7ebff94]" >
                                                 <li><a className="dropdown-item" href="#">Global plastic waste generation</a></li>
                                                 <li><a className="dropdown-item" href="#">Plastic in Bangladesh Statistics</a></li>
@@ -96,16 +97,16 @@ function NavTab() {
                                           </ul>
                                     </li>
                                     <li className="nav-item">
-                                          <a className="nav-link active" href="#">Reduce, Reuse, Recycle (3R)</a>
+                                          <a className={`nav-link ${activeKey === '4' ? 'active shadow-blue-400' : 'active'}`} href="#">Reduce, Reuse, Recycle (3R)</a>
                                     </li>
                                     <li className="nav-item">
-                                          <a className="nav-link active" href="#">Kids’ Corner</a>
+                                          <a className={`nav-link ${activeKey === '5' ? 'active shadow-blue-400' : 'active'}`} href="#">Kids’ Corner</a>
                                     </li>
                                     <li className="nav-item">
-                                          <a className="nav-link active" href="#">Media</a>
+                                          <a className={`nav-link ${activeKey === '6' ? 'active shadow-blue-400' : 'active'}`} href="#">Media</a>
                                     </li>
                                     <li className="nav-item">
-                                          <a className="nav-link active" href="#">FAQs</a>
+                                          <a className={`nav-link ${activeKey === '7' ? 'active shadow-blue-400' : 'active'}`} href="#">FAQs</a>
                                     </li>
 
 
