@@ -3,6 +3,12 @@ p {
       all: unset;
 }
 
+.bground {
+      background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+      --tw-text-opacity: 1;
+      color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 @keyframes slideUp {
 
       0% {
@@ -333,7 +339,11 @@ p {
       z-index: 1000;
 }
 
-.selected {}
+.selected {
+      background: #4f1baa;
+      color: white;
+
+}
 
 .nav-item:hover {
       transform: scale(1.05);

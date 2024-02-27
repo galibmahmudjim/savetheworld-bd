@@ -9,7 +9,7 @@ function NavTab() {
       const [children, setChildren] = useState(null);
       const [current, setCurrent] = useState('/');
       const currentPath = usePathname();
-
+      const [selectedKey, setSelectedKey] = useState('1');
       const handleClick = (e: any) => {
             setCurrent(currentPath);
             console.log('click ', e);
@@ -79,8 +79,8 @@ function NavTab() {
                   <div className='NavigationMenuRoot' id='navbar'>
                         <div className='NavigationMenuList' id='navbarlist'>
                               <ul className=" nav nav-pills">
-                                    <li className="nav-item selected">
-                                          <a className="nav-link active " aria-current="page" href="#">Home</a>
+                                    <li className="nav-item ">
+                                          <a className={`nav-link ${selectedKey === '1' ? 'active shadow-gray-950' : 'active'}`} aria-current="page" href="#">Home</a>
                                     </li>
                                     <li className="nav-item">
                                           <a className="nav-link active" href="#"> Plastic threat</a>
