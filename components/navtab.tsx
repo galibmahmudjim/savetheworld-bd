@@ -32,7 +32,7 @@ function NavTab() {
                   const element = document.getElementById('navcontainer');
                   const navbar = document.getElementById('navbar');
                   const navbarlist = document.getElementById('navbarlist');
-                  if (navbar && element) {
+                  if (navbar && element && navbarlist) {
                         navbar.classList.remove('animationroot')
                         element.classList.remove('animationnav')
                   }

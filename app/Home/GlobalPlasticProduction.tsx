@@ -83,7 +83,7 @@ const GlobalPlasticProduction = () => {
                                           </div>
 
                                           <div className={`${leftGrow !== 2 ? 'hidden' : 'detailsPreview'}`}>
-                                                <ul >
+                                                <ul className="ulHome">
                                                       <li className="checkmark">It is estimated that around 343 million tonnes (MT) of plastic is produced every year.</li>
                                                       <li className="checkmark">Plastic Wastes (PW) are produced by massive manufacturing, processing, and packaging industries.</li>
                                                       <li className="checkmark">More than 20 billion plastic bottles are tossed on earth.</li>
