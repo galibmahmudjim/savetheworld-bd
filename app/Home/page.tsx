@@ -14,6 +14,7 @@ import GlobalPlasticProduction from "./GlobalPlasticProduction";
 
 
 import { Row, Col, Carousel } from 'antd'
+import GlobalPlasticProduction1 from "./Facts/GlobalPlasticProduction1";
 
 
 const contentStyle: React.CSSProperties = {
@@ -90,45 +91,38 @@ const Home: React.FC = () => {
 
 
       return (
-            <Row justify="center">
-                  <Col className="w-full"  >
-                        <Carousel autoplay={true} autoplaySpeed={1500} dots={false} arrows {...settings} >
-                              <div className="w-full flex flex-col justify-center items-center">
-                                    <GlobalPlasticProduction onClick={handleChildData} />
-                              </div>
-                              <div className="w-full flex flex-col justify-center items-center">
-                                    <GlobalPlasticProduction onClick={handleChildData} />
-                              </div>
 
-                        </Carousel>
-                  </Col>
-            </Row>
-            // <Swiper
-            //       spaceBetween={30}
-            //       centeredSlides={true}
 
-            //       autoplay={{
-            //             delay: 2000,
-            //             disableOnInteraction: true,
-            //       }}
-            //       pagination={{
-            //             clickable: true,
-            //       }}
-            //       navigation={true}
-            //       modules={[Autoplay, Pagination, Navigation]}
-            //       className="mySwiper"
-            // >
-            //       <SwiperSlide>
-            //             <div className="w-full flex flex-col justify-center items-center">
-            //                   <GlobalPlasticProduction onClick={handleChildData} />
-            //             </div>
-            //       </SwiperSlide>
-            //       <SwiperSlide>
-            //             <div className="w-full flex flex-col justify-center items-center">
-            //                   <GlobalPlasticProduction onClick={handleChildData} />
-            //             </div>
-            //       </SwiperSlide>
-            // </Swiper>
+            <Swiper
+                  spaceBetween={30}
+                  centeredSlides={true}
+                  onReachEnd={() => {
+
+                        
+                  }}
+                  autoplay={{
+                        delay: 5000,
+                        disableOnInteraction: false,
+                  }}
+                  pagination={{
+                        clickable: true,
+                  }}
+                  navigation={true}
+
+                  modules={[Autoplay, Pagination, Navigation]}
+
+            >
+                  <SwiperSlide>
+                        <div className="w-full flex flex-col justify-center items-center">
+                              <GlobalPlasticProduction onClick={handleChildData} />
+                        </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                        <div className="w-full flex flex-col justify-center items-center">
+                              <GlobalPlasticProduction1 />
+                        </div>
+                  </SwiperSlide>
+            </Swiper>
       );
 };
 

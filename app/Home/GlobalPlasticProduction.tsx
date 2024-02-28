@@ -9,7 +9,7 @@ import { useRouter, usePathname } from 'next/navigation';
 type Props = {
       onCallback: (value: string) => void;
 };
-const GlobalPlasticProduction = ({ onClick }: { onClick: () => void }) => {
+const GlobalPlasticProduction1 = ({ onClick }: { onClick: () => void }) => {
 
       // const [isVisible, setIsVisible] = useState(false);
       const [clickedGraph, setClickedGraph] = useState(0);
@@ -133,4 +133,4 @@ const GlobalPlasticProduction = ({ onClick }: { onClick: () => void }) => {
       );
 }
 
-export default GlobalPlasticProduction;
+export default GlobalPlasticProduction1;

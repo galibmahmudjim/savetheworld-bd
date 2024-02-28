@@ -323,20 +323,3 @@
             }
       }
 }
-
-/* 
-.swiper-button-next, .swiper-button-prev {
-      opacity: 0;
-transition: opacity 0.3s;
-z-index: 1000;
-cursor: pointer;
-}
-
-.swiper-container:hover .swiper-button-next,
-.swiper-container:hover .swiper-button-prev {
-      opacity: 1;
-      z-index: 1000;
-      cursor: pointer;
-}
-
-*/
