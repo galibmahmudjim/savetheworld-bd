@@ -45,7 +45,7 @@ p {
       justify-content: center;
       align-items: center;
       position: fixed;
-      font-size: 20px;
+      font-size: 24px;
 
 
 
@@ -119,7 +119,7 @@ p {
       font-family: 'Inter', sans-serif;
       position: relative;
       font-weight: 700;
-      font-size: 20px;
+      font-size: 24px;
       z-index: 100;
 
 
@@ -146,7 +146,7 @@ p {
 }
 
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1149px) {
       @keyframes widthShrink {
             0% {
                   width: 100vw;
@@ -205,7 +205,185 @@ p {
       }
 }
 
+
+@media screen and (max-width: 1299px) and (min-width: 1150px) {
+      @keyframes widthShrink {
+            0% {
+                  width: 100vw;
+                  font-size: 14px;
+            }
+
+            100% {
+                  width: 80vw;
+                  font-size: 10px;
+
+
+            }
+      }
+
+      @keyframes widthGrow {
+            0% {
+                  width: 80vw;
+                  font-size: 10px;
+            }
+
+            100% {
+                  width: 100vw;
+                  font-size: 14px;
+            }
+      }
+
+      #navbarlist.widthgrow {
+            animation: widthGrow 0.5s ease-in-out 0s forwards;
+      }
+
+      #navbarlist.widthshrink {
+            animation: widthShrink 0.5s ease-in-out 0s forwards;
+      }
+
+      .nav-container {
+            z-index: 1000;
+            top: 20.5vh;
+            width: 100vw;
+            visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            font-size: 14px;
+      }
+
+      .NavigationMenuRoot {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            font-weight: 700;
+            font-size: 14px;
+            z-index: 100;
+      }
+}
+
+@media screen and (max-width: 1500px) and (min-width: 1300px) {
+      @keyframes widthShrink {
+            0% {
+                  width: 100vw;
+                  font-size: 15px;
+            }
+
+            100% {
+                  width: 80vw;
+                  font-size: 13px;
+
+
+            }
+      }
+
+      @keyframes widthGrow {
+            0% {
+                  width: 80vw;
+                  font-size: 13px;
+            }
+
+            100% {
+                  width: 100vw;
+                  font-size: 15px;
+            }
+      }
+
+      #navbarlist.widthgrow {
+            animation: widthGrow 0.5s ease-in-out 0s forwards;
+      }
+
+      #navbarlist.widthshrink {
+            animation: widthShrink 0.5s ease-in-out 0s forwards;
+      }
+
+      .nav-container {
+            z-index: 1000;
+            top: 20.5vh;
+            width: 100vw;
+            visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            font-size: 15px;
+      }
+
+      .NavigationMenuRoot {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            font-weight: 700;
+            font-size: 15px;
+            z-index: 100;
+      }
+}
+
 @media screen and (min-width: 1500px) and (max-width: 1800px) {
+      @keyframes widthShrink {
+            0% {
+                  width: 100vw;
+                  font-size: 20px;
+            }
+
+            100% {
+                  width: 80vw;
+                  font-size: 16px;
+
+
+            }
+      }
+
+      @keyframes widthGrow {
+            0% {
+                  width: 80vw;
+                  font-size: 16px;
+            }
+
+            100% {
+                  width: 100vw;
+                  font-size: 20px;
+            }
+      }
+
+      #navbarlist.widthgrow {
+            animation: widthGrow 0.5s ease-in-out 0s forwards;
+      }
+
+      #navbarlist.widthshrink {
+            animation: widthShrink 0.5s ease-in-out 0s forwards;
+      }
+
+      .nav-container {
+            z-index: 1000;
+            top: 20.5vh;
+            width: 100vw;
+            visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            font-size: 20px;
+      }
+
+      .NavigationMenuRoot {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            font-weight: 700;
+            font-size: 20px;
+            z-index: 100;
+      }
+}
+
+@media screen and (min-width: 1801px) {
       @keyframes widthShrink {
             0% {
                   width: 100vw;
@@ -318,7 +496,7 @@ p {
       width: 100%;
       flex-shrink: inherit;
       position: relative;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
       margin-left: 7%;
       margin-right: 7%;

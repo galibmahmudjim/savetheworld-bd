@@ -1,129 +1,62 @@
 "use client";
-import React, { useEffect, useState, PureComponent, useCallback } from "react";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { LeftOutlined, RightOutlined } from '@ant-design/icons'
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import { IoChevronBack } from "react-icons/io5";
+import { useEffect, useState } from 'react';
+import React from 'react';
+import Carousel from 'react-material-ui-carousel'
+import { Paper, Button } from '@mui/material'
+import { GrFormNextLink } from "react-icons/gr";
+import GlobalPlasticProduction from './GlobalPlasticProduction';
+import GlobalPlasticProduction1 from './Facts/GlobalPlasticProduction1';
 
-import "./home.css";
-import GlobalPlasticProduction from "./GlobalPlasticProduction";
-
-
-import { Row, Col, Carousel } from 'antd'
-import GlobalPlasticProduction1 from "./Facts/GlobalPlasticProduction1";
-
-
-const contentStyle: React.CSSProperties = {
-
-      height: '160px',
-      color: '#fff',
-      lineHeight: '160px',
-      textAlign: 'center',
-      background: '#364d79',
-};
-
-interface ArrowProps {
-      className?: string;
-      style?: React.CSSProperties;
-      onClick?: () => void;
-}
-
-const SampleNextArrow: React.FC<ArrowProps> = (props) => {
-      const { className, style, onClick } = props;
-      return (
-            <RightOutlined className={className}
-                  style={{
-                        ...style,
-                        color: 'black',
-                        fontSize: '15px',
-                        lineHeight: '1.5715',
-                        right: '6%',
-                        position: 'absolute',
-                        zIndex: 1
-                  }}
-                  onClick={onClick}
-            />
-      );
-};
-
-const SamplePrevArrow: React.FC<ArrowProps> = (props) => {
-      const { className, style, onClick } = props;
-      return (
-
-            <LeftOutlined
-                  className={className}
-                  style={{
-                        ...style,
-                        color: 'black',
-                        fontSize: '15px',
-                        lineHeight: '1.5715',
-                        left: '8%',
-                        position: 'absolute',
-                        zIndex: 1
-
-                  }}
-                  onClick={onClick}
-            />
-      );
-};
-
-const settings = {
-      nextArrow: <SampleNextArrow />,
-      prevArrow: <SamplePrevArrow />,
-};
 
 
 const Home: React.FC = () => {
-      const [count, setCount] = useState(0);
-      const [released, setReleased] = useState(true);
 
-      const handleChildData = () => {
-            setReleased(!released);
-      };
-      useEffect(() => {
+      const [index, setIndex] = useState(0);
 
+      const handleChange = () => {
+            setIndex((prevIndex) => (prevIndex + 1) % 2);
       }
-            , [released]);
-
 
       return (
-
-
-            <Swiper
-                  spaceBetween={30}
-                  centeredSlides={true}
-                  onReachEnd={() => {
-
-                        
+            <Carousel
+                  swipe={true}
+                  animation="slide"
+                  indicators={false}
+                  interval={15000}
+                  index={index}
+                  navButtonsProps={{
+                        style: {
+                              backgroundColor: 'black',
+                              borderRadius: 100,
+                              width: '70px',
+                              height: '70px',
+                              zIndex: 1000,
+                        }
                   }}
-                  autoplay={{
-                        delay: 5000,
-                        disableOnInteraction: false,
-                  }}
-                  pagination={{
-                        clickable: true,
-                  }}
-                  navigation={true}
+                  navButtonsWrapperProps={{
+                        style: {
+                              bottom: '0',
+                              top: 'unset',
+                              marginLeft: '5%',
+                              marginRight: '5%',
 
-                  modules={[Autoplay, Pagination, Navigation]}
-
+                              position: 'absolute',
+                        }
+                  }}
             >
-                  <SwiperSlide>
-                        <div className="w-full flex flex-col justify-center items-center">
-                              <GlobalPlasticProduction onClick={handleChildData} />
-                        </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                        <div className="w-full flex flex-col justify-center items-center">
-                              <GlobalPlasticProduction1 />
-                        </div>
-                  </SwiperSlide>
-            </Swiper>
+
+                  <div className="w-full flex flex-col justify-center items-center">
+                        <GlobalPlasticProduction onClick={handleChange} />
+                  </div>
+                  <div className="w-full flex flex-col justify-center items-center">
+
+                        <GlobalPlasticProduction1 />
+                  </div>
+            </Carousel >
       );
 };
 
 export default Home;
+
+
+

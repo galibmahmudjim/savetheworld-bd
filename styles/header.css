@@ -17,7 +17,7 @@
       transition: var(--background-start-rgb) 0.1s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
       margin-top: 0px;
       padding: 0px 20px 0px 20px;
-      height: 19vh;
+      height: 20vh;
       width: 100vw;
       overflow: hidden;
       position: fixed;
@@ -31,8 +31,8 @@
       display: flex;
       height: 100%;
       flex-direction: row;
-      margin-right: auto;
-      margin-left: auto;
+      margin-right: 2%;
+      margin-left: 2%;
       padding-bottom: 0px;
 }
 
@@ -40,9 +40,9 @@
       display: flex;
       flex: 1.5;
       flex-direction: row;
-      justify-items: end;
+      justify-items: flex-start;
       align-items: center;
-      justify-content: flex-end;
+      justify-content: flex-start;
       width: 100%;
       height: auto;
       margin-left: 0px;
@@ -58,8 +58,8 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: flex-center;
-      width: 80%;
+      justify-content: flex-start;
+      width: 90%;
       height: 140%;
       min-width: 103px;
       max-width: 100%;
@@ -68,12 +68,10 @@
       cursor: pointer
 }
 
-.header .header-1 .left .logo svg.green {
-      filter: brightness(250%);
-}
+
 
 .header .header-1 .left .logo:hover {
-      transform: scale(1.1);
+      transform: scale(1.06);
       transition: transform 0.3s ease-in-out;
 
 }
@@ -117,10 +115,10 @@
       flex: 1;
       display: flex;
       flex-direction: row;
-      align-items: start;
+      align-items: flex-start;
       justify-content: space-around;
+
       width: 100%;
-      padding-left: 30px;
       margin-left: 0px;
 }
 
