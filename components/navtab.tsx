@@ -32,7 +32,7 @@ function NavTab() {
                   const element = document.getElementById('navcontainer');
                   const navbar = document.getElementById('navbar');
                   const navbarlist = document.getElementById('navbarlist');
-                  if (navbar && element && navbarlist) {
+                  if (navbar && element) {
                         navbar.classList.remove('animationroot')
                         element.classList.remove('animationnav')
                   }
@@ -89,8 +89,8 @@ function NavTab() {
                         <div className='NavigationMenuList' id='navbarlist'>
                               <ul className=" nav nav-pills">
                                     <li className="nav-item">
-                                          <Link href="/Home"
-                                          ><div className={`nav-link ${activeKey === '1' ? 'active shadow-blue-400 shadow-xl' : 'active'}`} aria-current="page" >Home</div></Link>
+                                          <a href="/Home"
+                                          ><div className={`nav-link ${activeKey === '1' ? 'active shadow-blue-400 shadow-xl' : 'active'}`} aria-current="page" >Home</div></a>
                                     </li>
                                     <li className="nav-item">
                                           <a className={`nav-link ${activeKey === '2' ? 'active shadow-blue-400' : 'active'}`} href="#"> Plastic threat</a>
