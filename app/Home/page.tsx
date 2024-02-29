@@ -5,7 +5,9 @@ import "./home.css";
 import { IoArrowBack } from "react-icons/io5";
 import Link from "next/link";
 import { useRouter, useSearchParams } from 'next/navigation';
-import AboutPlastic from "./aboutPlastic";
+import AboutPlastic from "./(components)/aboutPlastic";
+import PlasticComprises from "./(components)/PlasticComprises";
+import LifePlastics from "./(components)/LifePlastics";
 
 type Props = {
       onCallback: (value: string) => void;
@@ -61,16 +63,54 @@ const Home = () => {
                                                       <h4 className=" font-[900]">
                                                             About Plastics
                                                       </h4>
-                                                      <p className="text-[22px] font-[300] mt-2 ml-10 mb-4">
+                                                      <p className="text-[22px] font-[300] mt-2 ml-10 mb-4 paragraph">
                                                             Plastic is mainly a petroleum-derived non-biodegradable polymer. Today modern life is almost impossible without plastics.
                                                             <span className="text-[#4a218b] ml-2 hover:underline cursor-pointer"
                                                                   onClick={() => {
                                                                         setIndexs(1);
                                                                   }}
-                                                                  {...(indexs === 1 ? { style: { visibility: "hidden" } } : {})}
+                                                                  {...(indexs === 1 ? { style: { display: "none" } } : {})}
                                                             > More </span>
                                                       </p>
                                                       {indexs === 1 ? <AboutPlastic /> : null}
+
+                                                </div>
+
+                                                <div className="flex flex-col  h-full ml-1">
+                                                      <h4 className=" font-[900]">
+                                                            Plastic comprises
+
+                                                      </h4>
+                                                      {indexs === 2 ? <p></p> : null}
+                                                      <p className={` mb-4 paragraph ${indexs === 2 ? "hidden" : ""}`}>
+                                                            5-12% of the world's total waste is plastic waste (PW)(World Bank Report)
+                                                            <span className="text-[#4a218b] ml-2 hover:underline cursor-pointer"
+                                                                  onClick={() => {
+                                                                        setIndexs(2);
+                                                                  }}
+                                                                  {...(indexs === 2 ? { style: { display: "none" } } : {})}
+                                                            > More </span>
+                                                      </p>
+                                                      {indexs === 2 ? <PlasticComprises /> : null}
+
+                                                </div>
+                                                <div className="flex flex-col  h-full ml-1">
+                                                      <h4 className=" font-[900]">
+                                                            Life of plastics
+
+                                                      </h4>
+                                                      <p className="text-[22px] font-[300] mt-2 ml-10 mb-4 paragraph">
+
+                                                            Plastic products can take hundreds of years to decompose, with fishing line lasting the longest at 600 years.
+
+                                                            <span className="text-[#4a218b] ml-2 hover:underline cursor-pointer"
+                                                                  onClick={() => {
+                                                                        setIndexs(3);
+                                                                  }}
+                                                                  {...(indexs === 3 ? { style: { display: "none" } } : {})}
+                                                            > More </span>
+                                                      </p>
+                                                      {indexs === 3 ? <LifePlastics /> : null}
 
                                                 </div>
                                           </div>

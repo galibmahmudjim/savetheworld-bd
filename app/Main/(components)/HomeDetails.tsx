@@ -76,8 +76,7 @@ const HomeDetails = () => {
                                     </div>
                               </div>
                               <div className='w-full h-full mb-8 mt-[3%]'>
-                                    <div id="rightFigHome" className=" right " >
-
+                                    <div id="rightFigHome" className=" right ">
                                           <div className='Description'>
                                                 <h1 className="text-[40px] font-bold mb-3">Bangladesh | Save The World </h1>
                                                 <p className="text-[24px] font-[300]">{Description}

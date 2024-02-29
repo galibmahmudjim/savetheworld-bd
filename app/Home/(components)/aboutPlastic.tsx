@@ -1,4 +1,5 @@
 
+import '../home.css';
 
 const AboutPlastic = () => {
       return (
