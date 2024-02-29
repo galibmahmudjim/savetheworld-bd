@@ -9,7 +9,7 @@ import { useRouter, usePathname } from 'next/navigation';
 type Props = {
       onCallback: (value: string) => void;
 };
-const HomeDetails = ({ onClick }: { onClick: () => void }) => {
+const HomeDetails = () => {
 
       // const [isVisible, setIsVisible] = useState(false);
       const [clickedGraph, setClickedGraph] = useState(0);

@@ -4,13 +4,13 @@ import Image from "next/image";
 import "./home.css";
 import { IoArrowBack } from "react-icons/io5";
 import Link from "next/link";
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import AboutPlastic from "./aboutPlastic";
 
 type Props = {
       onCallback: (value: string) => void;
 };
-const Home = (index: number) => {
+const Home = () => {
 
       // const [isVisible, setIsVisible] = useState(false);
       const [clickedGraph, setClickedGraph] = useState(0);
@@ -18,6 +18,9 @@ const Home = (index: number) => {
       const [fact, setFact] = useState(false);
 
       const router = useRouter();
+      const params = useSearchParams();
+      const index = parseInt(params.get('index') || '0');
+
 
 
 
@@ -25,9 +28,14 @@ const Home = (index: number) => {
       const Description = "Save The World, Bangladesh is a plastic pollution awareness portal is developed as part of a research collaborative initiative between the University of Dhaka and East West University, Bangladesh. This portal is dedicated to creating awareness among people from all walks of life and industries about the detrimental effects of plastic pollution on the environment and promoting sustainable solutions to reduce plastic waste. Plastic pollution poses a serious threat to the environment, wildlife, and human health, and contributes to global warming and climate change. Now, it is high time to take action to protect our mother Earth from further plastic pollution. "
 
       const [indexs, setIndexs] = useState(0);
-      if (index === 1) {
-            setIndexs(1);
+
+      useEffect(() => {
+            if (index === 1) {
+                  setIndexs(1);
+            }
       }
+            , [index]);
+
 
 
       return (
@@ -53,7 +61,7 @@ const Home = (index: number) => {
                                                       <h4 className=" font-[900]">
                                                             About Plastics
                                                       </h4>
-                                                      <p className="text-[22px] font-[300] mt-2 ml-10">
+                                                      <p className="text-[22px] font-[300] mt-2 ml-10 mb-4">
                                                             Plastic is mainly a petroleum-derived non-biodegradable polymer. Today modern life is almost impossible without plastics.
                                                             <span className="text-[#4a218b] ml-2 hover:underline cursor-pointer"
                                                                   onClick={() => {
