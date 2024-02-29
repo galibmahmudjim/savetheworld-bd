@@ -44,7 +44,7 @@ const Main: React.FC = () => {
             >
 
                   <div className="w-full flex flex-col justify-center items-center ">
-                        <HomeDetails onClick={handleChange} />
+                        <HomeDetails />
                   </div>
             </Carousel >
       );
