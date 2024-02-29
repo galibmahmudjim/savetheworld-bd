@@ -76,16 +76,14 @@ const HomeDetails = () => {
                                     </div>
                               </div>
                               <div className='w-full h-full mb-8 mt-[3%]'>
-                                    <div id="rightFigHome" className=" right ">
+                                    <div id="rightFigHome " className=" right  ">
                                           <div className='Description'>
-                                                <h1 className="text-[40px] font-bold mb-3">Bangladesh | Save The World </h1>
-                                                <p className="text-[24px] font-[300]">{Description}
-                                                      <span className='mt-[30px] text-[22px] cursor-pointer text-blue-700 ml-2 hover:underline'
-                                                            onClick={() => {
-                                                                  router.push('/Home');
-                                                            }}
-                                                      >   More</span>
-                                                </p>
+                                                <h1 className="text-[40px] font-bold mb-3 mainTitle">Bangladesh | Save The World </h1>
+                                                <span className='mt-[30px] text-[22px] cursor-pointer moreMain text-blue-700 ml-2 hover:underline'
+                                                      onClick={() => {
+                                                            router.push('/Home');
+                                                      }}
+                                                >   More</span>
                                           </div>
                                     </div>
                               </div>

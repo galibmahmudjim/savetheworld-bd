@@ -54,7 +54,7 @@
       display: flex;
       flex-direction: row;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       flex: 1;
       justify-items: center;
       visibility: hidden;
@@ -86,8 +86,7 @@
       flex-direction: column;
       justify-content: flex-start;
       justify-items: start;
-      width: 100%;
-      height: 100%;
+
       color: #fff;
       margin: 10px;
       padding-left: 8%;
@@ -110,11 +109,15 @@
             width: 100%;
             transform: scaleY(0);
             transform-origin: top;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-end;
             font-weight: 400;
             font-size: 27px;
             text-align: left;
             color: #373636;
-            font-family: GeoEditMedium, Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic, Helvetica, Arial, sans-serif;
+            font-family: "Google Sans", Roboto, "Helvetica Neue", sans-serif;
             letter-spacing: normal;
             line-height: 35px;
             animation: textUptoDownAppear 1s ease-in-out 1s forwards;
@@ -326,21 +329,22 @@
                   margin-top: 1em;
             }
       }
+
 }
 
-/* 
-.swiper-button-next, .swiper-button-prev {
-      opacity: 0;
-transition: opacity 0.3s;
-z-index: 1000;
-cursor: pointer;
+.mainTitle {
+
+      font-size: 40px;
+      font-weight: 900;
+      color: rgba(39, 30, 30, 0.644);
+      text-shadow: rgba(120, 107, 107, 0.43) 1px 1px 2px;
+      text-align: left;
+      font-family: "Google Sans", Roboto, "Helvetica Neue", sans-serif;
+      animation: fadeIn 2s ease-in-out 0s forwards;
 }
 
-.swiper-container:hover .swiper-button-next,
-.swiper-container:hover .swiper-button-prev {
-      opacity: 1;
-      z-index: 1000;
-      cursor: pointer;
-}
+.moreMain {
 
-*/
+      font-family: "Google Sans", Roboto, "Helvetica Neue", sans-serif;
+      font-weight: 400;
+}

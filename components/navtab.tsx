@@ -90,7 +90,7 @@ function NavTab() {
                               <ul className=" nav nav-pills">
                                     <li className="nav-item">
                                           <Link href="/Home"
-                                          ><div className={`nav-link ${activeKey === '1' ? 'active shadow-blue-400 shadow-xl' : 'active'}`} aria-current="page" >Home</div></Link>
+                                          ><div className={`nav-link ${activeKey === '1' ? 'active selectedActive shadow-xl' : 'active'}`} aria-current="page" >Home</div></Link>
                                     </li>
                                     <li className="nav-item">
                                           <a className={`nav-link ${activeKey === '2' ? 'active shadow-blue-400' : 'active'}`} href="#"> Plastic threat</a>

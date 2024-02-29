@@ -8,6 +8,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import AboutPlastic from "./aboutPlastic";
 import PlasticComprises from "./PlasticComprises";
 import LifePlastics from "./LifePlastics";
+import { BsSignIntersection, BsSignIntersectionY } from "react-icons/bs";
 
 type Props = {
       onCallback: (value: string) => void;
@@ -20,7 +21,7 @@ const Home = () => {
       const [fact, setFact] = useState(false);
 
       const router = useRouter();
-      // const params = useSearchParams();
+      const params = useSearchParams();
       const index = parseInt('0');
 
 
@@ -52,64 +53,66 @@ const Home = () => {
                                     <div id="rightFigHome" className=" body " >
 
                                           <div className='Description'>
-                                                <h1 className="text-[40px] font-bold mb-3">Bangladesh | Save The World </h1>
+                                                <h1 className=" mb-3 titled">Bangladesh | Save The World </h1>
                                                 <p className="text-[24px] font-[300]">{Description}</p>
                                           </div>
 
 
                                           <div className='contains'>
 
-                                                <div className="flex flex-col  h-full ml-1">
-                                                      <h4 className=" font-[900]">
-                                                            About Plastics
-                                                      </h4>
-                                                      <p className="text-[22px] font-[300] mt-2 ml-10 mb-4 paragraph">
-                                                            Plastic is mainly a petroleum-derived non-biodegradable polymer. Today modern life is almost impossible without plastics.
-                                                            <span className="text-[#4a218b] ml-2 hover:underline cursor-pointer"
-                                                                  onClick={() => {
+                                                <div className="flex flex-col   h-full ml-1">
+                                                      <div className="   flex flex-row justify-start items-center align-middle gap-3 h4Sub text-[#4a218b] cursor-pointer"
+                                                            onClick={() => {
+                                                                  if (indexs === 1) {
+                                                                        setIndexs(0);
+                                                                  }
+                                                                  else {
                                                                         setIndexs(1);
-                                                                  }}
-                                                                  {...(indexs === 1 ? { style: { display: "none" } } : {})}
-                                                            > More </span>
-                                                      </p>
+                                                                  }
+
+                                                            }}
+                                                      >
+                                                            {indexs !== 1 ? <BsSignIntersection /> : <BsSignIntersectionY />} About Plastics
+                                                      </div>
+
                                                       {indexs === 1 ? <AboutPlastic /> : null}
 
                                                 </div>
 
                                                 <div className="flex flex-col  h-full ml-1">
-                                                      <h4 className=" font-[900]">
-                                                            Plastic comprises
-
-                                                      </h4>
-                                                      {indexs === 2 ? <p></p> : null}
-                                                      <p className={` mb-4 paragraph ${indexs === 2 ? "hidden" : ""}`}>
-                                                            5-12% of the world's total waste is plastic waste (PW)(World Bank Report)
-                                                            <span className="text-[#4a218b] ml-2 hover:underline cursor-pointer"
-                                                                  onClick={() => {
+                                                      <div className="   flex flex-row justify-start items-center align-middle gap-3 h4Sub text-[#4a218b] cursor-pointer"
+                                                            onClick={() => {
+                                                                  if (indexs === 2) {
+                                                                        setIndexs(0);
+                                                                  }
+                                                                  else {
                                                                         setIndexs(2);
-                                                                  }}
-                                                                  {...(indexs === 2 ? { style: { display: "none" } } : {})}
-                                                            > More </span>
-                                                      </p>
+                                                                  }
+
+                                                            }}
+                                                      >
+                                                            {indexs !== 2 ? <BsSignIntersection /> : <BsSignIntersectionY />} Plastic comprises
+                                                      </div>
+
                                                       {indexs === 2 ? <PlasticComprises /> : null}
 
                                                 </div>
                                                 <div className="flex flex-col  h-full ml-1">
-                                                      <h4 className=" font-[900]">
-                                                            Life of plastics
+                                                      <div className="   flex flex-row justify-start items-center align-middle gap-3 h4Sub text-[#4a218b] cursor-pointer"
+                                                            onClick={() => {
 
-                                                      </h4>
-                                                      <p className="text-[22px] font-[300] mt-2 ml-10 mb-4 paragraph">
-
-                                                            Plastic products can take hundreds of years to decompose, with fishing line lasting the longest at 600 years.
-
-                                                            <span className="text-[#4a218b] ml-2 hover:underline cursor-pointer"
-                                                                  onClick={() => {
+                                                                  if (indexs === 3) {
+                                                                        setIndexs(0);
+                                                                  }
+                                                                  else {
                                                                         setIndexs(3);
-                                                                  }}
-                                                                  {...(indexs === 3 ? { style: { display: "none" } } : {})}
-                                                            > More </span>
-                                                      </p>
+                                                                  }
+
+                                                            }}
+                                                      >
+                                                            {indexs !== 3 ? <BsSignIntersection /> : <BsSignIntersectionY />} Life of plastics
+                                                      </div>
+
                                                       {indexs === 3 ? <LifePlastics /> : null}
 
                                                 </div>

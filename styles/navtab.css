@@ -513,3 +513,7 @@ p {
       transform: scale(1.05);
       transition: transform 0.5s;
 }
+
+.selectedActive {
+      box-shadow: #4f1baa 8px 5px 10px 0px;
+}
