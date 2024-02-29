@@ -7,6 +7,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-display: swap;
+  font-family: GeoEditMedium;
+  src: url(https://assets-cdn.nationalgeographic.com/natgeo/static/fonts/geographeditweb-medium.eot);
+  src: url(https://assets-cdn.nationalgeographic.com/natgeo/static/fonts/geographeditweb-medium.eot?#iefix) format("embedded-opentype"), url(https://assets-cdn.nationalgeographic.com/natgeo/static/fonts/geographeditweb-medium.woff2) format("woff2"), url(https://assets-cdn.nationalgeographic.com/natgeo/static/fonts/geographeditweb-medium.woff) format("woff"), url(https://assets-cdn.nationalgeographic.com/natgeo/static/fonts/geographeditweb-medium.ttf) format("truetype")
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;

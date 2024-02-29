@@ -4,7 +4,7 @@ import React from 'react';
 import Carousel from 'react-material-ui-carousel'
 import { Paper, Button } from '@mui/material'
 import { GrFormNextLink } from "react-icons/gr";
-import GlobalPlasticProduction from './GlobalPlasticProduction';
+import GlobalPlasticProduction from './(components)/HomeDetails';
 import GlobalPlasticProduction1 from './Facts/GlobalPlasticProduction1';
 
 
@@ -48,10 +48,10 @@ const Home: React.FC = () => {
                   <div className="w-full flex flex-col justify-center items-center">
                         <GlobalPlasticProduction onClick={handleChange} />
                   </div>
-                  <div className="w-full flex flex-col justify-center items-center">
+                  {/* <div className="w-full flex flex-col justify-center items-center">
 
                         <GlobalPlasticProduction1 />
-                  </div>
+                  </div> */}
             </Carousel >
       );
 };
