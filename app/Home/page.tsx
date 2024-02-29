@@ -5,7 +5,6 @@ import Carousel from 'react-material-ui-carousel'
 import { Paper, Button } from '@mui/material'
 import { GrFormNextLink } from "react-icons/gr";
 import GlobalPlasticProduction from './(components)/HomeDetails';
-import GlobalPlasticProduction1 from './Facts/GlobalPlasticProduction1';
 
 
 
