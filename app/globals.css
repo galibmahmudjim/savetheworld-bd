@@ -118,7 +118,7 @@ body {
   background-position: bottom;
   width: 60vw;
   height: 60vh;
-  top: 5vh;
+  top: 20vh;
   position: relative;
   filter: grayscale(100%) blur(3px);
   z-index: -100;

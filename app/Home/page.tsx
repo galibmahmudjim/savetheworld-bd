@@ -21,7 +21,6 @@ const Home = () => {
       const [fact, setFact] = useState(false);
 
       const router = useRouter();
-      const params = useSearchParams();
       const index = parseInt('0');
 
 

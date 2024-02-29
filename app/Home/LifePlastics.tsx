@@ -3,9 +3,9 @@ const LifePlastics = () => {
       return (
             <div className="w-full h-full text-[23px] more">
                   <ul className="ulHome">
-                        <li className="checkmark"><HiOutlineClipboardDocumentList color="#3565BE" /> Plastic bags: 20 years</li>
-                        <li className="checkmark"><HiOutlineClipboardDocumentList color="#3565BE" />Plastic bottles: 450 years</li>
-                        <li className="checkmark"><HiOutlineClipboardDocumentList color="#3565BE" />Fishing line: 600 years</li>
+                        <li className="checkmark">  <HiOutlineClipboardDocumentList color="#3565BE" size={25} /> Plastic bags: 20 years</li>
+                        <li className="checkmark">  <HiOutlineClipboardDocumentList color="#3565BE" size={25} />Plastic bottles: 450 years</li>
+                        <li className="checkmark">  <HiOutlineClipboardDocumentList color="#3565BE" size={25} />Fishing line: 600 years</li>
                   </ul>
             </div>
       )
