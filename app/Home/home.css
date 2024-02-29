@@ -78,7 +78,7 @@
       color: #fff;
       margin: 10px;
       padding-left: 6%;
-      padding-right: 10%;
+      padding-right: 7%;
 
       @keyframes textUptoDownAppear {
             0% {
@@ -161,8 +161,10 @@
       font-size: 24px;
       list-style-type: none;
       margin: 3em;
+      margin-right: 2%;
       margin-top: 0px;
       margin-left: 0%;
+      width: 100%;
 
       li {
             @extend .checkmarks;
@@ -177,30 +179,10 @@
       justify-content: flex-start;
       align-items: flex-start;
       flex-direction: row;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       gap: 20px;
 
-      /* &::before {
-            content: "";
-            display: inline-block;
-            position: absolute;
-            left: -0.5em;
-            top: 5px;
-            transform: rotate(45deg);
-            height: 1em;
-            width: 0.5em;
-            border-bottom: 0.15em solid;
-            border-right: 0.15em solid;
 
-      }
-
-      &:is(li) {
-            margin-left: 1em;
-
-            &:not(:first-child) {
-                  margin-top: 1em;
-            }
-      } */
 }
 
 @keyframes heightAppear {

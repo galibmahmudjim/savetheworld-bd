@@ -5,6 +5,7 @@ import Carousel from 'react-material-ui-carousel'
 import { Paper, Button } from '@mui/material'
 import { GrFormNextLink } from "react-icons/gr";
 import HomeDetails from './(components)/HomeDetails'
+import HomeMain from './(components)/HomeMain';
 
 
 const Main: React.FC = () => {
@@ -42,10 +43,13 @@ const Main: React.FC = () => {
                         }
                   }}
             >
-
+                  <div className="w-full flex flex-col justify-center items-center ">
+                        <HomeMain />
+                  </div>
                   <div className="w-full flex flex-col justify-center items-center ">
                         <HomeDetails />
                   </div>
+
             </Carousel >
       );
 };

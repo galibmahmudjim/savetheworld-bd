@@ -88,10 +88,20 @@ function NavTab() {
                   <div className='NavigationMenuRoot' id='navbar'>
                         <div className='NavigationMenuList' id='navbarlist'>
                               <ul className=" nav nav-pills">
-                                    <li className="nav-item">
+                                    <li className="nav-item dropdown">
+                                          <a className={`nav-link ${activeKey === '3' ? 'active shadow-blue-400' : 'active'} dropdown-toggle `} data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Home</a>
+                                          <ul className="dropdown-menu bg-[#d7ebff94]" >
+                                                <li><a className="dropdown-item" href="/Home?index=1">About Plastics</a></li>
+                                                <li><a className="dropdown-item" href="/Home?index=2">Plastic comprises</a></li>
+                                                <li><a className="dropdown-item" href="/Home?index=3">Life of plastics</a></li>
+                                                <li><a className="dropdown-item" href="/Home?index=4">Global Top Plastic Producers</a></li>
+                                                <li><a className="dropdown-item" href="/Home?index=5">COVID-19 & Plastic</a></li>
+                                          </ul>
+                                    </li>
+                                    {/* <li className="nav-item">
                                           <Link href="/Home"
                                           ><div className={`nav-link ${activeKey === '1' ? 'active selectedActive shadow-xl' : 'active'}`} aria-current="page" >Home</div></Link>
-                                    </li>
+                                    </li> */}
                                     <li className="nav-item">
                                           <a className={`nav-link ${activeKey === '2' ? 'active shadow-blue-400' : 'active'}`} href="#"> Plastic threat</a>
                                     </li>
