@@ -165,12 +165,12 @@
       margin-left: 0%;
 
       li {
-            @extend .checkmark;
+            @extend .checkmarks;
       }
 }
 
 
-.checkmark {
+.checkmarks {
       position: relative;
       padding-left: 0.8em;
       display: flex;
