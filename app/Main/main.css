@@ -21,7 +21,7 @@
 
 
 
-.HomeBody {
+.HomeFigure {
       width: 100%;
       padding-left: 1%;
       padding-right: 1%;
@@ -38,14 +38,14 @@
       font-family: sans-serif;
       font-weight: 700;
       font-size: 18px;
-      padding-left: 7%;
-      padding-right: 6%;
+      padding-left: 5%;
+      padding-right: 5%;
       animation: fadeIn 2s ease-in-out 4s forwards;
 
 }
 
 
-.HomeBody .box-container {
+.HomeFigure .box-container {
 
       width: 100%;
       min-height: 65vh;
@@ -59,14 +59,27 @@
       justify-items: center;
       visibility: hidden;
       border-radius: 15px;
-      padding-left: 25px;
+      padding-left: 50px;
       animation: fadeIn 2s ease-in-out 1s forwards;
 }
 
 
 
+.HomeFigure .left {
+      background-color: transparent;
+      padding: 20px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      justify-items: center;
+      height: 65vh;
+      color: #fff;
+      margin: 10px;
+}
 
-.HomeBody .body {
+.HomeFigure .right {
       background-color: transparent;
       text-align: start;
       display: flex;
@@ -77,7 +90,7 @@
       height: 100%;
       color: #fff;
       margin: 10px;
-      padding-left: 6%;
+      padding-left: 8%;
       padding-right: 10%;
 
       @keyframes textUptoDownAppear {
@@ -104,10 +117,10 @@
             font-family: GeoEditMedium, Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic, Helvetica, Arial, sans-serif;
             letter-spacing: normal;
             line-height: 35px;
-            animation: textUptoDownAppear 1s ease-in-out 1.2s forwards;
+            animation: textUptoDownAppear 1s ease-in-out 1s forwards;
       }
 
-      .contains {
+      .detailsPreview {
             width: 100%;
             transform: scaleY(0);
             margin-bottom: 5%;
@@ -115,20 +128,145 @@
             font-weight: 600;
             font-size: 25px;
             line-height: 35px;
-            margin-top: 60px;
+            margin-top: 30px;
             text-align: left;
             color: #333333;
-            line-height: 35px;
-            letter-spacing: normal;
             font-family: GeoEditMedium, Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic, Helvetica, Arial, sans-serif;
-            animation: textUptoDownAppear .5s ease-in-out 2s forwards;
+            animation: textUptoDownAppear .5s ease-in-out 0s forwards;
 
       }
 }
 
+@keyframes widthGrowHome {
+      0% {
+            width: 0;
+      }
+
+      100% {
+            width: 100%;
+      }
+
+}
+
+.widthGrowHome {
+      animation: widthGrowHome .5s ease-in-out 0s forwards;
+}
+
+@keyframes widthShrinkHome {
+      0% {
+            width: 100%;
+      }
+
+      100% {
+            width: 0;
+      }
+
+}
+
+.widthShrinkHome {
+      animation: widthShrinkHome .5s ease-in-out 0s forwards;
+}
+
+@keyframes flexExpand {
+      0% {
+            visibility: hidden;
+            width: 0;
+            flex: 0;
+      }
+
+      100% {
+            visibility: visible;
+            display: flex;
+            width: 100%;
+            flex: 1;
+      }
+
+}
+
+@keyframes flexShrink {
+      0% {
+            flex: 1;
+      }
+
+      100% {
+            flex: 1;
+      }
+
+}
 
 
 
+.HomeFigure .box-container {
+
+      #leftFigHome {
+
+            /* cursor: pointer */
+      }
+
+      @keyframes flexExpandleft {
+            0% {
+                  visibility: hidden;
+                  width: 0;
+                  flex: 0;
+            }
+
+            100% {
+                  visibility: visible;
+                  width: 100%;
+                  flex: 1;
+            }
+
+      }
+
+
+
+
+      .left {
+            animation: flexShrink 3s ease-in-out 5s forwards;
+      }
+
+      @keyframes leftFlexShrink {
+            0% {
+                  visibility: visible;
+                  width: 100%;
+                  flex: 1;
+            }
+
+            100% {
+                  visibility: hidden;
+                  width: 0;
+                  flex: 0;
+            }
+
+      }
+
+      #leftFigHome.leftshrink {
+            visibility: visible;
+            width: 100%;
+            flex: 1;
+            animation: leftFlexShrink .01s ease-in-out 0s forwards;
+      }
+
+      @keyframes leftFlexExpand {
+            0% {
+                  visibility: hidden;
+                  width: 0;
+                  flex: 0;
+            }
+
+            100% {
+                  visibility: visible;
+                  width: 100%;
+                  flex: 1;
+            }
+
+      }
+
+      #leftFigHome.leftgrow {
+            animation: leftFlexExpand 1s ease-in-out 0s forwards;
+      }
+
+}
 
 .transition-container {
       visibility: hidden;
@@ -156,8 +294,6 @@
       font-size: 1.2rem;
       list-style-type: none;
       margin: 3em;
-      margin-top: 0px;
-      margin-left: 0%;
 
       li {
             @extend .checkmark;
@@ -192,17 +328,19 @@
       }
 }
 
-@keyframes heightAppear {
-      0% {
-            height: 0;
-      }
-
-      100% {
-            height: 100%;
-      }
+/* 
+.swiper-button-next, .swiper-button-prev {
+      opacity: 0;
+transition: opacity 0.3s;
+z-index: 1000;
+cursor: pointer;
 }
 
-.more {
-      margin-left: 20px;
-      animation: textUptoDownAppear .2s ease-in-out 0s forwards;
+.swiper-container:hover .swiper-button-next,
+.swiper-container:hover .swiper-button-prev {
+      opacity: 1;
+      z-index: 1000;
+      cursor: pointer;
 }
+
+*/
