@@ -5,9 +5,9 @@ import "./home.css";
 import { IoArrowBack } from "react-icons/io5";
 import Link from "next/link";
 import { useRouter, useSearchParams } from 'next/navigation';
-import AboutPlastic from "./(components)/aboutPlastic";
-import PlasticComprises from "./(components)/PlasticComprises";
-import LifePlastics from "./(components)/LifePlastics";
+import AboutPlastic from "./aboutPlastic";
+import PlasticComprises from "./PlasticComprises";
+import LifePlastics from "./LifePlastics";
 
 type Props = {
       onCallback: (value: string) => void;
@@ -20,8 +20,8 @@ const Home = () => {
       const [fact, setFact] = useState(false);
 
       const router = useRouter();
-      const params = useSearchParams();
-      const index = parseInt(params.get('index') || '0');
+      // const params = useSearchParams();
+      const index = parseInt('0');
 
 
 

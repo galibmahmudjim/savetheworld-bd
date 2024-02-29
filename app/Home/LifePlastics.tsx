@@ -1,6 +1,5 @@
 
-import '../home.css';
-const PlasticComprises = () => {
+const LifePlastics = () => {
       return (
             <div className="w-full h-full text-[20px] more">
                   <ul className="ulHome">
@@ -12,4 +11,4 @@ const PlasticComprises = () => {
       )
 }
 
-export default PlasticComprises;
+export default LifePlastics;
