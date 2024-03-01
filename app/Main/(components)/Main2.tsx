@@ -21,7 +21,7 @@ const CarouselComponent = () => {
                         swipe={false}
                         animation="fade"
                         indicators={false}
-                        interval={5000}
+                        interval={7000}
                         index={index}
                         navButtonsAlwaysInvisible={true}
 
@@ -29,7 +29,7 @@ const CarouselComponent = () => {
                   >
                         <img
                               alt='Mountains'
-                              src='/logofig.png'
+                              src='/main21.png'
 
                               style={{ borderRadius: '10px' }}
                         />
@@ -37,13 +37,11 @@ const CarouselComponent = () => {
                               <picture className="block relative ">
                                     <img
                                           alt='Mountains'
-                                          src='/climate-change-concept-collage.jpg'
+                                          src='/main22.png'
                                           style={{ borderRadius: '10px' }}
                                     />
                               </picture>
 
-                              <a className='absolute bottom-[2%] right-[2%] p-4 text-white  normal-case normal opacity-50 no-underline text-[70%]'
-                                    href="https://www.freepik.com/free-photo/climate-change-concept-collage_19332542.htm#fromView=search&page=1&position=14&uuid=7865a8ca-b1c1-449a-806f-737090b5c187">Image by freepik</a>
 
 
                         </div>
