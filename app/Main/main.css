@@ -23,9 +23,7 @@
 
 .HomeFigure {
       width: 100%;
-      padding-left: 1%;
-      padding-right: 1%;
-      padding-top: 2%;
+      padding-top: 14vh;
       padding-bottom: 1%;
       display: flex;
       flex-direction: column;
@@ -38,8 +36,6 @@
       font-family: sans-serif;
       font-weight: 700;
       font-size: 18px;
-      padding-left: 5%;
-      padding-right: 5%;
       animation: fadeIn 2s ease-in-out 4s forwards;
 
 }
@@ -49,7 +45,6 @@
 
 .HomeFigure .left {
       background-color: transparent;
-      padding: 20px;
       width: 100%;
       height: auto;
       display: flex;
@@ -58,7 +53,6 @@
       justify-items: center;
       height: auto;
       color: #fff;
-      margin: 10px;
 }
 
 .HomeFigure .right {
@@ -187,10 +181,8 @@
 
 
 .HomeFigure .box-container {
-      width: 100%;
-      height: auto;
-      padding-top: 2%;
-      padding-bottom: 2%;
+      width: 89.5%;
+      height: 50vh;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -199,7 +191,7 @@
       justify-items: center;
       visibility: hidden;
       border-radius: 15px;
-      padding-left: 50px;
+      overflow: hidden;
       animation: fadeIn 2s ease-in-out 1s forwards;
 
       #leftFigHome {

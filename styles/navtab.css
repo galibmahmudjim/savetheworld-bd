@@ -146,7 +146,66 @@ p {
 }
 
 
-@media screen and (max-width: 1149px) {
+@media screen and (max-width: 1080) {
+      @keyframes widthShrink {
+            0% {
+                  width: 100vw;
+                  font-size: 12px;
+            }
+
+            100% {
+                  width: 80vw;
+                  font-size: 10px;
+
+
+            }
+      }
+
+      @keyframes widthGrow {
+            0% {
+                  width: 80vw;
+                  font-size: 10x;
+            }
+
+            100% {
+                  width: 100vw;
+                  font-size: 8px;
+            }
+      }
+
+      #navbarlist.widthgrow {
+            animation: widthGrow 0.5s ease-in-out 0s forwards;
+      }
+
+      #navbarlist.widthshrink {
+            animation: widthShrink 0.5s ease-in-out 0s forwards;
+      }
+
+      .nav-container {
+            z-index: 1000;
+            top: 20.5vh;
+            width: 100vw;
+            visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            font-size: 7px;
+      }
+
+      .NavigationMenuRoot {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            font-weight: 700;
+            font-size: 8px;
+            z-index: 100;
+      }
+}
+
+@media screen and (max-width: 1149px) and (min-width: 1080px) {
       @keyframes widthShrink {
             0% {
                   width: 100vw;

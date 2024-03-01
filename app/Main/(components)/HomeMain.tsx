@@ -15,9 +15,9 @@ const CarouselComponent = () => {
       const [index, setIndex] = useState(0);
 
       return (
-            <div className="w-full h-full flex flex-col justify-center items-center  ">
+            <div className="w-full h-full  flex flex-col justify-center items-center  ">
 
-                  <Carousel className='w-full h-full flex flex-col justify-start items-center'
+                  <Carousel className='w-full h-full  flex flex-col justify-start items-center'
                         swipe={false}
                         animation="fade"
                         indicators={false}
@@ -27,18 +27,17 @@ const CarouselComponent = () => {
 
 
                   >
-                        <img
+                        <Image
                               alt='1.1'
-                              src='/logofig.png'
-
-                              style={{ borderRadius: '10px' }}
+                              src='/logofig.jpeg'
+                              fill
                         />
                         <div id="leftFigHome" className=" w-full h-full flex flex-col justify-center items-center " >
 
-                              <img
+                              <Image
+                                    fill
                                     alt='Main12'
                                     src='/main12.jpg'
-                                    style={{ borderRadius: '10px' }}
                               />
 
                               <a className='absolute bottom-[2%] right-[2%] p-4 text-white  normal-case normal opacity-50 no-underline text-[70%]'
@@ -96,16 +95,13 @@ const HomeMain = () => {
 
 
                   <div className="HomeFigure ">
-                        <div className=" box-container mt-[5vh] bg-[#fcfffc5f] ">
+                        <div className=" box-container  bg-[#fcfffc5f] ">
 
 
                               <div className='widthGrowHome'>
                                     <div id="leftFigHome" className=" left " >
 
-                                          <div className=" w-full h-full flex flex-col justify-center items-center">
-
-                                                <CarouselComponent />
-                                          </div>
+                                          <CarouselComponent />
 
                                     </div>
                               </div>

@@ -20,38 +20,38 @@ const Main: React.FC = () => {
 
 
       return (
+            <div className="w-full h-screen flex flex-col justify-start items-center">
 
+                  <Carousel className='w-full h-full  flex flex-col justify-start items-center pl-[2%] pr-[1.5%]'
+                        swipe={true}
+                        animation="slide"
+                        indicators={false}
+                        interval={15000}
+                        index={index}
+                        navButtonsProps={{
+                              style: {
+                                    backgroundColor: 'black',
+                                    borderRadius: 100,
+                                    width: '70px',
+                                    height: '70px',
+                                    zIndex: 1000,
+                              }
+                        }}
+                        navButtonsWrapperProps={{
+                              style: {
+                                    bottom: '0',
+                                    top: 'unset',
+                                    marginLeft: '5%',
+                                    marginRight: '5%',
 
-            <Carousel className='w-full min-h-screen flex flex-col justify-start items-center pl-[2%] pr-[1.5%]'
-                  swipe={true}
-                  animation="slide"
-                  indicators={false}
-                  interval={15000}
-                  index={index}
-                  navButtonsProps={{
-                        style: {
-                              backgroundColor: 'black',
-                              borderRadius: 100,
-                              width: '70px',
-                              height: '70px',
-                              zIndex: 1000,
-                        }
-                  }}
-                  navButtonsWrapperProps={{
-                        style: {
-                              bottom: '0',
-                              top: 'unset',
-                              marginLeft: '5%',
-                              marginRight: '5%',
-
-                              position: 'absolute',
-                        }
-                  }}
-            >
-                  <div className="w-full  min-h-screen flex flex-col justify-center items-center ">
-                        <HomeMain />
-                  </div>
-
+                                    position: 'absolute',
+                              }
+                        }}
+                  >
+                        <div className="w-full  h-[80vh] flex flex-col justify-start items-center ">
+                              <HomeMain />
+                        </div>
+                        {/* 
                   <div className="w-full min-h-screen flex flex-col  justify-center items-center " >
                         <Main2 />
                   </div >
@@ -69,9 +69,9 @@ const Main: React.FC = () => {
                   </div >
                   <div className="w-full min-h-screen flex flex-col  justify-center items-center " >
                         <Main7 />
-                  </div >
+                  </div > */}
 
-            </Carousel >
+                  </Carousel ></div>
       );
 };
 
