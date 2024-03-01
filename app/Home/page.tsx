@@ -4,7 +4,7 @@ import Image from "next/image";
 import "./home.css";
 import { IoArrowBack } from "react-icons/io5";
 import Link from "next/link";
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams, usePathname } from 'next/navigation';
 import AboutPlastic from "./aboutPlastic";
 import PlasticComprises from "./PlasticComprises";
 import LifePlastics from "./LifePlastics";
@@ -18,11 +18,10 @@ type Props = {
 
 
 const Home = () => {
-
-      // const [isVisible, setIsVisible] = useState(false);
       const [clickedGraph, setClickedGraph] = useState(0);
       const [leftGrow, setLeftGrow] = useState(2);
       const [fact, setFact] = useState(false);
+      const pathname = usePathname();
 
       const router = useRouter();
       const index = parseInt('0');
@@ -39,29 +38,32 @@ const Home = () => {
       // State to hold your fetched data
       const [data, setData] = useState(null);
       const params = useSearchParams();
+      const [first, setFirst] = useState(true);
       useEffect(() => {
-            if (params) {
-                  // Replace this with your actual data fetching logic
+            if (params.has('index')) {
                   setIndexs(parseInt(params.get('index') || '0'));
+                  alert('index' + indexs);
+                  if (indexs === 1 as number) {
+                        router.push('/Home#Home1idx');
+                  }
+                  else if (indexs === 2 as number) {
+                        router.push('/Home#Home2idx');
+                  }
+                  else if (indexs === 3 as number) {
+                        router.push('/Home#Home3idx');
+                  }
+                  else if (indexs === 4 as number) {
+                        router.push('/Home#Home4idx');
+                  }
+                  else if (indexs === 5 as number) {
+                        router.push('/Home#Home5idx');
+                  }
+                  router.replace('/Home');
 
-                  // if (indexs === 1) {
-                  //       router.push('/Home#Home1idx');
-                  // }
-                  // else if (indexs === 2) {
-                  //       router.push('/Home#Home2idx');
-                  // }
-                  // else if (indexs === 3) {
-                  //       router.push('/Home#Home3idx');
-                  // }
-                  // else if (indexs === 4) {
-                  //       router.push('/Home#Home4idx');
-                  // }
-                  // else if (indexs === 5) {
-                  //       router.push('/Home#Home5idx');
-                  // }
             }
-      }, [indexs]);
 
+      }
+            , [params]);
       // Suspense fallback while loading
       const loading = <div>Loading...</div>;
 
@@ -125,7 +127,6 @@ const Home = () => {
                                                 <div id="Home3idx" className="flex flex-col w-full h-full ml-1">
                                                       <div className="   flex flex-row justify-start items-center align-middle gap-3 h4Sub text-[#4a218b] cursor-pointer"
                                                             onClick={() => {
-
                                                                   if (indexs === 3) {
                                                                         setIndexs(0);
                                                                   }

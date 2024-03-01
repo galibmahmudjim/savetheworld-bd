@@ -91,11 +91,11 @@ function NavTab() {
                                     <li className="nav-item dropdown">
                                           <a className={`nav-link ${activeKey === '3' ? 'active shadow-blue-400' : 'active'} dropdown-toggle `} data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Home</a>
                                           <ul className="dropdown-menu bg-[#d7ebff94]" >
-                                                <li><a className="dropdown-item" href="/Home?index=1">About Plastics</a></li>
-                                                <li><a className="dropdown-item" href="/Home?index=2">Plastic comprises</a></li>
-                                                <li><a className="dropdown-item" href="/Home?index=3">Life of plastics</a></li>
-                                                <li><a className="dropdown-item" href="/Home?index=4">Global Top Plastic Producers</a></li>
-                                                <li><a className="dropdown-item" href="/Home?index=5">COVID-19 & Plastic</a></li>
+                                                <li><Link className="dropdown-item" href="/Home?index=1" shallow>About Plastics</Link></li>
+                                                <li><Link className="dropdown-item" href="/Home?index=2" shallow={true}>Plastic comprises</Link></li>
+                                                <li><Link className="dropdown-item" href="/Home?index=3" shallow={true}>Life of plastics</Link></li>
+                                                <li><Link className="dropdown-item" href="/Home?index=4" shallow={true}>Global Top Plastic Producers</Link></li>
+                                                <li><Link className="dropdown-item" href="/Home?index=5" shallow={true}>COVID-19 & Plastic</Link></li>
                                           </ul>
                                     </li>
                                     {/* <li className="nav-item">

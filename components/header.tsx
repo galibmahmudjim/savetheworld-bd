@@ -44,10 +44,11 @@ const Headers = (): JSX.Element => {
                   <div className="header-1">
                         <div className="left">
 
-                              <img onClick={() => router.push("/")}
-                                    className="logo hover:w-96" src="/logo.svg" alt="logo">
-
-                              </img>
+                              <a href="/">
+                                    <img
+                                          className="logo hover:w-96" src="/logo.svg" alt="logo">
+                                    </img>
+                              </a>
 
                         </div>
                         <div id='center-header' className="center" onClick={() => { }}>

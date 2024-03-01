@@ -45,36 +45,18 @@
 }
 
 
-.HomeFigure .box-container {
-
-      width: 100%;
-      min-height: 65vh;
-      padding-top: 2%;
-      padding-bottom: 2%;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: flex-start;
-      flex: 1;
-      justify-items: center;
-      visibility: hidden;
-      border-radius: 15px;
-      padding-left: 50px;
-      animation: fadeIn 2s ease-in-out 1s forwards;
-}
-
 
 
 .HomeFigure .left {
       background-color: transparent;
       padding: 20px;
       width: 100%;
-      height: 100%;
+      height: auto;
       display: flex;
       flex-direction: column;
       justify-content: center;
       justify-items: center;
-      height: 65vh;
+      height: auto;
       color: #fff;
       margin: 10px;
 }
@@ -152,6 +134,11 @@
 }
 
 .widthGrowHome {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 0;
       animation: widthGrowHome .5s ease-in-out 0s forwards;
 }
 
@@ -200,6 +187,20 @@
 
 
 .HomeFigure .box-container {
+      width: 100%;
+      height: auto;
+      padding-top: 2%;
+      padding-bottom: 2%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-center;
+      flex: 1;
+      justify-items: center;
+      visibility: hidden;
+      border-radius: 15px;
+      padding-left: 50px;
+      animation: fadeIn 2s ease-in-out 1s forwards;
 
       #leftFigHome {
 
@@ -225,6 +226,7 @@
 
 
       .left {
+            flex: 1;
             animation: flexShrink 3s ease-in-out 5s forwards;
       }
 
@@ -346,5 +348,60 @@
 .moreMain {
 
       font-family: "Google Sans", Roboto, "Helvetica Neue", sans-serif;
-      font-weight: 400;
+      color: rgb(60, 10, 107);
+      font-weight: 700;
+}
+
+@keyframes textUptoDownAppearY {
+      0% {
+            opacity: 0;
+            transform: translateY(-100%)
+      }
+
+      100% {
+            opacity: 1;
+            transform: translateY(0);
+      }
+
+}
+
+@keyframes textDowntoUpAppearY {
+      0% {
+            opacity: 0;
+            transform: translateY(100%)
+      }
+
+      100% {
+            opacity: 1;
+            transform: translateY(0);
+      }
+
+}
+
+.rightHomeMain {
+
+      font-size: 25px;
+      font-weight: 700;
+      color: rgba(0, 0, 0, 0.644);
+      text-shadow: rgba(53, 44, 44, 0.43) 1px 1px 0px;
+      text-align: left;
+      font-family: "Google Sans", Roboto, "Helvetica Neue", sans-serif;
+      opacity: 0;
+      animation: textUptoDownAppearY 1s ease-in-out 2s forwards;
+}
+
+.rightHomeMainDown {
+
+      font-size: 25px;
+      font-weight: 700;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end;
+      color: rgba(0, 0, 0, 0.644);
+      text-shadow: rgba(53, 44, 44, 0.43) 1px 1px 0px;
+      text-align: left;
+      font-family: "Google Sans", Roboto, "Helvetica Neue", sans-serif;
+      opacity: 0;
+      animation: textDowntoUpAppearY 1s ease-in-out 2s forwards;
 }

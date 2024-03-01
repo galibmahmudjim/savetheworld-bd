@@ -51,7 +51,7 @@ const CarouselComponent = () => {
             </div >
       )
 }
-const HomeMain = () => {
+const Main2 = () => {
 
       // const [isVisible, setIsVisible] = useState(false);
       const [clickedGraph, setClickedGraph] = useState(0);
@@ -113,13 +113,11 @@ const HomeMain = () => {
                               <div className='w-full h-full mb-8 mt-[3%]'>
                                     <div id="rightFigHome " className=" right gap-10  ">
                                           <div className="rightHomeMain">
-                                                A portal is dedicated to creating awareness among
-                                                people from all walks of life about the detrimental
-                                                effects of plastic pollution on the environment and
+                                                Around 343 MT of plastic waste is produced every
+                                                year
                                           </div>
                                           <div className="rightHomeMainDown">
-                                                <> Promoting sustainable solutions to reduce plastic
-                                                      waste.</>
+                                                <> More than 20 billion plastic bottles are tossed on</>
                                                 <h2 className='mt-[30px] text-[700] text-[22px] cursor-pointer moreMain  ml-2 hover:underline'
                                                       onClick={() => {
                                                             router.push('/Home');
@@ -139,4 +137,4 @@ const HomeMain = () => {
       );
 }
 
-export default HomeMain;
+export default Main2;

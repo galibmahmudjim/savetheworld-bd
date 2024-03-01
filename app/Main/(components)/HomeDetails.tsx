@@ -5,10 +5,40 @@ import "../main.css";
 import { IoArrowBack } from "react-icons/io5";
 import Link from "next/link";
 import { useRouter, usePathname } from 'next/navigation';
+import Carousel from "react-material-ui-carousel";
 
-type Props = {
-      onCallback: (value: string) => void;
-};
+
+
+
+const CarouselComponent = () => {
+      const [index, setIndex] = useState(0);
+
+      return (
+            <div className="w-full h-full flex flex-col  ">
+
+                  <Carousel className='w-full h-full '
+                        swipe={false}
+                        animation="fade"
+                        indicators={false}
+                        interval={5000}
+                        index={index}
+
+
+                  >
+                        <img
+                              width={500}
+                              height={500}
+                              alt='Mountains'
+                              src='/aboutplasticfig.jpeg'
+                              style={{ borderRadius: '10px' }}
+                        />
+
+
+
+                  </Carousel >
+            </div >
+      )
+}
 const HomeDetails = () => {
 
       // const [isVisible, setIsVisible] = useState(false);
@@ -59,31 +89,32 @@ const HomeDetails = () => {
 
 
                               <div className='widthGrowHome'>
-                                    <div id="leftFigHome" className=" left overflow-hidden" >
+                                    <div id="leftFigHome" className=" left " >
 
-                                          <div style={{ width: '100%', height: '100%', position: 'relative' }}>
-                                                <Image
-                                                      alt='Mountains'
-                                                      src='/aboutplasticfig.jpeg'
-                                                      fill
-                                                      style={{ borderRadius: '10px' }}
-                                                />
+                                          <div className=" w-full h-full flex flex-col justify-center items-center">
+
+                                                <CarouselComponent />
                                           </div>
-                                          <a className='absolute bottom-[8.6%] right-[49%] p-4 text-white  normal-case normal opacity-50 no-underline text-[70%]'
-                                                href="https://www.freepik.com/">
-                                                Designed by Freepik
-                                          </a>
+
                                     </div>
                               </div>
                               <div className='w-full h-full mb-8 mt-[3%]'>
-                                    <div id="rightFigHome " className=" right  ">
-                                          <div className='Description'>
-                                                <h1 className="text-[40px] font-bold mb-3 mainTitle">Bangladesh | Save The World </h1>
-                                                <span className='mt-[30px] text-[22px] cursor-pointer moreMain text-blue-700 ml-2 hover:underline'
+
+                                    <h1 className="mainTitle">
+                                          Bangladesh | Save The World
+                                    </h1>
+                                    <div id="rightFigHome " className=" right gap-10  ">
+
+                                          <div className="rightHomeMainDown">
+
+                                                <h2 className='mt-[30px] text-[700] text-[22px] cursor-pointer moreMain  ml-2 hover:underline'
                                                       onClick={() => {
                                                             router.push('/Home');
                                                       }}
-                                                >   More</span>
+                                                >   More</h2>
+                                          </div>
+                                          <div className=" flex flex-row h-full justify-end justify-items-start align-top items-start mt-[-100px">
+
                                           </div>
                                     </div>
                               </div>

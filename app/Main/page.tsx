@@ -6,18 +6,18 @@ import { Paper, Button } from '@mui/material'
 import { GrFormNextLink } from "react-icons/gr";
 import HomeDetails from './(components)/HomeDetails'
 import HomeMain from './(components)/HomeMain';
+import Main2 from './(components)/Main2';
 
 
 const Main: React.FC = () => {
 
       const [index, setIndex] = useState(0);
 
-      const handleChange = () => {
-            setIndex((prevIndex) => (prevIndex + 1) % 2);
-      }
 
       return (
-            <Carousel className=''
+
+
+            <Carousel className='w-full min-h-screen flex flex-col justify-start items-center'
                   swipe={true}
                   animation="slide"
                   indicators={false}
@@ -43,13 +43,15 @@ const Main: React.FC = () => {
                         }
                   }}
             >
-                  <div className="w-full flex flex-col justify-center items-center ">
+                  <div className="w-full  min-h-[75vh] flex flex-col justify-center items-center ">
                         <HomeMain />
                   </div>
-                  <div className="w-full flex flex-col justify-center items-center ">
+                  <div className="w-full min-h-[75vh] flex flex-col  justify-center items-center " >
                         <HomeDetails />
-                  </div>
-
+                  </div >
+                  <div className="w-full min-h-[75vh] flex flex-col  justify-center items-center " >
+                        <Main2 />
+                  </div >
             </Carousel >
       );
 };
