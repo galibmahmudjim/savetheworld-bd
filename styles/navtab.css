@@ -265,16 +265,16 @@ p {
       }
 }
 
-@media screen and (max-width: 1500px) and (min-width: 1300px) {
+@media screen and (max-width: 1445px) and (min-width: 1300px) {
       @keyframes widthShrink {
             0% {
                   width: 100vw;
-                  font-size: 15px;
+                  font-size: 21px;
             }
 
             100% {
                   width: 80vw;
-                  font-size: 13px;
+                  font-size: 15px;
 
 
             }
@@ -283,12 +283,12 @@ p {
       @keyframes widthGrow {
             0% {
                   width: 80vw;
-                  font-size: 13px;
+                  font-size: 15px;
             }
 
             100% {
                   width: 100vw;
-                  font-size: 15px;
+                  font-size: 21px;
             }
       }
 
@@ -309,7 +309,7 @@ p {
             justify-content: center;
             align-items: center;
             position: fixed;
-            font-size: 15px;
+            font-size: 21px;
       }
 
       .NavigationMenuRoot {
@@ -319,16 +319,16 @@ p {
             font-family: 'Inter', sans-serif;
             position: relative;
             font-weight: 700;
-            font-size: 15px;
+            font-size: 21px;
             z-index: 100;
       }
 }
 
-@media screen and (min-width: 1500px) and (max-width: 1800px) {
+@media screen and (min-width: 1445px) and (max-width: 1800px) {
       @keyframes widthShrink {
             0% {
                   width: 100vw;
-                  font-size: 20px;
+                  font-size: 18px;
             }
 
             100% {
@@ -347,7 +347,7 @@ p {
 
             100% {
                   width: 100vw;
-                  font-size: 20px;
+                  font-size: 18px;
             }
       }
 
@@ -368,7 +368,7 @@ p {
             justify-content: center;
             align-items: center;
             position: fixed;
-            font-size: 20px;
+            font-size: 18px;
       }
 
       .NavigationMenuRoot {
@@ -378,7 +378,7 @@ p {
             font-family: 'Inter', sans-serif;
             position: relative;
             font-weight: 700;
-            font-size: 20px;
+            font-size: 18px;
             z-index: 100;
       }
 }
@@ -454,24 +454,6 @@ p {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .ListItemLinkActive {
       color: black;
       background-color: black;
@@ -516,4 +498,12 @@ p {
 
 .selectedActive {
       box-shadow: #4f1baa 8px 5px 10px 0px;
+}
+
+.nav_drop {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      z-index: 100;
+      color: white;
 }

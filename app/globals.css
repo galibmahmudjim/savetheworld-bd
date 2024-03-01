@@ -52,7 +52,7 @@ body {
 }
 
 .homepage-layout {
-  @apply bg-gradient-to-b from-[#e0e9f1e0] to-[#0d0f989f] via-[#b3d1ec];
+  @apply bg-gradient-to-b from-[#e0e9f1e0] to-[#0f1398] via-[#b3d1ec];
   width: 100%;
   min-height: 150vh;
   display: flex;

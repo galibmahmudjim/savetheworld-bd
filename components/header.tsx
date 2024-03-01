@@ -5,6 +5,9 @@ import "../app/globals.css";
 import { useEffect } from 'react';
 import Image from 'next/image';
 
+function handleClick() {
+      alert('Image clicked!');
+}
 const Headers = (): JSX.Element => {
       const router = useRouter();
       useEffect(() => {
@@ -42,7 +45,10 @@ const Headers = (): JSX.Element => {
                         <div className="left">
 
                               <a href="/">
-                                    <img
+                                    <img onClick={() => router.push("/")}
+                                          style={{
+                                                aspectRatio: '12/10'
+                                          }}
                                           className="logo hover:w-96" src="/logo.svg" alt="logo">
                                     </img>
                               </a>
@@ -52,7 +58,7 @@ const Headers = (): JSX.Element => {
                               <h1 className="title-h1">A Plastic Pollution Awareness Portal</h1>
                         </div>
                         <div id='right-header' className="right" >
-                              <div className="w-full h-[60%] gap-2 flex flex-row justify-around items-start items-end ">
+                              <div className="w-full h-[60%] gap-2 flex flex-row justify-around items-end ">
                                     <a href="https://www.du.ac.bd" target="_blank" className='w-full flex-1 flex flex-row justify-end '>
                                           <img className="du" src="/du.png" alt="university-logo" />
                                     </a>
