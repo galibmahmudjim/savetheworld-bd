@@ -36,8 +36,8 @@ const CarouselComponent = () => {
                         <div id="leftFigHome" className=" w-full h-full flex flex-col justify-center items-center " >
                               <picture className="block relative ">
                                     <img
-                                          alt='Mountains'
-                                          src='/climate-change-concept-collage.jpg'
+                                          alt='Main12'
+                                          src='/main12.jpg'
                                           style={{ borderRadius: '10px' }}
                                     />
                               </picture>

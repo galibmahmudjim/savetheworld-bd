@@ -21,27 +21,24 @@ const CarouselComponent = () => {
                         swipe={false}
                         animation="fade"
                         indicators={false}
-                        interval={7000}
+                        interval={5000}
                         index={index}
                         navButtonsAlwaysInvisible={true}
 
 
                   >
-                        <img
-                              alt='Main21'
-                              src='/Main21.png'
-                              style={{ borderRadius: '10px' }}
-                        />
+
                         <div id="leftFigHome" className=" w-full h-full flex flex-col justify-center items-center " >
                               <picture className="block relative ">
                                     <img
-
-                                          alt='Plastic Waste'
-                                          src='/main22.png'
+                                          alt='main41'
+                                          src='/Main41.jpeg'
                                           style={{ borderRadius: '10px' }}
                                     />
                               </picture>
 
+                              <a className='absolute bottom-[2%] right-[2%] p-4 text-white  normal-case normal opacity-50 no-underline text-[70%]'
+                                    href="https://www.freepik.com/free-photo/climate-change-concept-collage_19332542.htm#fromView=search&page=1&position=14&uuid=7865a8ca-b1c1-449a-806f-737090b5c187">Image by freepik</a>
 
 
                         </div>
@@ -49,7 +46,7 @@ const CarouselComponent = () => {
             </div >
       )
 }
-const Main2 = () => {
+const Main4 = () => {
 
       // const [isVisible, setIsVisible] = useState(false);
       const [clickedGraph, setClickedGraph] = useState(0);
@@ -87,7 +84,6 @@ const Main2 = () => {
       }
             , [leftGrow]);
 
-      const Description = "Save The World, Bangladesh is a plastic pollution awareness portal is developed as part of a research collaborative initiative between the University of Dhaka and East West University, Bangladesh. This portal is dedicated to creating awareness among people from all walks of life and industries about the detrimental effects of plastic pollution on the environment and promoting sustainable solutions to reduce plastic waste. Plastic pollution poses a serious threat to the environment, wildlife, and human health, and contributes to global warming and climate change. Now, it is high time to take action to protect our mother Earth from further plastic pollution. "
 
 
       return (
@@ -111,11 +107,15 @@ const Main2 = () => {
                               <div className='w-full h-full mb-8 mt-[3%]'>
                                     <div id="rightFigHome " className=" right gap-10  ">
                                           <div className="rightHomeMain">
-                                                Around 343 MT of plastic waste is produced every
-                                                year
+                                                Plastic is not biodegradable
                                           </div>
-                                          <div className="rightHomeMainDown">
-                                                <> More than 20 billion plastic bottles are tossed on</>
+                                          <div className="rightHomeMainDown justify-start ">
+                                                <ul className="w-full flex flex-col justify-end items-start list-disc">
+                                                      <li>Life of plastics</li>
+                                                      <li>Plastic bags last for: 20 Years</li>
+                                                      <li>Plastic bottles: 450 Years</li>
+                                                      <li>Fishing line: 600 years</li>
+                                                </ul>
                                                 <h2 className='mt-[30px] text-[700] text-[22px] cursor-pointer moreMain  ml-2 hover:underline'
                                                       onClick={() => {
                                                             router.push('/Home');
@@ -135,4 +135,4 @@ const Main2 = () => {
       );
 }
 
-export default Main2;
+export default Main4;
