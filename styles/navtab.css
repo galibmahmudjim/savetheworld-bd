@@ -38,7 +38,7 @@ p {
 
 .nav-container {
       z-index: 1000;
-      top: 20.5vh;
+      top: 22vh;
       width: 100vw;
       visibility: hidden;
       display: flex;
@@ -52,7 +52,7 @@ p {
 }
 
 #navcontainer.animationnav {
-      top: 20.5vh;
+      top: 22vh;
       animation: fadeIn 1s ease-in-out 0s forwards;
 }
 
@@ -64,7 +64,7 @@ p {
 
 @keyframes moveInNav {
       0% {
-            top: 20.5vh;
+            top: 22vh;
             width: 100vw;
             left: 0;
       }
@@ -88,7 +88,7 @@ p {
       }
 
       100% {
-            top: 20.5vh;
+            top: 22vh;
             width: 100vw;
             left: 0;
       }
@@ -183,7 +183,7 @@ p {
 
       .nav-container {
             z-index: 1000;
-            top: 20.5vh;
+            top: 22vh;
             width: 100vw;
             visibility: hidden;
             display: flex;
@@ -242,7 +242,7 @@ p {
 
       .nav-container {
             z-index: 1000;
-            top: 20.5vh;
+            top: 22vh;
             width: 100vw;
             visibility: hidden;
             display: flex;
@@ -302,7 +302,7 @@ p {
 
       .nav-container {
             z-index: 1000;
-            top: 20.5vh;
+            top: 22vh;
             width: 100vw;
             visibility: hidden;
             display: flex;
@@ -361,7 +361,7 @@ p {
 
       .nav-container {
             z-index: 1000;
-            top: 20.5vh;
+            top: 22vh;
             width: 100vw;
             visibility: hidden;
             display: flex;
@@ -420,7 +420,7 @@ p {
 
       .nav-container {
             z-index: 1000;
-            top: 20.5vh;
+            top: 22vh;
             width: 100vw;
             visibility: hidden;
             display: flex;
@@ -479,7 +479,7 @@ p {
 
       .nav-container {
             z-index: 1000;
-            top: 20.5vh;
+            top: 22vh;
             width: 100vw;
             visibility: hidden;
             display: flex;

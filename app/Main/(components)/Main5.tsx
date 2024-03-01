@@ -8,52 +8,38 @@ import { useRouter, usePathname } from 'next/navigation';
 import HomeDetails from "./HomeDetails";
 import Carousel from "react-material-ui-carousel";
 
-import { LineChart, AreaChart, Area, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Rectangle, Label, BarChart, Bar } from 'recharts';
 
-const data = [
-      { country: "China", production: 30 },
-      { country: "USA", production: 19 },
-      { country: "India", production: 5 },
-      { country: "Germany", production: 4 },
-      { country: "Japan", production: 4 },
-      { country: "Others", production: 38 }
-];
 
 
 const CarouselComponent = () => {
       const [index, setIndex] = useState(0);
 
       return (
-            <div className="w-full h-full flex flex-col justify-center items-center   ">
+            <div className="w-full h-full  flex flex-col justify-center items-center  ">
 
-                  <div className='w-full h-full flex flex-col justify-start items-center'
+                  <Carousel className='w-full h-full  flex flex-col justify-start items-center'
+                        swipe={false}
+                        animation="fade"
+                        indicators={false}
+                        interval={7000}
+                        index={index}
+                        navButtonsAlwaysInvisible={true}
+
+
                   >
-                        <div className="w-full h-full flex flex-col justify-start items-center">
-                              <div className="text-[#181360]">
-                                    Global Plastic Production
-                              </div>
-                              <ResponsiveContainer width="100%" height="80%"
-                              >
-                                    <BarChart
-                                          data={data}
-                                          margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
-                                    >
-                                          <XAxis dataKey="country" stroke="#181360" strokeWidth={1} />
-                                          <YAxis dataKey="production" stroke="#181360"  >
-                                                <Label
-                                                      value="Production (%)"
-                                                      angle={270}
-                                                      position="insideLeft"
-                                                      style={{ textAnchor: 'middle', fill: '#181360' }}
-                                                />
-                                          </YAxis>
-                                          <Legend />
-                                          <Bar dataKey="production" fill="#181360" label={false} />
-                                    </BarChart>
-                              </ResponsiveContainer>
+                        <div id="leftFigHome" className=" w-full absolute h-full flex top-0 flex-col justify-center items-center " >
+
+                              <Image
+                                    fill
+                                    alt='Main51'
+                                    src='/main51.png'
+                              />
+
+
+
                         </div>
 
-                  </div >
+                  </Carousel >
             </div >
       )
 }
@@ -96,27 +82,23 @@ const Main5 = () => {
             , [leftGrow]);
 
 
-
       return (
             <>
 
 
                   <div className="HomeFigure ">
-                        <div className=" box-container mt-[5vh] bg-[#fcfffc5f] ">
+                        <div className=" box-container  bg-[#fcfffc5f] ">
 
 
-                              <div className='widthGrowHome'>
+                              <div className='widthGrowHome w-full'>
                                     <div id="leftFigHome" className=" left " >
 
-                                          <div className=" w-full h-full flex flex-col justify-center items-center">
-
-                                                <CarouselComponent />
-                                          </div>
+                                          <CarouselComponent />
 
                                     </div>
                               </div>
                               <div className='w-full h-full mb-8 mt-[3%]'>
-                                    <div id="rightFigHome " className=" right gap-10  ">
+                                    <div id="rightFigHome " className=" right w-full gap-5 flex flex-col justify-start items-start ">
                                           <div className="rightHomeMain">
                                                 Global Top Plastic Producers:
                                           </div>
@@ -130,11 +112,9 @@ const Main5 = () => {
                                                       onClick={() => {
                                                             router.push('/Home');
                                                       }}
-                                                >   More</h2>
+                                                >   (more)...</h2>
                                           </div>
-                                          <div className=" flex flex-row h-full justify-end justify-items-start align-top items-start mt-[-100px">
 
-                                          </div>
                                     </div>
                               </div>
 

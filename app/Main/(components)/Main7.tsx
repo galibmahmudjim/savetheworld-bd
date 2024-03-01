@@ -7,42 +7,46 @@ import Link from "next/link";
 import { useRouter, usePathname } from 'next/navigation';
 import HomeDetails from "./HomeDetails";
 import Carousel from "react-material-ui-carousel";
-import { ChartControl, ChartType } from '@pnp/spfx-controls-react/lib/ChartControl';
 
-import { LineChart, AreaChart, Area, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Rectangle, Label, BarChart, Bar, PieChart, Pie, Cell, Text } from 'recharts';
-const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884d8', '#82ca9d'];
+
 
 
 const CarouselComponent = () => {
       const [index, setIndex] = useState(0);
 
       return (
-            <div className="w-full h-full flex flex-col justify-center items-center  ">
+            <div className="w-full h-full  flex flex-col justify-center items-center  ">
 
-                  <Carousel className='w-full h-full flex flex-col justify-start items-center'
+                  <Carousel className='w-full h-full  flex flex-col justify-start items-center'
                         swipe={false}
                         animation="fade"
                         indicators={false}
-                        interval={5000}
+                        interval={7000}
                         index={index}
                         navButtonsAlwaysInvisible={true}
 
 
                   >
-                        <img
-                              alt='Mountains'
-                              src='/main71.jpeg'
+                        <div id="leftFigHome" className=" w-full absolute h-full flex top-0 flex-col justify-center items-center " >
 
-                              style={{ borderRadius: '10px' }}
-                        />
-                        <img
-                              alt='Mountains'
-                              src='/main7.2.png'
-
-                              style={{ borderRadius: '10px' }}
-                        />
+                              <Image
+                                    fill
+                                    alt='Main71'
+                                    src='/main71.jpeg'
+                              />
 
 
+                        </div>
+                        <div id="leftFigHome" className=" w-full absolute h-full flex top-0 flex-col justify-center items-center " >
+
+                              <Image
+                                    fill
+                                    alt='Main72'
+                                    src='/main72.png'
+                              />
+
+
+                        </div>
 
                   </Carousel >
             </div >
@@ -87,32 +91,28 @@ const Main7 = () => {
             , [leftGrow]);
 
 
-
       return (
             <>
 
 
                   <div className="HomeFigure ">
-                        <div className=" box-container mt-[5vh] bg-[#fcfffc5f] ">
+                        <div className=" box-container  bg-[#fcfffc5f] ">
 
 
-                              <div className='widthGrowHome'>
+                              <div className='widthGrowHome w-full'>
                                     <div id="leftFigHome" className=" left " >
 
-                                          <div className=" w-full h-full flex flex-col justify-center items-center">
-
-                                                <CarouselComponent />
-                                          </div>
+                                          <CarouselComponent />
 
                                     </div>
                               </div>
                               <div className='w-full h-full mb-8 mt-[3%]'>
-                                    <div id="rightFigHome " className=" right gap-10  ">
+                                    <div id="rightFigHome " className=" right w-full gap-3 flex flex-col justify-start items-start ">
                                           <div className="rightHomeMain">
                                                 River Pollution Soars from Plastics
                                           </div>
                                           <div className="rightHomeMainDown justify-start ">
-                                                <ul className="w-full text-xl flex flex-col justify-end items-start list-disc">
+                                                <ul className="w-full text-xl flex flex-col justify-end items-start ">
                                                       <li>By 2050, there will be more plastic in the ocean than
                                                             fish</li>
                                                       <li>51 trillion floating microplastics in the sea, are
@@ -124,11 +124,9 @@ const Main7 = () => {
                                                       onClick={() => {
                                                             router.push('/Home');
                                                       }}
-                                                >   More</h2>
+                                                >   (more)...</h2>
                                           </div>
-                                          <div className=" flex flex-row h-full justify-end justify-items-start align-top items-start mt-[-100px">
 
-                                          </div>
                                     </div>
                               </div>
 

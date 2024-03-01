@@ -12,12 +12,16 @@ import Main4 from './(components)/Main4';
 import Main5 from './(components)/Main5';
 import Main6 from './(components)/Main6';
 import Main7 from './(components)/Main7';
+import Main8 from './(components)/Main8';
+import Main9 from './(components)/Main9';
+import Main10 from './(components)/Main10';
+import Main11 from './(components)/Main10';
+import Main12 from './(components)/Main12';
 
 
 const Main: React.FC = () => {
 
       const [index, setIndex] = useState(0);
-
 
       return (
             <div className="w-full h-screen flex flex-col justify-start items-center">
@@ -27,7 +31,7 @@ const Main: React.FC = () => {
                         animation="slide"
                         indicators={false}
                         interval={15000}
-                        index={index}
+                        index={0}
                         navButtonsProps={{
                               style: {
                                     backgroundColor: 'black',
@@ -51,25 +55,43 @@ const Main: React.FC = () => {
                         <div className="w-full  h-[80vh] flex flex-col justify-start items-center ">
                               <HomeMain />
                         </div>
-                        {/* 
-                  <div className="w-full min-h-screen flex flex-col  justify-center items-center " >
-                        <Main2 />
-                  </div >
-                  <div className="w-full min-h-screen flex flex-col  justify-center items-center " >
-                        <Main3 />
-                  </div >
-                  <div className="w-full min-h-screen flex flex-col  justify-center items-center " >
-                        <Main4 />
-                  </div >
-                  <div className="w-full min-h-screen flex flex-col  justify-center items-center " >
-                        <Main5 />
-                  </div >
-                  <div className="w-full min-h-screen flex flex-col  justify-center items-center " >
-                        <Main6 />
-                  </div >
-                  <div className="w-full min-h-screen flex flex-col  justify-center items-center " >
-                        <Main7 />
-                  </div > */}
+
+                        <div className="w-full h-[80vh] flex flex-col  justify-center items-center " >
+                              <Main2 />
+                        </div >
+                        <div className="w-full  h-[80vh]  flex flex-col  justify-center items-center " >
+                              <Main3 />
+                        </div >
+                        <div className="w-full h-[80vh] flex flex-col  justify-center items-center " >
+                              <Main4 />
+                        </div >
+                        <div className="w-full h-[80vh] flex flex-col  justify-center items-center " >
+                              <Main5 />
+                        </div >
+                        <div className="w-full h-[80vh] flex flex-col  justify-center items-center " >
+                              <Main6 />
+                        </div >
+                        <div className="w-full h-[80vh] flex flex-col  justify-center items-center " >
+                              <Main7 />
+                        </div >
+                        <div className="w-full h-[80vh] flex flex-col  justify-center items-center " >
+                              <Main8 />
+                        </div >
+                        <div className="w-full h-[80vh] flex flex-col  justify-center items-center " >
+                              <Main9 />
+                        </div >
+                        <div className="w-full h-[80vh] flex flex-col  justify-center items-center " >
+                              <Main10 />
+                        </div >
+                        <div className="w-full h-[80vh] flex flex-col  justify-center items-center " >
+                              <Main11 />
+                        </div >
+                        <div className="w-full h-[80vh] flex flex-col  justify-center items-center " >
+                              <Main12 />
+                        </div >
+
+
+
 
                   </Carousel ></div>
       );

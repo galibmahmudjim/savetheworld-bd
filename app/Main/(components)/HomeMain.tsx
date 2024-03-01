@@ -27,12 +27,19 @@ const CarouselComponent = () => {
 
 
                   >
-                        <Image
-                              alt='1.1'
-                              src='/logofig.jpeg'
-                              fill
-                        />
-                        <div id="leftFigHome" className=" w-full h-full flex flex-col justify-center items-center " >
+                        <div id="leftFigHome" className=" mt-[4%] w-full absolute h-full flex flex-col  justify-start items-center " >
+
+                              <img
+                                    width={"60%"}
+                                    alt='Main12'
+                                    src='/logofig1.png'
+                                    style={{ aspectRatio: '1/1', borderRadius: '10px', boxShadow: '1px 0px 0px 0px #AA8E8E' }}
+                              />
+
+
+
+                        </div>
+                        <div id="leftFigHome" className=" w-full absolute h-full flex  flex-col justify-center items-center " >
 
                               <Image
                                     fill
@@ -98,7 +105,7 @@ const HomeMain = () => {
                         <div className=" box-container  bg-[#fcfffc5f] ">
 
 
-                              <div className='widthGrowHome'>
+                              <div className='widthGrowHome w-full'>
                                     <div id="leftFigHome" className=" left " >
 
                                           <CarouselComponent />
@@ -111,15 +118,16 @@ const HomeMain = () => {
                                                 A portal is dedicated to creating awareness among
                                                 people from all walks of life about the detrimental
                                                 effects of plastic pollution on the environment and
+                                                promoting sustainable solutions to reduce plastic
+                                                waste
                                           </div>
                                           <div className="rightHomeMainDown">
-                                                <> Promoting sustainable solutions to reduce plastic
-                                                      waste.</>
+
                                                 <h2 className='mt-[30px] text-[700] text-[22px] cursor-pointer moreMain  ml-2 hover:underline'
                                                       onClick={() => {
                                                             router.push('/Home');
                                                       }}
-                                                >   More</h2>
+                                                >   (more)...</h2>
                                           </div>
                                           <div className=" flex flex-row h-full justify-end justify-items-start align-top items-start mt-[-100px">
 

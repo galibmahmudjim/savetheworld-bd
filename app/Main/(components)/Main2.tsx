@@ -15,9 +15,9 @@ const CarouselComponent = () => {
       const [index, setIndex] = useState(0);
 
       return (
-            <div className="w-full h-full flex flex-col justify-center items-center  ">
+            <div className="w-full h-full  flex flex-col justify-center items-center  ">
 
-                  <Carousel className='w-full h-full flex flex-col justify-start items-center'
+                  <Carousel className='w-full h-full  flex flex-col justify-start items-center'
                         swipe={false}
                         animation="fade"
                         indicators={false}
@@ -27,20 +27,24 @@ const CarouselComponent = () => {
 
 
                   >
-                        <img
-                              alt='Main21'
-                              src='/Main21.png'
-                              style={{ borderRadius: '10px' }}
-                        />
-                        <div id="leftFigHome" className=" w-full h-full flex flex-col justify-center items-center " >
-                              <picture className="block relative ">
-                                    <img
+                        <div id="leftFigHome" className=" w-full absolute h-full flex top-0 flex-col justify-center items-center " >
 
-                                          alt='Plastic Waste'
-                                          src='/main22.png'
-                                          style={{ borderRadius: '10px' }}
-                                    />
-                              </picture>
+                              <Image
+                                    fill
+                                    alt='Main12'
+                                    src='/main21.png'
+                              />
+
+
+
+                        </div>
+                        <div id="leftFigHome" className=" w-full absolute h-full flex top-0 flex-col justify-center items-center " >
+
+                              <Image
+                                    fill
+                                    alt='Main22'
+                                    src='/main22.png'
+                              />
 
 
 
@@ -95,21 +99,18 @@ const Main2 = () => {
 
 
                   <div className="HomeFigure ">
-                        <div className=" box-container mt-[5vh] bg-[#fcfffc5f] ">
+                        <div className=" box-container  bg-[#fcfffc5f] ">
 
 
-                              <div className='widthGrowHome'>
+                              <div className='widthGrowHome w-full'>
                                     <div id="leftFigHome" className=" left " >
 
-                                          <div className=" w-full h-full flex flex-col justify-center items-center">
-
-                                                <CarouselComponent />
-                                          </div>
+                                          <CarouselComponent />
 
                                     </div>
                               </div>
                               <div className='w-full h-full mb-8 mt-[3%]'>
-                                    <div id="rightFigHome " className=" right gap-10  ">
+                                    <div id="rightFigHome " className=" right w-full gap-5 flex flex-col justify-start items-start ">
                                           <div className="rightHomeMain">
                                                 Around 343 MT of plastic waste is produced every
                                                 year
@@ -120,7 +121,7 @@ const Main2 = () => {
                                                       onClick={() => {
                                                             router.push('/Home');
                                                       }}
-                                                >   More</h2>
+                                                >   (more)...</h2>
                                           </div>
                                           <div className=" flex flex-row h-full justify-end justify-items-start align-top items-start mt-[-100px">
 

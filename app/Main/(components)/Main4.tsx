@@ -15,30 +15,39 @@ const CarouselComponent = () => {
       const [index, setIndex] = useState(0);
 
       return (
-            <div className="w-full h-full flex flex-col justify-center items-center  ">
+            <div className="w-full h-full  flex flex-col justify-center items-center  ">
 
-                  <Carousel className='w-full h-full flex flex-col justify-start items-center'
+                  <Carousel className='w-full h-full  flex flex-col justify-start items-center'
                         swipe={false}
                         animation="fade"
                         indicators={false}
-                        interval={5000}
+                        interval={7000}
                         index={index}
                         navButtonsAlwaysInvisible={true}
 
 
                   >
+                        <div id="leftFigHome" className=" w-full absolute h-full flex top-0 flex-col justify-center items-center " >
 
-                        <div id="leftFigHome" className=" w-full h-full flex flex-col justify-center items-center " >
-                              <picture className="block relative ">
-                                    <img
-                                          alt='main41'
-                                          src='/Main41.jpeg'
-                                          style={{ borderRadius: '10px' }}
-                                    />
-                              </picture>
-
+                              <Image
+                                    fill
+                                    alt='Main41'
+                                    src='/Main41.jpeg'
+                              />
                               <a className='absolute bottom-[2%] right-[2%] p-4 text-white  normal-case normal opacity-50 no-underline text-[70%]'
                                     href="https://www.freepik.com/free-photo/climate-change-concept-collage_19332542.htm#fromView=search&page=1&position=14&uuid=7865a8ca-b1c1-449a-806f-737090b5c187">Image by freepik</a>
+
+
+
+                        </div>
+                        <div id="leftFigHome" className=" w-full absolute h-full flex top-0 flex-col justify-center items-center " >
+
+                              <Image
+                                    fill
+                                    alt='Main32'
+                                    src='/main21.png'
+                              />
+
 
 
                         </div>
@@ -85,46 +94,36 @@ const Main4 = () => {
             , [leftGrow]);
 
 
-
       return (
             <>
 
 
                   <div className="HomeFigure ">
-                        <div className=" box-container mt-[5vh] bg-[#fcfffc5f] ">
+                        <div className=" box-container  bg-[#fcfffc5f] ">
 
 
-                              <div className='widthGrowHome'>
+                              <div className='widthGrowHome w-full'>
                                     <div id="leftFigHome" className=" left " >
 
-                                          <div className=" w-full h-full flex flex-col justify-center items-center">
-
-                                                <CarouselComponent />
-                                          </div>
+                                          <CarouselComponent />
 
                                     </div>
                               </div>
                               <div className='w-full h-full mb-8 mt-[3%]'>
-                                    <div id="rightFigHome " className=" right gap-10  ">
+                                    <div id="rightFigHome " className=" right w-full gap-5 flex flex-col justify-start items-start ">
                                           <div className="rightHomeMain">
-                                                Plastic is not biodegradable
+                                                More than 80% of Plastic waste ended up inland and
+                                                Only around 10% of total world plastic is recycled
                                           </div>
-                                          <div className="rightHomeMainDown justify-start ">
-                                                <ul className="w-full flex flex-col justify-end items-start list-disc">
-                                                      <li>Life of plastics</li>
-                                                      <li>Plastic bags last for: 20 Years</li>
-                                                      <li>Plastic bottles: 450 Years</li>
-                                                      <li>Fishing line: 600 years</li>
-                                                </ul>
-                                                <h2 className='mt-[30px] text-[700] text-[22px] cursor-pointer moreMain  ml-2 hover:underline'
+                                          <div className="rightHomeMainDown w-full">
+
+                                                <h2 className='mt-[30px] w-full flex flex-row items-end justify-end text-[700] text-[22px] cursor-pointer moreMain  ml-2 hover:underline'
                                                       onClick={() => {
                                                             router.push('/Home');
                                                       }}
-                                                >   More</h2>
+                                                >   (more)...</h2>
                                           </div>
-                                          <div className=" flex flex-row h-full justify-end justify-items-start align-top items-start mt-[-100px">
 
-                                          </div>
                                     </div>
                               </div>
 
