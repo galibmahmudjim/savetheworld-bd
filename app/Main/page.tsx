@@ -22,7 +22,7 @@ const Main: React.FC = () => {
       return (
 
 
-            <Carousel className='w-full min-h-screen flex flex-col justify-start items-center'
+            <Carousel className='w-full min-h-screen flex flex-col justify-start items-center pl-[2%] pr-[1.5%]'
                   swipe={true}
                   animation="slide"
                   indicators={false}
