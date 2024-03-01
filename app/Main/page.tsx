@@ -11,6 +11,7 @@ import Main3 from './(components)/Main3';
 import Main4 from './(components)/Main4';
 import Main5 from './(components)/Main5';
 import Main6 from './(components)/Main6';
+import Main7 from './(components)/Main7';
 
 
 const Main: React.FC = () => {
@@ -67,6 +68,12 @@ const Main: React.FC = () => {
                   </div >
                   <div className="w-full min-h-screen flex flex-col  justify-center items-center " >
                         <Main6 />
+                  </div >
+                  <div className="w-full min-h-screen flex flex-col  justify-center items-center " >
+                        <Main6 />
+                  </div >
+                  <div className="w-full min-h-screen flex flex-col  justify-center items-center " >
+                        <Main7 />
                   </div >
 
             </Carousel >
