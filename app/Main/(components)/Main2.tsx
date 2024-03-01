@@ -30,13 +30,13 @@ const CarouselComponent = () => {
                         <img
                               alt='Mountains'
                               src='/main21.png'
-
                               style={{ borderRadius: '10px' }}
                         />
                         <div id="leftFigHome" className=" w-full h-full flex flex-col justify-center items-center " >
                               <picture className="block relative ">
                                     <img
-                                          alt='Mountains'
+
+                                          alt='Plastic Waste'
                                           src='/main22.png'
                                           style={{ borderRadius: '10px' }}
                                     />
