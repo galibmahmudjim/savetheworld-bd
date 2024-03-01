@@ -10,7 +10,6 @@ import Carousel from "react-material-ui-carousel";
 
 
 
-
 const CarouselComponent = () => {
       const [index, setIndex] = useState(0);
 
@@ -27,21 +26,18 @@ const CarouselComponent = () => {
 
 
                   >
-                        <img
-                              alt='Mountains'
-                              src='/main21.png'
 
-                              style={{ borderRadius: '10px' }}
-                        />
                         <div id="leftFigHome" className=" w-full h-full flex flex-col justify-center items-center " >
                               <picture className="block relative ">
                                     <img
                                           alt='Mountains'
-                                          src='/main22.png'
+                                          src='/main31.jpeg'
                                           style={{ borderRadius: '10px' }}
                                     />
                               </picture>
 
+                              <a className='absolute bottom-[2%] right-[2%] p-4 text-white  normal-case normal opacity-50 no-underline text-[70%]'
+                                    href="https://www.freepik.com/free-photo/climate-change-concept-collage_19332542.htm#fromView=search&page=1&position=14&uuid=7865a8ca-b1c1-449a-806f-737090b5c187">Image by freepik</a>
 
 
                         </div>
@@ -87,6 +83,8 @@ const Main3 = () => {
       }
             , [leftGrow]);
 
+      const Description = "Save The World, Bangladesh is a plastic pollution awareness portal is developed as part of a research collaborative initiative between the University of Dhaka and East West University, Bangladesh. This portal is dedicated to creating awareness among people from all walks of life and industries about the detrimental effects of plastic pollution on the environment and promoting sustainable solutions to reduce plastic waste. Plastic pollution poses a serious threat to the environment, wildlife, and human health, and contributes to global warming and climate change. Now, it is high time to take action to protect our mother Earth from further plastic pollution. "
+
 
       return (
             <>
@@ -109,11 +107,11 @@ const Main3 = () => {
                               <div className='w-full h-full mb-8 mt-[3%]'>
                                     <div id="rightFigHome " className=" right gap-10  ">
                                           <div className="rightHomeMain">
-                                                Around 343 MT of plastic waste is produced every
-                                                year
+                                                More than 80% of Plastic waste ended up inland and
+                                                Only around 10% of total world plastic is recycled
                                           </div>
                                           <div className="rightHomeMainDown">
-                                                <> More than 20 billion plastic bottles are tossed on</>
+
                                                 <h2 className='mt-[30px] text-[700] text-[22px] cursor-pointer moreMain  ml-2 hover:underline'
                                                       onClick={() => {
                                                             router.push('/Home');
