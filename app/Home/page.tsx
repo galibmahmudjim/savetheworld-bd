@@ -42,7 +42,6 @@ const Home = () => {
       useEffect(() => {
             if (params.has('index')) {
                   setIndexs(parseInt(params.get('index') || '0'));
-                  alert('index' + indexs);
                   if (indexs === 1 as number) {
                         router.push('/Home#Home1idx');
                   }

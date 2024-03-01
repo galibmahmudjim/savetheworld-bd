@@ -5,9 +5,6 @@ import "../app/globals.css";
 import { useEffect } from 'react';
 import Image from 'next/image';
 
-function handleClick() {
-      alert('Image clicked!');
-}
 const Headers = (): JSX.Element => {
       const router = useRouter();
       useEffect(() => {
