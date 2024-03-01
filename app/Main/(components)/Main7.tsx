@@ -31,24 +31,19 @@ const CarouselComponent = () => {
                   >
                         <img
                               alt='Mountains'
-                              src='/logofig.png'
+                              src='/main71.jpeg'
 
                               style={{ borderRadius: '10px' }}
                         />
-                        <div id="leftFigHome" className=" w-full h-full flex flex-col justify-center items-center " >
-                              <picture className="block relative ">
-                                    <img
-                                          alt='Main72'
-                                          src='/main71.jpeg'
-                                          style={{ borderRadius: '10px' }}
-                                    />
-                              </picture>
+                        <img
+                              alt='Mountains'
+                              src='/main7.2.png'
 
-                              <a className='absolute bottom-[2%] right-[2%] p-4 text-white  normal-case normal opacity-50 no-underline text-[70%]'
-                                    href="https://www.freepik.com/free-photo/climate-change-concept-collage_19332542.htm#fromView=search&page=1&position=14&uuid=7865a8ca-b1c1-449a-806f-737090b5c187">Image by freepik</a>
+                              style={{ borderRadius: '10px' }}
+                        />
 
 
-                        </div>
+
                   </Carousel >
             </div >
       )

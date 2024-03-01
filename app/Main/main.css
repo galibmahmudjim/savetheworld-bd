@@ -227,7 +227,7 @@
 
       .left {
             flex: 1;
-            animation: flexShrink 3s ease-in-out 5s forwards;
+            animation: flexShrink 3s ease-in-out 1s forwards;
       }
 
       @keyframes leftFlexShrink {

@@ -47,9 +47,7 @@ const Main: React.FC = () => {
                               position: 'absolute',
                         }
                   }}
-            > {/* <div className="w-full min-h-[75vh] flex flex-col  justify-center items-center " >
-                        <HomeDetails />
-                  </div > */}
+            >
                   <div className="w-full  min-h-screen flex flex-col justify-center items-center ">
                         <HomeMain />
                   </div>
@@ -65,9 +63,6 @@ const Main: React.FC = () => {
                   </div >
                   <div className="w-full min-h-screen flex flex-col  justify-center items-center " >
                         <Main5 />
-                  </div >
-                  <div className="w-full min-h-screen flex flex-col  justify-center items-center " >
-                        <Main6 />
                   </div >
                   <div className="w-full min-h-screen flex flex-col  justify-center items-center " >
                         <Main6 />
