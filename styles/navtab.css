@@ -269,7 +269,7 @@ p {
       @keyframes widthShrink {
             0% {
                   width: 100vw;
-                  font-size: 21px;
+                  font-size: 18px;
             }
 
             100% {
@@ -288,7 +288,7 @@ p {
 
             100% {
                   width: 100vw;
-                  font-size: 21px;
+                  font-size: 18px;
             }
       }
 
@@ -309,7 +309,7 @@ p {
             justify-content: center;
             align-items: center;
             position: fixed;
-            font-size: 21px;
+            font-size: 18px;
       }
 
       .NavigationMenuRoot {
@@ -319,7 +319,7 @@ p {
             font-family: 'Inter', sans-serif;
             position: relative;
             font-weight: 700;
-            font-size: 21px;
+            font-size: 18px;
             z-index: 100;
       }
 }
