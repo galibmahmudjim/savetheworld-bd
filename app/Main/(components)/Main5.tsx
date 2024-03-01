@@ -8,41 +8,52 @@ import { useRouter, usePathname } from 'next/navigation';
 import HomeDetails from "./HomeDetails";
 import Carousel from "react-material-ui-carousel";
 
+import { LineChart, AreaChart, Area, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Rectangle, Label, BarChart, Bar } from 'recharts';
 
+const data = [
+      { country: "China", production: 30 },
+      { country: "USA", production: 19 },
+      { country: "India", production: 5 },
+      { country: "Germany", production: 4 },
+      { country: "Japan", production: 4 },
+      { country: "Others", production: 38 }
+];
 
 
 const CarouselComponent = () => {
       const [index, setIndex] = useState(0);
 
       return (
-            <div className="w-full h-full flex flex-col justify-center items-center  ">
+            <div className="w-full h-full flex flex-col justify-center items-center   ">
 
-                  <Carousel className='w-full h-full flex flex-col justify-start items-center'
-                        swipe={false}
-                        animation="fade"
-                        indicators={false}
-                        interval={5000}
-                        index={index}
-                        navButtonsAlwaysInvisible={true}
-
-
+                  <div className='w-full h-full flex flex-col justify-start items-center'
                   >
-
-                        <div id="leftFigHome" className=" w-full h-full flex flex-col justify-center items-center " >
-                              <picture className="block relative ">
-                                    <img
-                                          alt='main41'
-                                          src='/Main41.jpeg'
-                                          style={{ borderRadius: '10px' }}
-                                    />
-                              </picture>
-
-                              <a className='absolute bottom-[2%] right-[2%] p-4 text-white  normal-case normal opacity-50 no-underline text-[70%]'
-                                    href="https://www.freepik.com/free-photo/climate-change-concept-collage_19332542.htm#fromView=search&page=1&position=14&uuid=7865a8ca-b1c1-449a-806f-737090b5c187">Image by freepik</a>
-
-
+                        <div className="w-full h-full flex flex-col justify-start items-center">
+                              <div className="text-[#181360]">
+                                    Global Plastic Production
+                              </div>
+                              <ResponsiveContainer width="100%" height="80%"
+                              >
+                                    <BarChart
+                                          data={data}
+                                          margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+                                    >
+                                          <XAxis dataKey="country" stroke="#181360" strokeWidth={1} />
+                                          <YAxis dataKey="production" stroke="#181360"  >
+                                                <Label
+                                                      value="Production (%)"
+                                                      angle={270}
+                                                      position="insideLeft"
+                                                      style={{ textAnchor: 'middle', fill: '#181360' }}
+                                                />
+                                          </YAxis>
+                                          <Legend />
+                                          <Bar dataKey="production" fill="#181360" label={false} />
+                                    </BarChart>
+                              </ResponsiveContainer>
                         </div>
-                  </Carousel >
+
+                  </div >
             </div >
       )
 }
