@@ -5,7 +5,6 @@ import "../main.css";
 import { IoArrowBack } from "react-icons/io5";
 import Link from "next/link";
 import { useRouter, usePathname } from 'next/navigation';
-import HomeDetails from "./HomeDetails";
 import Carousel from "react-material-ui-carousel";
 
 
