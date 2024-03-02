@@ -125,7 +125,7 @@ function NavTab() {
                                           <a className={` text-nowrap bg-transparent nav-link ${activeKey === '4' ? 'active shadow-blue-400' : 'active'}`} href="#">Reduce, Reuse, Recycle (3R)</a>
                                     </div>
                                     <div className="nav-item  w-full  border-r-2 flex flex-row justify-center items-center ">
-                                          <a className={`text-nowrap nav-link bg-transparent ${activeKey === '5' ? 'active shadow-blue-400' : 'active'}`} href="#">Kids’ Corner</a>
+                                          <a className={`text-nowrap nav-link bg-transparent ${activeKey === '5' ? 'active shadow-blue-400' : 'active'}`} href="/Kidscorner">Kids’ Corner</a>
                                     </div>
                                     <div className="nav-item w-full  border-r-2 flex flex-row justify-center items-center ">
                                           <a className={`nav-link bg-transparent ${activeKey === '6' ? 'active shadow-blue-400' : 'active'}`} href="#">Media</a>
