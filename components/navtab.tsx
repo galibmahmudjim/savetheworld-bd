@@ -93,7 +93,7 @@ function NavTab() {
                         <div className='NavigationMenuList' id='navbarlist'>
                               <div id='navbarround' className=" nav nav-pills flex flex-row w-[91%] bg-[#0f1398] h-[60px] gap-0 flex flex-shrink-1 flex-nowrap">
                                     <div className="nav-item  rounded-[10px] border-r-2  border-white rounded-r-none w-full gap-3  flex flex-row justify-center items-center dropdown ">
-                                          <a className={`nav-link   bg-transparent ${activeKey === '3' ? 'active shadow-blue-400' : 'active'} dropdown-toggle `} data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Home</a>
+                                          <a className={`nav-link   bg-transparent ${activeKey === '3' ? 'active shadow-blue-400' : 'active'} dropdown-toggle `} data-bs-toggle="dropdown" href="/Home" role="button" aria-expanded="false">Home</a>
                                           <div className='dropdown-menu bg-transparent border-0'>
                                                 <div className="bg-[#0f1398] pt-[7%] w-full h-full rounded-[10px] p-1 flex flex-col justify-center items-start " >
                                                       <div className='dropdown-item bg-transparent hover:scale-105'><Link className=" nav_drop no-underline w-full" href="/Home?index=1" shallow>About Plastics</Link></div>
@@ -105,17 +105,17 @@ function NavTab() {
                                           </div>
                                     </div>
                                     <div className="nav-item   border-r-2 w-full flex flex-row justify-center items-center  ">
-                                          <a className={` bg-transparent nav-link text-nowrap ${activeKey === '2' ? 'active shadow-blue-400' : 'active'}`} href="#"> Plastic threat</a>
+                                          <a className={` bg-transparent nav-link text-nowrap ${activeKey === '2' ? 'active shadow-blue-400' : 'active'}`} href="/Plasticthreats"> Plastic threat</a>
                                     </div>
 
                                     <div className="nav-item border-r-2 w-full gap-3  flex flex-row justify-center items-center dropdown ">
-                                          <a className={`nav-link  bg-transparent ${activeKey === '3' ? 'active shadow-blue-400' : 'active'} dropdown-toggle `} data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Facts &amp; Figures</a>
+                                          <a className={`nav-link  bg-transparent ${activeKey === '3' ? 'active shadow-blue-400' : 'active'} dropdown-toggle `} data-bs-toggle="dropdown" href="/FactsFigures" role="button" aria-expanded="false">Facts &amp; Figures</a>
                                           <div className='dropdown-menu bg-transparent border-0'>
-                                                <div className=" w-full h-full  p-1 flex flex-col justify-center items-start " >
-                                                      <div className='dropdown-item bg-transparent hover:scale-105'><Link className=" nav_drop no-underline w-full" href="/Home?index=1" shallow>Global plastic waste generation</Link></div>
-                                                      <div className='dropdown-item bg-transparent hover:scale-105'><Link className="nav_drop no-underline" href="/Home?index=2" shallow={true}>Plastic in Bangladesh Statistics</Link></div>
-                                                      <div className='dropdown-item bg-transparent hover:scale-105'><Link className="nav_drop no-underline" href="/Home?index=3" shallow={true}>Plastic Industries &amp; Revenue (Industrial Impact)</Link></div>
-                                                      <div className='dropdown-item bg-transparent hover:scale-105'><Link className="nav_drop no-underline" href="/Home?index=4" shallow={true}>Plastic Industry &amp; Pollution</Link></div>
+                                                <div className="bg-[#0f1398] pt-[7%] w-full h-full rounded-[10px] p-1 flex flex-col justify-center items-start " >
+                                                      <div className='dropdown-item bg-transparent hover:scale-105'><Link className=" nav_drop no-underline w-full" href="//FactFigures" shallow>Global plastic waste generation</Link></div>
+                                                      <div className='dropdown-item bg-transparent hover:scale-105'><Link className="nav_drop no-underline" href="/FactsFigures" shallow={true}>Plastic in Bangladesh Statistics</Link></div>
+                                                      <div className='dropdown-item bg-transparent hover:scale-105'><Link className="nav_drop no-underline" href="/FactsFigures" shallow={true}>Plastic Industries &amp; Revenue (Industrial Impact)</Link></div>
+                                                      <div className='dropdown-item bg-transparent hover:scale-105'><Link className="nav_drop no-underline" href="/FactsFigures" shallow={true}>Plastic Industry &amp; Pollution</Link></div>
 
 
                                                 </div>
