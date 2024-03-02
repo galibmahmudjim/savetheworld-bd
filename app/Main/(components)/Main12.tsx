@@ -32,7 +32,7 @@ const CarouselComponent = () => {
                               <Image
                                     fill
                                     alt='Main121'
-                                    src='/main121.png'
+                                    src='/main121.svg'
                               />
 
 

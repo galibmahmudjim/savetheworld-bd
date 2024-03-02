@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState, PureComponent, Suspense } from "react";
 import Image from "next/image";
-import "./home.css";
+import "./Plasicthreats.css";
 import { IoArrowBack } from "react-icons/io5";
 import Link from "next/link";
 import { useRouter, useSearchParams, usePathname } from 'next/navigation';
@@ -13,13 +13,16 @@ import GlobalPlastic from "./GlobalPlastic";
 import CovidPlastic from "./CovidPlastic";
 import { FaMinusCircle } from "react-icons/fa";
 import { FaPlusCircle } from "react-icons/fa";
+import Climate from "./Climate";
+import Social from "./social";
+import Econ from "./econ";
 
 type Props = {
       onCallback: (value: string) => void;
 };
 
 
-const Home = () => {
+const FactFigure = () => {
       const [clickedGraph, setClickedGraph] = useState(0);
       const [leftGrow, setLeftGrow] = useState(2);
       const [fact, setFact] = useState(false);
@@ -31,7 +34,7 @@ const Home = () => {
 
 
 
-      const Description = "Save The World, Bangladesh is a plastic pollution awareness portal is developed as part of a research collaborative initiative between the University of Dhaka and East West University, Bangladesh. This portal is dedicated to creating awareness among people from all walks of life and industries about the detrimental effects of plastic pollution on the environment and promoting sustainable solutions to reduce plastic waste. Plastic pollution poses a serious threat to the environment, wildlife, and human health, and contributes to global warming and climate change. Now, it is high time to take action to protect our mother Earth from further plastic pollution. "
+      const Description = "Many high-income countries generate high amounts of plastic waste but are either better at processing it or exporting it to other countries. Meanwhile, many of the middle-income and low-income countries that both demand plastics and receive bulk exports have yet to develop the infrastructure needed to process it."
 
       const [indexs, setIndexs] = useState(0);
 
@@ -45,21 +48,31 @@ const Home = () => {
             if (params.has('index')) {
                   setIndexs(parseInt(params.get('index') || '0'));
                   if (indexs === 1 as number) {
-                        router.push('/Home#Home1idx');
+                        router.push('/Plasicthreats#Plasicthreats1idx');
                   }
                   else if (indexs === 2 as number) {
-                        router.push('/Home#Home2idx');
+                        router.push('/Plasicthreats#Plasicthreats2idx');
                   }
                   else if (indexs === 3 as number) {
-                        router.push('/Home#Home3idx');
+                        router.push('/Plasicthreats#Plasicthreats3idx');
                   }
                   else if (indexs === 4 as number) {
-                        router.push('/Home#Home4idx');
+                        router.push('/Plasicthreats#Plasicthreats4idx');
                   }
                   else if (indexs === 5 as number) {
-                        router.push('/Home#Home5idx');
+                        router.push('/Plasicthreats#Plasicthreats5idx');
                   }
-                  router.replace('/Home');
+
+                  else if (indexs === 6 as number) {
+                        router.push('/Plasicthreats#Plasicthreats6idx');
+                  }
+                  else if (indexs === 7 as number) {
+                        router.push('/Plasicthreats#Plasicthreats7idx');
+                  }
+                  else if (indexs === 8 as number) {
+                        router.push('/Plasicthreats#Plasicthreats8idx');
+                  }
+                  router.replace('/Plasicthreats');
 
             }
 
@@ -81,7 +94,8 @@ const Home = () => {
                                     <div id="rightFigHome" className=" body " >
 
                                           <div className='Description'>
-                                                <h1 className=" mb-3 titled">Bangladesh | Save The World </h1>
+                                                <h1 className=" mb-3 titled">acts & Figures
+                                                </h1>
                                                 <p className="text-[24px]  font-[300]">{Description}</p>
                                           </div>
 
@@ -100,7 +114,8 @@ const Home = () => {
 
                                                             }}
                                                       >
-                                                            About Plastics{indexs !== 1 ? <FaPlusCircle /> : <FaMinusCircle />}
+                                                            Plastic in Bangladesh Statistics
+                                                            {indexs !== 1 ? <FaPlusCircle /> : <FaMinusCircle />}
                                                       </div>
 
                                                       {indexs === 1 ? <AboutPlastic /> : null}
@@ -119,7 +134,9 @@ const Home = () => {
 
                                                             }}
                                                       >
-                                                            Plastic wastes{indexs !== 2 ? <FaPlusCircle className="font-extrabold" /> : <FaMinusCircle />}
+                                                            Global plastic waste generation
+
+                                                            {indexs !== 2 ? <FaPlusCircle className="font-extrabold" /> : <FaMinusCircle />}
                                                       </div>
 
                                                       {indexs === 2 ? <PlasticComprises /> : null}
@@ -137,7 +154,8 @@ const Home = () => {
 
                                                             }}
                                                       >
-                                                            Life of plastics{indexs !== 3 ? <FaPlusCircle /> : <FaMinusCircle />}
+                                                            Plastic in Bangladesh Statistics
+                                                            {indexs !== 3 ? <FaPlusCircle /> : <FaMinusCircle />}
                                                       </div>
 
                                                       {indexs === 3 ? <LifePlastics /> : null}
@@ -155,7 +173,8 @@ const Home = () => {
 
                                                             }}
                                                       >
-                                                            Global Top Plastic Producers{indexs !== 4 ? <FaPlusCircle /> : <FaMinusCircle />}
+                                                            Plastic Industries & Revenue (Industrial Impact)
+                                                            {indexs !== 4 ? <FaPlusCircle /> : <FaMinusCircle />}
                                                       </div>
 
                                                       {indexs === 4 ? <GlobalPlastic /> : null}
@@ -173,12 +192,17 @@ const Home = () => {
 
                                                             }}
                                                       >
-                                                            COVID-19 & Plastic{indexs !== 5 ? <FaPlusCircle /> : <FaMinusCircle />}
+                                                            Plastic Industry & Pollution
+                                                            {indexs !== 5 ? <FaPlusCircle /> : <FaMinusCircle />}
                                                       </div>
 
                                                       {indexs === 5 ? <CovidPlastic /> : null}
 
                                                 </div>
+
+
+
+
                                           </div>
 
 
@@ -195,5 +219,5 @@ const Home = () => {
 }
 
 
-export default Home;
+export default FactFigure;
 

@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState, PureComponent, Suspense } from "react";
 import Image from "next/image";
-import "./home.css";
+import "./Plasicthreats.css";
 import { IoArrowBack } from "react-icons/io5";
 import Link from "next/link";
 import { useRouter, useSearchParams, usePathname } from 'next/navigation';
@@ -13,13 +13,16 @@ import GlobalPlastic from "./GlobalPlastic";
 import CovidPlastic from "./CovidPlastic";
 import { FaMinusCircle } from "react-icons/fa";
 import { FaPlusCircle } from "react-icons/fa";
+import Climate from "./Climate";
+import Social from "./social";
+import Econ from "./econ";
 
 type Props = {
       onCallback: (value: string) => void;
 };
 
 
-const Home = () => {
+const Plasticthreats = () => {
       const [clickedGraph, setClickedGraph] = useState(0);
       const [leftGrow, setLeftGrow] = useState(2);
       const [fact, setFact] = useState(false);
@@ -31,7 +34,7 @@ const Home = () => {
 
 
 
-      const Description = "Save The World, Bangladesh is a plastic pollution awareness portal is developed as part of a research collaborative initiative between the University of Dhaka and East West University, Bangladesh. This portal is dedicated to creating awareness among people from all walks of life and industries about the detrimental effects of plastic pollution on the environment and promoting sustainable solutions to reduce plastic waste. Plastic pollution poses a serious threat to the environment, wildlife, and human health, and contributes to global warming and climate change. Now, it is high time to take action to protect our mother Earth from further plastic pollution. "
+      const Description = "Plastic pollution is a serious threat to the environment, wildlife, and human health. It is estimated that by 2050, there will be more plastic in the ocean than fish. Plastic waste not only harms marine life and pollutes our waterways but also affects human health and contributes to global warming and climate change. According to the United Nations Environment Program (UNEP), Plastic Pollution is one of the most emerging environmental problems in oceans."
 
       const [indexs, setIndexs] = useState(0);
 
@@ -45,21 +48,31 @@ const Home = () => {
             if (params.has('index')) {
                   setIndexs(parseInt(params.get('index') || '0'));
                   if (indexs === 1 as number) {
-                        router.push('/Home#Home1idx');
+                        router.push('/Plasicthreats#Plasicthreats1idx');
                   }
                   else if (indexs === 2 as number) {
-                        router.push('/Home#Home2idx');
+                        router.push('/Plasicthreats#Plasicthreats2idx');
                   }
                   else if (indexs === 3 as number) {
-                        router.push('/Home#Home3idx');
+                        router.push('/Plasicthreats#Plasicthreats3idx');
                   }
                   else if (indexs === 4 as number) {
-                        router.push('/Home#Home4idx');
+                        router.push('/Plasicthreats#Plasicthreats4idx');
                   }
                   else if (indexs === 5 as number) {
-                        router.push('/Home#Home5idx');
+                        router.push('/Plasicthreats#Plasicthreats5idx');
                   }
-                  router.replace('/Home');
+
+                  else if (indexs === 6 as number) {
+                        router.push('/Plasicthreats#Plasicthreats6idx');
+                  }
+                  else if (indexs === 7 as number) {
+                        router.push('/Plasicthreats#Plasicthreats7idx');
+                  }
+                  else if (indexs === 8 as number) {
+                        router.push('/Plasicthreats#Plasicthreats8idx');
+                  }
+                  router.replace('/Plasicthreats');
 
             }
 
@@ -81,7 +94,7 @@ const Home = () => {
                                     <div id="rightFigHome" className=" body " >
 
                                           <div className='Description'>
-                                                <h1 className=" mb-3 titled">Bangladesh | Save The World </h1>
+                                                <h1 className=" mb-3 titled">Plastic threat</h1>
                                                 <p className="text-[24px]  font-[300]">{Description}</p>
                                           </div>
 
@@ -100,7 +113,7 @@ const Home = () => {
 
                                                             }}
                                                       >
-                                                            About Plastics{indexs !== 1 ? <FaPlusCircle /> : <FaMinusCircle />}
+                                                            Effect on Environment{indexs !== 1 ? <FaPlusCircle /> : <FaMinusCircle />}
                                                       </div>
 
                                                       {indexs === 1 ? <AboutPlastic /> : null}
@@ -119,7 +132,7 @@ const Home = () => {
 
                                                             }}
                                                       >
-                                                            Plastic wastes{indexs !== 2 ? <FaPlusCircle className="font-extrabold" /> : <FaMinusCircle />}
+                                                            Air Pollution{indexs !== 2 ? <FaPlusCircle className="font-extrabold" /> : <FaMinusCircle />}
                                                       </div>
 
                                                       {indexs === 2 ? <PlasticComprises /> : null}
@@ -137,7 +150,7 @@ const Home = () => {
 
                                                             }}
                                                       >
-                                                            Life of plastics{indexs !== 3 ? <FaPlusCircle /> : <FaMinusCircle />}
+                                                            Soil Pollution{indexs !== 3 ? <FaPlusCircle /> : <FaMinusCircle />}
                                                       </div>
 
                                                       {indexs === 3 ? <LifePlastics /> : null}
@@ -155,7 +168,7 @@ const Home = () => {
 
                                                             }}
                                                       >
-                                                            Global Top Plastic Producers{indexs !== 4 ? <FaPlusCircle /> : <FaMinusCircle />}
+                                                            Marine Pollution{indexs !== 4 ? <FaPlusCircle /> : <FaMinusCircle />}
                                                       </div>
 
                                                       {indexs === 4 ? <GlobalPlastic /> : null}
@@ -173,12 +186,73 @@ const Home = () => {
 
                                                             }}
                                                       >
-                                                            COVID-19 & Plastic{indexs !== 5 ? <FaPlusCircle /> : <FaMinusCircle />}
+                                                            Human Health
+                                                            {indexs !== 5 ? <FaPlusCircle /> : <FaMinusCircle />}
                                                       </div>
 
                                                       {indexs === 5 ? <CovidPlastic /> : null}
 
                                                 </div>
+                                                <div id="Home6idx" className="flex flex-col w-full  h-full ml-1">
+                                                      <div className="   flex flex-row justify-start items-center align-middle gap-3 h4Sub text-[#4a218b] cursor-pointer"
+                                                            onClick={() => {
+                                                                  if (indexs === 6) {
+                                                                        setIndexs(0);
+                                                                  }
+                                                                  else {
+                                                                        setIndexs(6);
+                                                                  }
+
+                                                            }}
+                                                      >
+                                                            Climate Change
+                                                            {indexs !== 6 ? <FaPlusCircle /> : <FaMinusCircle />}
+                                                      </div>
+
+                                                      {indexs === 6 ? <Climate /> : null}
+
+                                                </div>
+                                                <div id="Home7idx" className="flex flex-col w-full  h-full ml-1">
+                                                      <div className="   flex flex-row justify-start items-center align-middle gap-3 h4Sub text-[#4a218b] cursor-pointer"
+                                                            onClick={() => {
+                                                                  if (indexs === 7) {
+                                                                        setIndexs(0);
+                                                                  }
+                                                                  else {
+                                                                        setIndexs(7);
+                                                                  }
+
+                                                            }}
+                                                      >
+                                                            Social Impact
+                                                            {indexs !== 7 ? <FaPlusCircle /> : <FaMinusCircle />}
+                                                      </div>
+
+                                                      {indexs === 7 ? <Social /> : null}
+
+                                                </div>
+                                                <div id="Home8idx" className="flex flex-col w-full  h-full ml-1">
+                                                      <div className="   flex flex-row justify-start items-center align-middle gap-3 h4Sub text-[#4a218b] cursor-pointer"
+                                                            onClick={() => {
+                                                                  if (indexs === 8) {
+                                                                        setIndexs(0);
+                                                                  }
+                                                                  else {
+                                                                        setIndexs(8);
+                                                                  }
+
+                                                            }}
+                                                      >
+                                                            Economic Burden
+                                                            {indexs !== 8 ? <FaPlusCircle /> : <FaMinusCircle />}
+                                                      </div>
+
+                                                      {indexs === 8 ? <Econ /> : null}
+
+                                                </div>
+
+
+
                                           </div>
 
 
@@ -195,5 +269,5 @@ const Home = () => {
 }
 
 
-export default Home;
+export default Plasticthreats;
 
