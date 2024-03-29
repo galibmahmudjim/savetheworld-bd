@@ -50,7 +50,7 @@ const Main: React.FC = () => {
             <div className="w-full h-screen flex flex-col justify-start items-center">
 
 
-                  <Carousel className='w-full h-full  flex flex-col justify-start items-center pl-[2%] pr-[1.5%]'
+                  <Carousel className='w-full h-full  flex flex-col justify-start items-center pl-[2.3%] pr-[1.4%]'
                         swipe={true}
                         animation="slide"
                         indicators={false}
