@@ -5,6 +5,7 @@ import Carousel from 'react-material-ui-carousel'
 import { Paper, Button } from '@mui/material'
 import { GrFormNextLink } from "react-icons/gr";
 import HomeDetails from './(components)/HomeDetails'
+import ReactLoading from 'react-loading';
 import HomeMain from './(components)/HomeMain';
 import Main2 from './(components)/Main2';
 import Main3 from './(components)/Main3';
@@ -22,9 +23,32 @@ import Main12 from './(components)/Main12';
 const Main: React.FC = () => {
 
       const [index, setIndex] = useState(0);
+      const components = [<HomeMain />, <Main2 />, <Main3 />, <Main4 />, <Main5 />, <Main6 />, <Main7 />, <Main8 />, <Main9 />, <Main10 />, <Main11 />, <Main12 />];
+      const imageUrls = ["/path/to/image1.jpg", "/path/to/image2.jpg"]; // Array of image URLs
+      const [allComponentsLoaded, setAllComponentsLoaded] = useState(false);
 
+      useEffect(() => {
+            // Simulate loading of components or content
+            Promise.all([
+                  // Simulate async loading, e.g., fetching data or waiting for images to load
+                  new Promise((resolve) => setTimeout(resolve, 1000)), // Placeholder for actual loading logic
+                  new Promise((resolve) => setTimeout(resolve, 1500)), // Adjust times based on your needs
+                  // Add more promises for other components or content
+            ]).then(() => {
+                  setAllComponentsLoaded(true);
+            });
+      }, []);
+
+      if (!allComponentsLoaded) {
+            return (
+                  <div className="w-full h-screen flex flex-col justify-center items-center">
+                        <ReactLoading type={"cylon"} height={100} width={100} />
+                  </div>
+            );
+      }
       return (
             <div className="w-full h-screen flex flex-col justify-start items-center">
+
 
                   <Carousel className='w-full h-full  flex flex-col justify-start items-center pl-[2%] pr-[1.5%]'
                         swipe={true}
@@ -52,48 +76,14 @@ const Main: React.FC = () => {
                               }
                         }}
                   >
-                        <div className="w-full  h-[80vh] flex flex-col justify-start items-center ">
-                              <HomeMain />
-                        </div>
+                        {components.map((Component, index) => (
 
-                        <div className="w-full h-[80vh] flex flex-col  justify-center items-center " >
-                              <Main2 />
-                        </div >
-                        <div className="w-full  h-[80vh]  flex flex-col  justify-center items-center " >
-                              <Main3 />
-                        </div >
-                        <div className="w-full h-[80vh] flex flex-col  justify-center items-center " >
-                              <Main4 />
-                        </div >
-                        <div className="w-full h-[80vh] flex flex-col  justify-center items-center " >
-                              <Main5 />
-                        </div >
-                        <div className="w-full h-[80vh] flex flex-col  justify-center items-center " >
-                              <Main6 />
-                        </div >
-                        <div className="w-full h-[80vh] flex flex-col  justify-center items-center " >
-                              <Main7 />
-                        </div >
-                        <div className="w-full h-[80vh] flex flex-col  justify-center items-center " >
-                              <Main8 />
-                        </div >
-                        <div className="w-full h-[80vh] flex flex-col  justify-center items-center " >
-                              <Main9 />
-                        </div >
-                        <div className="w-full h-[80vh] flex flex-col  justify-center items-center " >
-                              <Main10 />
-                        </div >
-                        <div className="w-full h-[80vh] flex flex-col  justify-center items-center " >
-                              <Main11 />
-                        </div >
-                        <div className="w-full h-[80vh] flex flex-col  justify-center items-center " >
-                              <Main12 />
-                        </div >
+                              <div key={index} className=" w-full  h-[80vh] flex flex-col justify-start items-center ">
 
-
-
-
-                  </Carousel ></div>
+                                    {components[index]}
+                              </div>
+                        ))}
+                  </Carousel ></div >
       );
 };
 

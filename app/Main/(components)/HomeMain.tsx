@@ -27,7 +27,7 @@ const CarouselComponent = () => {
 
 
                   >
-                        <div id="leftFigHome" className=" mt-[4%] w-full absolute h-full flex flex-col  justify-start items-center " >
+                        <div id="leftFigHome" className=" mt-[7%] w-full absolute h-full flex flex-col  justify-start items-center " >
 
                               <img
                                     width={"60%"}
@@ -94,7 +94,7 @@ const HomeMain = () => {
       }
             , [leftGrow]);
 
-      const Description = "Save The World, Bangladesh is a plastic pollution awareness portal is developed as part of a research collaborative initiative between the University of Dhaka and East West University, Bangladesh. This portal is dedicated to creating awareness among people from all walks of life and industries about the detrimental effects of plastic pollution on the environment and promoting sustainable solutions to reduce plastic waste. Plastic pollution poses a serious threat to the environment, wildlife, and human health, and contributes to global warming and climate change. Now, it is high time to take action to protect our mother Earth from further plastic pollution. "
+      const Description = "A portal is dedicated to creating awareness among people from all walks of life about the detrimental effects of plastic pollution on the environment and promoting sustainable solutions to reduce plastic waste"
 
 
       return (
@@ -112,26 +112,12 @@ const HomeMain = () => {
 
                                     </div>
                               </div>
-                              <div className='w-full h-full mb-8 mt-[3%]'>
-                                    <div id="rightFigHome " className=" right gap-10  ">
-                                          <div className="rightHomeMain">
-                                                A portal is dedicated to creating awareness among
-                                                people from all walks of life about the detrimental
-                                                effects of plastic pollution on the environment and
-                                                promoting sustainable solutions to reduce plastic
-                                                waste
-                                          </div>
-                                          <div className="rightHomeMainDown">
+                              <div className='w-full h-full flex flex-col justify-center items-center '>
+                                    <div id="rightFigHome " className=" right gap-10   ">
+                                          <div className="rightHomeMain">{Description} <span onClick={() => router.push('/Home')} className="cursor-pointer">
+                                                .....</span></div>
 
-                                                <h2 className='mt-[30px] text-[700] text-[22px] cursor-pointer moreMain  ml-2 hover:underline'
-                                                      onClick={() => {
-                                                            router.push('/Home');
-                                                      }}
-                                                >   (more)...</h2>
-                                          </div>
-                                          <div className=" flex flex-row h-full justify-end justify-items-start align-top items-start mt-[-100px">
 
-                                          </div>
                                     </div>
                               </div>
 

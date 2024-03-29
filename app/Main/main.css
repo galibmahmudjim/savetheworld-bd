@@ -57,12 +57,11 @@
 
 .HomeFigure .right {
       background-color: transparent;
-      text-align: start;
+      text-align: justify;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
-      justify-items: start;
-
+      justify-content: center;
+      justify-items: center;
       color: #fff;
       margin: 10px;
       padding-left: 8%;
@@ -182,17 +181,17 @@
 
 .HomeFigure .box-container {
       width: 90%;
-      max-height: 60vh;
+      max-height: 100%;
       display: flex;
       flex-direction: row;
       justify-content: center;
-      align-items: flex-center;
+      justify-items: center;
       flex: 1;
       justify-items: center;
       visibility: hidden;
       border-radius: 15px;
       overflow: hidden;
-      margin-left: 10px;
+      margin-left: 0px;
       animation: fadeIn 2s ease-in-out 1s forwards;
 
       #leftFigHome {
@@ -371,16 +370,32 @@
 
 }
 
-.rightHomeMain {
+@media screen and (max-width: 1500px) {
+      .rightHomeMain {
+            font-size: 30px;
+            font-weight: 700;
+            color: #000000;
+            text-shadow: rgba(53, 44, 44, 0.43) 1px 1px 0px;
+            text-align: justify;
+            font-family: "RocknRoll One", sans-serif;
+            opacity: 0;
+            animation: textUptoDownAppearY 1s ease-in-out 2s forwards;
+      }
 
-      font-size: 25px;
-      font-weight: 700;
-      color: rgba(0, 0, 0, 0.644);
-      text-shadow: rgba(53, 44, 44, 0.43) 1px 1px 0px;
-      text-align: left;
-      font-family: "Google Sans", Roboto, "Helvetica Neue", sans-serif;
-      opacity: 0;
-      animation: textUptoDownAppearY 1s ease-in-out 2s forwards;
+}
+
+@media screen and (min-width: 1501px) {
+      .rightHomeMain {
+            font-size: 35px;
+            font-weight: 700;
+            color: #000000;
+            text-shadow: rgba(53, 44, 44, 0.43) 1px 1px 0px;
+            text-align: justify;
+            font-family: "RocknRoll One", sans-serif;
+            opacity: 0;
+            animation: textUptoDownAppearY 1s ease-in-out 2s forwards;
+      }
+
 }
 
 .rightHomeMainDown {

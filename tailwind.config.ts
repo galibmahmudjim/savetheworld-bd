@@ -14,6 +14,10 @@ const config: Config = withMT({
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        RocknRoll: ["RocknRoll One", "cursive"],
+        // Add more custom font families as needed
+      },
     },
   },
   plugins: [],

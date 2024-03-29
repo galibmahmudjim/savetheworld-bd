@@ -38,7 +38,7 @@ p {
 
 .nav-container {
       z-index: 1000;
-      top: 22vh;
+      top: 20vh;
       width: 100vw;
       visibility: hidden;
       display: flex;
@@ -52,7 +52,7 @@ p {
 }
 
 #navcontainer.animationnav {
-      top: 22vh;
+      top: 20vh;
       animation: fadeIn 1s ease-in-out 0s forwards;
 }
 
@@ -64,7 +64,7 @@ p {
 
 @keyframes moveInNav {
       0% {
-            top: 22vh;
+            top: 20vh;
             width: 100vw;
             left: 0;
       }
@@ -88,7 +88,7 @@ p {
       }
 
       100% {
-            top: 22vh;
+            top: 20vh;
             width: 100vw;
             left: 0;
       }
@@ -145,17 +145,43 @@ p {
       /* border-bottom: 0.5px solid rgba(255, 255, 255, 0.172); */
 }
 
+@keyframes widthShrink {
+      0% {
+            width: 100vw;
+            font-size: 24px;
+      }
 
-@media screen and (max-width: 1080) {
+      100% {
+            width: 80vw;
+            font-size: 18px;
+
+
+      }
+}
+
+@keyframes widthGrow {
+      0% {
+            width: 80vw;
+            font-size: 18px;
+            ;
+      }
+
+      100% {
+            width: 100vw;
+            font-size: 24px;
+      }
+}
+
+@media screen and (max-width: 1080px) {
       @keyframes widthShrink {
             0% {
                   width: 100vw;
-                  font-size: 12px;
+                  font-size: calc(24px - 6px);
             }
 
             100% {
                   width: 80vw;
-                  font-size: 10px;
+                  font-size: calc(24px - 10px);
 
 
             }
@@ -164,12 +190,12 @@ p {
       @keyframes widthGrow {
             0% {
                   width: 80vw;
-                  font-size: 10x;
+                  font-size: calc(24px - 10px);
             }
 
             100% {
                   width: 100vw;
-                  font-size: 8px;
+                  font-size: calc(24px - 6px);
             }
       }
 
@@ -183,14 +209,14 @@ p {
 
       .nav-container {
             z-index: 1000;
-            top: 22vh;
+            top: 20vh;
             width: 100vw;
             visibility: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
             position: fixed;
-            font-size: 7px;
+            font-size: calc(24px - 6px);
       }
 
       .NavigationMenuRoot {
@@ -200,7 +226,7 @@ p {
             font-family: 'Inter', sans-serif;
             position: relative;
             font-weight: 700;
-            font-size: 8px;
+            font-size: calc(24px - 6px);
             z-index: 100;
       }
 }
@@ -209,12 +235,12 @@ p {
       @keyframes widthShrink {
             0% {
                   width: 100vw;
-                  font-size: 12px;
+                  font-size: calc(24px - 6px);
             }
 
             100% {
                   width: 80vw;
-                  font-size: 10px;
+                  font-size: calc(24px - 10px);
 
 
             }
@@ -223,12 +249,12 @@ p {
       @keyframes widthGrow {
             0% {
                   width: 80vw;
-                  font-size: 10px;
+                  font-size: calc(24px - 10px);
             }
 
             100% {
                   width: 100vw;
-                  font-size: 12px;
+                  font-size: calc(24px - 6px);
             }
       }
 
@@ -242,14 +268,14 @@ p {
 
       .nav-container {
             z-index: 1000;
-            top: 22vh;
+            top: 20vh;
             width: 100vw;
             visibility: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
             position: fixed;
-            font-size: 12px;
+            font-size: calc(24px - 6px);
       }
 
       .NavigationMenuRoot {
@@ -259,7 +285,7 @@ p {
             font-family: 'Inter', sans-serif;
             position: relative;
             font-weight: 700;
-            font-size: 12px;
+            font-size: calc(24px - 6px);
             z-index: 100;
       }
 }
@@ -269,12 +295,12 @@ p {
       @keyframes widthShrink {
             0% {
                   width: 100vw;
-                  font-size: 14px;
+                  font-size: calc(24px - 2px);
             }
 
             100% {
                   width: 80vw;
-                  font-size: 10px;
+                  font-size: calc(24px - 6px);
 
 
             }
@@ -283,12 +309,12 @@ p {
       @keyframes widthGrow {
             0% {
                   width: 80vw;
-                  font-size: 10px;
+                  font-size: calc(24px - 6px);
             }
 
             100% {
                   width: 100vw;
-                  font-size: 14px;
+                  font-size: calc(24px - 2px);
             }
       }
 
@@ -302,14 +328,14 @@ p {
 
       .nav-container {
             z-index: 1000;
-            top: 22vh;
+            top: 20vh;
             width: 100vw;
             visibility: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
             position: fixed;
-            font-size: 14px;
+            font-size: calc(24px - 2px);
       }
 
       .NavigationMenuRoot {
@@ -319,12 +345,12 @@ p {
             font-family: 'Inter', sans-serif;
             position: relative;
             font-weight: 700;
-            font-size: 14px;
+            font-size: calc(24px - 2px);
             z-index: 100;
       }
 }
 
-@media screen and (max-width: 1445px) and (min-width: 1300px) {
+/* @media screen and (max-width: 1445px) and (min-width: 1300px) {
       @keyframes widthShrink {
             0% {
                   width: 100vw;
@@ -361,7 +387,7 @@ p {
 
       .nav-container {
             z-index: 1000;
-            top: 22vh;
+            top: 20vh;
             width: 100vw;
             visibility: hidden;
             display: flex;
@@ -420,7 +446,7 @@ p {
 
       .nav-container {
             z-index: 1000;
-            top: 22vh;
+            top: 20vh;
             width: 100vw;
             visibility: hidden;
             display: flex;
@@ -479,7 +505,7 @@ p {
 
       .nav-container {
             z-index: 1000;
-            top: 22vh;
+            top: 20vh;
             width: 100vw;
             visibility: hidden;
             display: flex;
@@ -499,7 +525,7 @@ p {
             font-size: 20px;
             z-index: 100;
       }
-}
+} */
 
 #navbarlist.widthshrink {
       animation: widthShrink 0.5s ease-in-out 0s forwards;
@@ -550,10 +576,10 @@ p {
 
 }
 
-.nav-item:hover {
+/* .nav-item:hover {
       transform: scale(1.05);
       transition: transform 0.5s;
-}
+} */
 
 .selectedActive {
       box-shadow: #4f1baa 8px 5px 10px 0px;

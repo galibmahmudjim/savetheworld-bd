@@ -101,7 +101,7 @@ const HomeDetails = () => {
                               <div className='w-full h-full mb-8 mt-[3%]'>
 
                                     <h1 className="mainTitle">
-                                          Bangladesh | Save The World
+                                          Bangladesh| Save The World
                                     </h1>
                                     <div id="rightFigHome " className=" right gap-10  ">
 

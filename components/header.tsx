@@ -40,25 +40,23 @@ const Headers = (): JSX.Element => {
       }, []);
 
       return (
-            <div className="header">
+            <div className="header justify-center items-center">
                   <div className="header-1">
-                        <div className="left">
+                        <div className="left h-full ">
+                              <img onClick={() => {
+                                    router.push("/");
+                                    router.refresh();
+                              }}
 
-                              <a href="/">
-                                    <img onClick={() => router.push("/")}
-                                          style={{
-                                                aspectRatio: '12/10'
-                                          }}
-                                          className="logo hover:w-96" src="/logo.svg" alt="logo">
-                                    </img>
-                              </a>
+                                    className="logo w-32   hover:w-96" src="/logo.png" alt="logo">
+                              </img>
 
                         </div>
                         <div id='center-header' className="center" onClick={() => { }}>
-                              <h1 className="title-h1">A Plastic Pollution Awareness Portal</h1>
+                              <div className="title-h1 text-[#23336A]">A Plastic Pollution Awareness Portal</div>
                         </div>
                         <div id='right-header' className="right" >
-                              <div className="w-full h-[60%] gap-2 flex flex-row justify-around items-end ">
+                              <div className="w-full h-[55%] gap-2 flex flex-row justify-around items-end ">
                                     <a href="https://www.du.ac.bd" target="_blank" className='w-full flex-1 flex flex-row justify-end '>
                                           <img className="du" src="/du.png" alt="university-logo" />
                                     </a>
@@ -68,7 +66,7 @@ const Headers = (): JSX.Element => {
                               </div>
                         </div>
                   </div>
-            </div>
+            </div >
       )
 }
 

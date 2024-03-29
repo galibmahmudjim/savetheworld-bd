@@ -91,7 +91,7 @@ function NavTab() {
             <div className='nav-container' id='navcontainer'>
                   <div className='NavigationMenuRoot' id='navbar'>
                         <div className='NavigationMenuList' id='navbarlist'>
-                              <div id='navbarround' className=" nav nav-pills flex flex-row w-[91%] bg-[#0f1398] h-[60px] gap-0 flex flex-shrink-1 flex-nowrap">
+                              <div id='navbarround' className=" nav nav-pills flex flex-row w-full bg-[#23336A] h-[60px] gap-0 flex flex-shrink-1 flex-nowrap">
                                     <div className="nav-item  rounded-[10px] border-r-2  border-white rounded-r-none w-full gap-3  flex flex-row justify-center items-center dropdown ">
                                           <a className={`nav-link   bg-transparent ${activeKey === '3' ? 'active shadow-blue-400' : 'active'} dropdown-toggle `} data-bs-toggle="dropdown" href="/Home" role="button" aria-expanded="false">Home</a>
                                           <div className='dropdown-menu bg-transparent border-0'>
@@ -122,7 +122,7 @@ function NavTab() {
                                           </div>
                                     </div>
                                     <div className="nav-item w-full  border-r-2  flex flex-row justify-center items-center  ">
-                                          <a className={` text-nowrap bg-transparent nav-link ${activeKey === '4' ? 'active shadow-blue-400' : 'active'}`} href="#">Reduce, Reuse, Recycle (3R)</a>
+                                          <a className={` text-nowrap bg-transparent nav-link ${activeKey === '4' ? 'active shadow-blue-400' : 'active'}`} href="#">3R</a>
                                     </div>
                                     <div className="nav-item  w-full  border-r-2 flex flex-row justify-center items-center ">
                                           <a className={`text-nowrap nav-link bg-transparent ${activeKey === '5' ? 'active shadow-blue-400' : 'active'}`} href="/Kidscorner">Kids’ Corner</a>

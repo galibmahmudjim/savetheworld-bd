@@ -77,6 +77,9 @@ dependencies:
   react-icons:
     specifier: ^5.0.1
     version: 5.0.1(react@18.2.0)
+  react-loading:
+    specifier: ^2.0.3
+    version: 2.0.3(prop-types@15.8.1)(react@18.2.0)
   react-material-ui-carousel:
     specifier: ^3.4.2
     version: 3.4.2(@emotion/react@11.11.4)(@emotion/styled@11.11.0)(@mui/icons-material@5.15.11)(@mui/material@5.15.11)(@mui/system@5.15.11)(react-dom@18.2.0)(react@18.2.0)
@@ -12491,6 +12494,16 @@ packages:
 
   /react-lifecycles-compat@3.0.4:
     resolution: {integrity: sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==}
+    dev: false
+
+  /react-loading@2.0.3(prop-types@15.8.1)(react@18.2.0):
+    resolution: {integrity: sha512-Vdqy79zq+bpeWJqC+xjltUjuGApyoItPgL0vgVfcJHhqwU7bAMKzysfGW/ADu6i0z0JiOCRJjo+IkFNkRNbA3A==}
+    peerDependencies:
+      prop-types: ^15.6.0
+      react: '>=0.14.0'
+    dependencies:
+      prop-types: 15.8.1
+      react: 18.2.0
     dev: false
 
   /react-material-ui-carousel@3.4.2(@emotion/react@11.11.4)(@emotion/styled@11.11.0)(@mui/icons-material@5.15.11)(@mui/material@5.15.11)(@mui/system@5.15.11)(react-dom@18.2.0)(react@18.2.0):
