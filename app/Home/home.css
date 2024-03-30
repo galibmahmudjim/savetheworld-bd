@@ -22,12 +22,11 @@
 
 
 .HomeBody {
-      width: 100%;
-      padding-left: 1%;
-      padding-right: 1%;
+      width: 100vw;
       padding-top: 2%;
       padding-bottom: 1%;
       display: flex;
+      padding-left: 6%;
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -38,7 +37,6 @@
       font-family: sans-serif;
       font-weight: 700;
       font-size: 18px;
-      padding-left: 7%;
       padding-right: 6%;
       animation: fadeIn 2s ease-in-out 4s forwards;
 
