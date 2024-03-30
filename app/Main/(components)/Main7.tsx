@@ -52,6 +52,8 @@ const CarouselComponent = () => {
             </div >
       )
 }
+const Description = 'River Pollution Soars from Plastics'
+
 const Main7 = () => {
 
       // const [isVisible, setIsVisible] = useState(false);
@@ -91,6 +93,7 @@ const Main7 = () => {
             , [leftGrow]);
 
 
+
       return (
             <>
 
@@ -106,26 +109,20 @@ const Main7 = () => {
 
                                     </div>
                               </div>
-                              <div className='w-full h-full mb-8 mt-[3%]'>
-                                    <div id="rightFigHome " className=" right w-full gap-3 flex flex-col justify-start items-start ">
-                                          <div className="rightHomeMain">
-                                                River Pollution Soars from Plastics
-                                          </div>
-                                          <div className="rightHomeMainDown justify-start ">
-                                                <ul className="w-full text-xl flex flex-col justify-end items-start ">
-                                                      <li>By 2050, there will be more plastic in the ocean than
-                                                            fish</li>
-                                                      <li>51 trillion floating microplastics in the sea, are
-                                                            consumed by marine animals and humans</li>
-                                                      <li>Over 8 million tons of plastic waste annually enters
-                                                            the oceans</li>
-                                                </ul>
-                                                <h2 className='mt-[30px] text-[700] text-[22px] cursor-pointer moreMain  ml-2 hover:underline'
-                                                      onClick={() => {
-                                                            router.push('/Home');
-                                                      }}
-                                                >   (more)...</h2>
-                                          </div>
+                              <div className='w-full h-full flex flex-col justify-center items-start ml-[4%] mr-[3%]'>
+                                    <div id="rightFigHome " className=" right gap-10   ">
+                                          <div className="rightHomeMain">{Description} </div>
+
+
+                                    </div>
+                                    <div className="rightHomeMainDown w-full mt-5">
+                                          <div className=" text-justify">
+                                                <ul className="w-full flex  mt-2 flex-col justify-end text-justify items-start list-disc">
+                                                      <li>By 2050, there will be more plastic in the ocean than fish</li>
+                                                      <li>51 trillion floating microplastics in the sea, are consumed by marine animals and humans </li>
+                                                      <li>Over 8 million tons of plastic waste annually enters the oceans
+                                                            <span onClick={() => router.push('/Home')} className="cursor-pointer">  .....</span></li>
+                                                </ul></div>
 
                                     </div>
                               </div>
@@ -138,3 +135,4 @@ const Main7 = () => {
 }
 
 export default Main7;
+

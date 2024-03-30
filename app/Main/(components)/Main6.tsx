@@ -45,6 +45,8 @@ const CarouselComponent = () => {
             </div >
       )
 }
+const Description = 'COVID-19 & Plastic'
+
 const Main6 = () => {
 
       // const [isVisible, setIsVisible] = useState(false);
@@ -84,6 +86,7 @@ const Main6 = () => {
             , [leftGrow]);
 
 
+
       return (
             <>
 
@@ -99,20 +102,14 @@ const Main6 = () => {
 
                                     </div>
                               </div>
-                              <div className='w-full h-full mb-8 mt-[3%]'>
-                                    <div id="rightFigHome " className=" right w-full gap-3 flex flex-col justify-start items-start ">
-                                          <div className="rightHomeMain">
-                                                COVID-19 & Plastic
-                                          </div>
-                                          <div className="rightHomeMainDown">
-                                                <div className=" text-justify ">Around 36 tons of <p>CO<sup>2</sup></p> gas was emitted from facemask production<br /> Medical masks used by the USA was 89 million/year<br />UK used near 24 billion/year<br />Dhaka city alone disposed 3039 tons of hand gloves, 1592 tons of medical masks and 900 tons of hand sanitiser bottles
-                                                </div>
-                                                <h2 className='mt-[30px] text-[700] text-[22px] cursor-pointer moreMain  ml-2 hover:underline'
-                                                      onClick={() => {
-                                                            router.push('/Home');
-                                                      }}
-                                                >   (more)...</h2>
-                                          </div>
+                              <div className='w-full h-full flex flex-col justify-center items-start ml-[4%] mr-[3%]'>
+                                    <div id="rightFigHome " className=" right gap-10   ">
+                                          <div className="rightHomeMain">{Description} </div>
+
+
+                                    </div>
+                                    <div className="rightHomeMainDown w-full mt-2">
+                                          <div className=" text-justify">Around 36 tons of <p>CO<sup>2</sup></p> gas was emitted from facemask production and Medical masks used by the USA was 89 million/year UK used near 24 billion/year Dhaka city alone disposed 3039 tons of hand gloves, 1592 tons of medical masks and 900 tons of hand sanitiser bottles<span onClick={() => router.push('/Home')} className="cursor-pointer">  .....</span></div>
 
                                     </div>
                               </div>

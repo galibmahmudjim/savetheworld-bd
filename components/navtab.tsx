@@ -88,10 +88,10 @@ function NavTab() {
       return (
 
 
-            <div className='nav-container' id='navcontainer'>
+            <div className='nav-container ' id='navcontainer'>
                   <div className='NavigationMenuRoot' id='navbar'>
                         <div className='NavigationMenuList' id='navbarlist'>
-                              <div id='navbarround' className=" nav nav-pills flex flex-row w-full bg-[#23336A] h-[60px] gap-0 flex flex-shrink-1 flex-nowrap">
+                              <div id='navbarround' className=" nav nav-pills flex flex-row w-full bg-[#23336A] h-[60px] gap-0 flex flex-shrink-1 flex-nowrap mx-[6vw]">
                                     <div className="nav-item  rounded-[10px] border-r-2  border-white rounded-r-none w-full gap-3  flex flex-row justify-center items-center dropdown ">
                                           <a className={`nav-link   bg-transparent ${activeKey === '3' ? 'active shadow-blue-400' : 'active'} dropdown-toggle `} data-bs-toggle="dropdown" href="/Home" role="button" aria-expanded="false">Home</a>
                                           <div className='dropdown-menu bg-transparent border-0'>

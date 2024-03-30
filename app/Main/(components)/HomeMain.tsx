@@ -112,7 +112,7 @@ const HomeMain = () => {
 
                                     </div>
                               </div>
-                              <div className='w-full h-full flex flex-col justify-center items-center '>
+                              <div className='w-full h-full flex flex-col justify-center items-center pl-[4%]'>
                                     <div id="rightFigHome " className=" right gap-10   ">
                                           <div className="rightHomeMain">{Description} <span onClick={() => router.push('/Home')} className="cursor-pointer">
                                                 .....</span></div>

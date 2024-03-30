@@ -91,7 +91,7 @@ const Main2 = () => {
       }
             , [leftGrow]);
 
-      const Description = "Save The World, Bangladesh is a plastic pollution awareness portal is developed as part of a research collaborative initiative between the University of Dhaka and East West University, Bangladesh. This portal is dedicated to creating awareness among people from all walks of life and industries about the detrimental effects of plastic pollution on the environment and promoting sustainable solutions to reduce plastic waste. Plastic pollution poses a serious threat to the environment, wildlife, and human health, and contributes to global warming and climate change. Now, it is high time to take action to protect our mother Earth from further plastic pollution. "
+      const Description = <p>Plastic pollution is a serious threat to the environment, wildlife, and human health. It is estimated that by 2050, there will be more plastic in the ocean than fish</p>
 
 
       return (
@@ -109,23 +109,12 @@ const Main2 = () => {
 
                                     </div>
                               </div>
-                              <div className='w-full h-full mb-8 mt-[3%]'>
-                                    <div id="rightFigHome " className=" right w-full gap-5 flex flex-col justify-start items-start ">
-                                          <div className="rightHomeMain">
-                                                Around 343 MT of plastic waste is produced every
-                                                year
-                                          </div>
-                                          <div className="rightHomeMainDown">
-                                                <> More than 20 billion plastic bottles are tossed on</>
-                                                <h2 className='mt-[30px] text-[700] text-[22px] cursor-pointer moreMain  ml-2 hover:underline'
-                                                      onClick={() => {
-                                                            router.push('/Home');
-                                                      }}
-                                                >   (more)...</h2>
-                                          </div>
-                                          <div className=" flex flex-row h-full justify-end justify-items-start align-top items-start mt-[-100px">
+                              <div className='w-full h-full flex flex-col justify-center items-center ml-[4%] mr-[3%]'>
+                                    <div id="rightFigHome " className=" right gap-10   ">
+                                          <div className="rightHomeMain">{Description} <span onClick={() => router.push('/Home')} className="cursor-pointer">
+                                                .....</span></div>
 
-                                          </div>
+
                                     </div>
                               </div>
 

@@ -55,7 +55,8 @@ const CarouselComponent = () => {
             </div >
       )
 }
-const Main2 = () => {
+const Description = 'More than 80% of Plastic waste ended up inland and Only around 10% of total world plastic is recycled'
+const Main3 = () => {
 
       // const [isVisible, setIsVisible] = useState(false);
       const [clickedGraph, setClickedGraph] = useState(0);
@@ -94,6 +95,7 @@ const Main2 = () => {
             , [leftGrow]);
 
 
+
       return (
             <>
 
@@ -109,20 +111,11 @@ const Main2 = () => {
 
                                     </div>
                               </div>
-                              <div className='w-full h-full mb-8 mt-[3%]'>
-                                    <div id="rightFigHome " className=" right w-full gap-5 flex flex-col justify-start items-start ">
-                                          <div className="rightHomeMain">
-                                                More than 80% of Plastic waste ended up inland and
-                                                Only around 10% of total world plastic is recycled
-                                          </div>
-                                          <div className="rightHomeMainDown w-full">
+                              <div className='w-full h-full flex flex-col justify-center items-center ml-[3%] mr-[3%]'>
+                                    <div id="rightFigHome " className=" right gap-10   ">
+                                          <div className="rightHomeMain">{Description} <span onClick={() => router.push('/Home')} className="cursor-pointer">
+                                                .....</span></div>
 
-                                                <h2 className='mt-[30px] w-full flex flex-row items-end justify-end text-[700] text-[22px] cursor-pointer moreMain  ml-2 hover:underline'
-                                                      onClick={() => {
-                                                            router.push('/Home');
-                                                      }}
-                                                >   (more)...</h2>
-                                          </div>
 
                                     </div>
                               </div>
@@ -134,4 +127,4 @@ const Main2 = () => {
       );
 }
 
-export default Main2;
+export default Main3;

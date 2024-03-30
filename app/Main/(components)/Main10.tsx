@@ -43,7 +43,9 @@ const CarouselComponent = () => {
             </div >
       )
 }
-const Main11 = () => {
+const Description = 'River Pollution Soars from Plastics'
+
+const Main10 = () => {
 
       // const [isVisible, setIsVisible] = useState(false);
       const [clickedGraph, setClickedGraph] = useState(0);
@@ -82,6 +84,7 @@ const Main11 = () => {
             , [leftGrow]);
 
 
+
       return (
             <>
 
@@ -97,23 +100,20 @@ const Main11 = () => {
 
                                     </div>
                               </div>
-                              <div className='w-full h-full mb-8 mt-[3%]'>
-                                    <div id="rightFigHome " className=" right w-full gap-3 flex flex-col justify-start items-start ">
-                                          <div className="rightHomeMain">
+                              <div className='w-full h-full flex flex-col justify-center items-start ml-[4%] mr-[3%]'>
+                                    <div id="rightFigHome " className=" right gap-10   ">
+                                          <div className="rightHomeMain">{Description} </div>
 
-                                          </div>
-                                          <div className="rightHomeMainDown justify-start ">
-                                                <ul className="gap-2 flex flex-col">
-                                                      <li>Over 73,000 tonnes (40%) of plastic waste enter the Bay through Padma, Meghna, and Jamuna rivers.</li>
-                                                      <li>60% of foreign plastic waste reaches Bangladesh from India, Thailand, Sri Lanka, and Myanmar.</li>
-                                                      <li>Plastic particles have been found in fish stomachs and even in salt, posing a threat to marine life and human health.</li>
-                                                </ul>
-                                                <h2 className='mt-[30px] text-[700] text-[22px] cursor-pointer moreMain  ml-2 hover:underline'
-                                                      onClick={() => {
-                                                            router.push('/Home');
-                                                      }}
-                                                >   (more)...</h2>
-                                          </div>
+
+                                    </div>
+                                    <div className="rightHomeMainDown w-full mt-5">
+                                          <div className=" text-justify ">
+                                                <ul className="w-full flex  mt-2 flex-col justify-end text-justify items-start list-disc">
+                                                      <li>More than 73,000 tonnes (40%) of plastic waste enter the Bay of Bengal through the Padma, Meghna and Jamuna rivers</li>
+                                                      <li>60% of foreign Plastic Waste reaches Bangladeshi waters through sea channels from India, Thailand, Sri Lanka and Myanmar</li>
+                                                      <li>Plastic particles were found in the stomachs of fish in the Bay of Bengal and in salt
+                                                            <span onClick={() => router.push('/Home')} className="cursor-pointer">  .....</span></li>
+                                                </ul></div>
 
                                     </div>
                               </div>
@@ -125,4 +125,4 @@ const Main11 = () => {
       );
 }
 
-export default Main11;
+export default Main10;

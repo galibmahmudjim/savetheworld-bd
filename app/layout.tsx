@@ -62,7 +62,7 @@ export default function RootLayout({
 
       <body className="homepage-layout">
 
-        <header className="h-[19vh] w-[100vw]">
+        <header className="h-[19vh] w-[100vw] ">
           <Headers />
         </header>
         <nav>
@@ -72,7 +72,7 @@ export default function RootLayout({
         <div className="background-container">
           <div className="background"></div>
         </div>
-        <main className="w-full">{children}</main>
+        <main className="w-full ">{children}</main>
 
         <Footer />
 

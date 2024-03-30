@@ -55,6 +55,8 @@ const CarouselComponent = () => {
             </div >
       )
 }
+
+const Description = 'Plastic is not biodegradable'
 const Main4 = () => {
 
       // const [isVisible, setIsVisible] = useState(false);
@@ -94,6 +96,7 @@ const Main4 = () => {
             , [leftGrow]);
 
 
+
       return (
             <>
 
@@ -109,20 +112,19 @@ const Main4 = () => {
 
                                     </div>
                               </div>
-                              <div className='w-full h-full mb-8 mt-[3%]'>
-                                    <div id="rightFigHome " className=" right w-full gap-5 flex flex-col justify-start items-start ">
-                                          <div className="rightHomeMain">
-                                                More than 80% of Plastic waste ended up inland and
-                                                Only around 10% of total world plastic is recycled
-                                          </div>
-                                          <div className="rightHomeMainDown w-full">
+                              <div className='w-full h-full flex flex-col justify-center items-start ml-[4%] mr-[3%] '>
+                                    <div id="rightFigHome " className=" right gap-10   ">
+                                          <div className="rightHomeMain">{Description} </div>
 
-                                                <h2 className='mt-[30px] w-full flex flex-row items-end justify-end text-[700] text-[22px] cursor-pointer moreMain  ml-2 hover:underline'
-                                                      onClick={() => {
-                                                            router.push('/Home');
-                                                      }}
-                                                >   (more)...</h2>
-                                          </div>
+
+                                    </div>
+                                    <div className="rightHomeMainDown w-full mt-2">
+                                          <div className="">Life of plastics:</div>
+                                          <ul className="w-full flex mt-2 flex-col justify-end text-justify items-start list-disc">
+                                                <li>Plastic bags last for: 20 Years</li>
+                                                <li>Plastic bottles: 450 Years</li>
+                                                <li>Fishing line: 600 years<span onClick={() => router.push('/Home')} className="cursor-pointer">  .....</span></li>
+                                          </ul>
 
                                     </div>
                               </div>

@@ -43,7 +43,11 @@ const CarouselComponent = () => {
             </div >
       )
 }
-const Main10 = () => {
+
+
+const Description = 'Mostly the middle - income and low - income countries suffer from plastic burden of the World'
+
+const Main11 = () => {
 
       // const [isVisible, setIsVisible] = useState(false);
       const [clickedGraph, setClickedGraph] = useState(0);
@@ -82,6 +86,7 @@ const Main10 = () => {
             , [leftGrow]);
 
 
+
       return (
             <>
 
@@ -97,32 +102,20 @@ const Main10 = () => {
 
                                     </div>
                               </div>
-                              <div className='w-full h-full mb-8 mt-[3%]'>
-                                    <div id="rightFigHome " className=" right w-full gap-3 flex flex-col justify-start items-start ">
-                                          <div className="rightHomeMain">
-                                                Dhaka city witnessed more than 3.5-fold
-                                                increase in plastic waste:
-                                          </div>
-                                          <div className="rightHomeMainDown justify-start ">
-                                                <ul className="w-full text-xl flex flex-col justify-end items-start ">
-                                                      <li>In 2005 178 tons per day</li>
-                                                      <li>In 2020 646 tons per day </li>
-                                                </ul>
-                                                <h2 className='mt-[30px] text-[700] text-[22px] cursor-pointer moreMain  ml-2 hover:underline'
-                                                      onClick={() => {
-                                                            router.push('/Home');
-                                                      }}
-                                                >   (more)...</h2>
-                                          </div>
+                              <div className='w-full h-full flex flex-col justify-center items-start ml-[4%] mr-[3%]'>
+                                    <div id="rightFigHome " className=" right gap-10   ">
+                                          <div className="rightHomeMain">{Description}  <span onClick={() => router.push('/Home')} className="cursor-pointer">  .....</span></div>
+
 
                                     </div>
-                              </div>
 
-                        </div >
+                              </div>
+                        </div>
+
                   </div >
 
             </>
       );
 }
 
-export default Main10;
+export default Main11;

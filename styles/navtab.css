@@ -565,8 +565,6 @@ p {
       position: relative;
       justify-content: space-between;
       align-items: center;
-      margin-left: 7%;
-      margin-right: 7%;
       z-index: 1000;
 }
 

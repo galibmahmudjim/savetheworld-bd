@@ -44,7 +44,8 @@ const CarouselComponent = () => {
             </div >
       )
 }
-const Main8 = () => {
+const Description = 'Plastic contributes up to 5,000 times more to global warming than carbon dioxide'
+const Main9 = () => {
 
       // const [isVisible, setIsVisible] = useState(false);
       const [clickedGraph, setClickedGraph] = useState(0);
@@ -83,6 +84,7 @@ const Main8 = () => {
             , [leftGrow]);
 
 
+
       return (
             <>
 
@@ -98,22 +100,13 @@ const Main8 = () => {
 
                                     </div>
                               </div>
-                              <div className='w-full h-full mb-8 mt-[3%]'>
-                                    <div id="rightFigHome " className=" right w-full gap-3 flex flex-col justify-start items-start ">
-                                          <div className="rightHomeMain">
-                                                Plastic contributes up to 5,000 times more
-                                                to global warming than carbon dioxide
-                                          </div>
-                                          <div className="rightHomeMainDown justify-start ">
+                              <div className='w-full h-full flex flex-col justify-center items-start ml-[4%] mr-[3%]'>
+                                    <div id="rightFigHome " className=" right gap-10   ">
+                                          <div className="rightHomeMain">{Description} <span onClick={() => router.push('/Home')} className="cursor-pointer">  .....</span></div>
 
-                                                <h2 className='mt-[30px] text-[700] text-[22px] cursor-pointer moreMain  ml-2 hover:underline'
-                                                      onClick={() => {
-                                                            router.push('/Home');
-                                                      }}
-                                                >   (more)...</h2>
-                                          </div>
 
                                     </div>
+
                               </div>
 
                         </div >
@@ -123,4 +116,4 @@ const Main8 = () => {
       );
 }
 
-export default Main8;
+export default Main9;

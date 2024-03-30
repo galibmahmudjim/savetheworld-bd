@@ -63,8 +63,6 @@
       justify-content: center;
       justify-items: center;
       color: #fff;
-      margin: 10px;
-      padding-left: 8%;
       padding-right: 10%;
 
       @keyframes textUptoDownAppear {
@@ -180,8 +178,8 @@
 
 
 .HomeFigure .box-container {
-      width: 90%;
       max-height: 100%;
+      width: 100%;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -191,7 +189,6 @@
       visibility: hidden;
       border-radius: 15px;
       overflow: hidden;
-      margin-left: 0px;
       animation: fadeIn 2s ease-in-out 1s forwards;
 
       #leftFigHome {
@@ -369,9 +366,10 @@
 
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1299px) {
       .rightHomeMain {
-            font-size: 30px;
+            width: 100%;
+            font-size: 25px;
             font-weight: 700;
             color: #000000;
             text-shadow: rgba(53, 44, 44, 0.43) 1px 1px 0px;
@@ -379,6 +377,55 @@
             font-family: "RocknRoll One", sans-serif;
             opacity: 0;
             animation: textUptoDownAppearY 1s ease-in-out 2s forwards;
+      }
+
+      .rightHomeMainDown {
+
+            font-size: 20px;
+            font-weight: 500;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            font-family: "RocknRoll One", sans-serif;
+
+            align-items: flex-start;
+            color: rgb(3, 0, 0);
+            text-shadow: rgba(53, 44, 44, 0.43) 1px 1px 0px;
+            text-align: left;
+            opacity: 0;
+            animation: textDowntoUpAppearY 1s ease-in-out 2s forwards;
+      }
+
+}
+
+@media screen and (max-width: 1500px) and (min-width: 1300px) {
+      .rightHomeMain {
+            width: 100%;
+            font-size: 28px;
+            font-weight: 700;
+            color: #000000;
+            text-shadow: rgba(53, 44, 44, 0.43) 1px 1px 0px;
+            text-align: justify;
+            font-family: "RocknRoll One", sans-serif;
+            opacity: 0;
+            animation: textUptoDownAppearY 1s ease-in-out 2s forwards;
+      }
+
+      .rightHomeMainDown {
+
+            font-size: 24px;
+            font-weight: 500;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            font-family: "RocknRoll One", sans-serif;
+
+            align-items: flex-start;
+            color: rgb(3, 0, 0);
+            text-shadow: rgba(53, 44, 44, 0.43) 1px 1px 0px;
+            text-align: left;
+            opacity: 0;
+            animation: textDowntoUpAppearY 1s ease-in-out 2s forwards;
       }
 
 }
@@ -395,20 +442,38 @@
             animation: textUptoDownAppearY 1s ease-in-out 2s forwards;
       }
 
+      .rightHomeMainDown {
+
+            font-size: 28px;
+            font-weight: 500;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            font-family: "RocknRoll One", sans-serif;
+
+            align-items: flex-start;
+            color: rgb(3, 0, 0);
+            text-shadow: rgba(53, 44, 44, 0.43) 1px 1px 0px;
+            text-align: left;
+            opacity: 0;
+            animation: textDowntoUpAppearY 1s ease-in-out 2s forwards;
+      }
+
 }
 
-.rightHomeMainDown {
+/* .rightHomeMainDown {
 
-      font-size: 20px;
+      font-size: 28px;
       font-weight: 500;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      align-items: flex-end;
-      color: rgba(0, 0, 0, 0.644);
+      font-family: "RocknRoll One", sans-serif;
+
+      align-items: flex-start;
+      color: rgb(3, 0, 0);
       text-shadow: rgba(53, 44, 44, 0.43) 1px 1px 0px;
       text-align: left;
-      font-family: "Google Sans", Roboto, "Helvetica Neue", sans-serif;
       opacity: 0;
       animation: textDowntoUpAppearY 1s ease-in-out 2s forwards;
-}
+} */

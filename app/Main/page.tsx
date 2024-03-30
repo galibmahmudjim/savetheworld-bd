@@ -16,7 +16,7 @@ import Main7 from './(components)/Main7';
 import Main8 from './(components)/Main8';
 import Main9 from './(components)/Main9';
 import Main10 from './(components)/Main10';
-import Main11 from './(components)/Main10';
+import Main11 from './(components)/Main11';
 import Main12 from './(components)/Main12';
 
 
@@ -47,10 +47,10 @@ const Main: React.FC = () => {
             );
       }
       return (
-            <div className="w-full h-screen flex flex-col justify-start items-center">
+            <div className="w-[100vw] h-screen flex flex-col justify-start items-center pl-[6%] pr-[6%]">
 
 
-                  <Carousel className='w-full h-full  flex flex-col justify-start items-center pl-[2.3%] pr-[1.4%]'
+                  <Carousel className='w-full h-full  flex flex-col justify-start items-center '
                         swipe={true}
                         animation="slide"
                         indicators={false}
@@ -69,8 +69,6 @@ const Main: React.FC = () => {
                               style: {
                                     bottom: '0',
                                     top: 'unset',
-                                    marginLeft: '5%',
-                                    marginRight: '5%',
 
                                     position: 'absolute',
                               }
@@ -78,7 +76,7 @@ const Main: React.FC = () => {
                   >
                         {components.map((Component, index) => (
 
-                              <div key={index} className=" w-full  h-[80vh] flex flex-col justify-start items-center ">
+                              <div key={index} className=" w-full  h-[80vh]  flex flex-col justify-start items-center ">
 
                                     {components[index]}
                               </div>

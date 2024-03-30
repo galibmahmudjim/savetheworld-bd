@@ -16,9 +16,11 @@
       background: rgba(255, 255, 255, 0.772);
       transition: var(--background-start-rgb) 0.1s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
       margin-top: 0px;
-      padding: 0px 20px 0px 20px;
+      padding: 0px 0px 0px 0px;
       height: 20vh;
       width: 100vw;
+      padding-left: 6%;
+      padding-right: 6%;
       overflow: hidden;
       position: fixed;
       top: 0;
@@ -31,8 +33,6 @@
       display: flex;
       height: 100%;
       flex-direction: row;
-      margin-right: 2%;
-      margin-left: 2%;
       padding-bottom: 0px;
 }
 
@@ -40,13 +40,11 @@
       display: flex;
       flex: 1;
       flex-direction: row;
-      justify-items: center;
+      justify-items: flex-start;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       width: 100%;
       height: auto;
-      margin-left: 0px;
-      padding: 5px;
 
       /* padding: 0px; */
 }
@@ -55,14 +53,11 @@
 
 .header .header-1 .left .logo {
       display: flex;
+      min-width: 180px;
       flex-direction: column;
       align-items: center;
       justify-content: flex-end;
-      width: 95%;
-      min-width: 103px;
-      max-width: 100%;
-      margin-left: 16%;
-      margin-bottom: -30px;
+      min-height: 100px;
       cursor: pointer
 }
 
@@ -112,11 +107,20 @@
       flex: 1;
       display: flex;
       flex-direction: column;
-      align-items: space-between;
+      align-items: end;
       justify-content: flex-start;
-      /* padding-top: 2.2%; */
-      padding-top: 2.5%;
+      justify-items: end;
       width: 100%;
+      margin-left: 0px;
+      margin-top: 15px;
+}
+
+.header .header-1 .right .duewu {
+      margin-top: 1%;
+      width: 55%;
+      height: 100%;
+      min-width: 122px;
+      min-height: 70px;
       margin-left: 0px;
 }
 
@@ -190,7 +194,7 @@
       }
 
       100% {
-            transform: translateY(-100%);
+            transform: translateY(-300%);
       }
 }
 
@@ -208,4 +212,32 @@
 
 #right-header.moveout {
       animation: moveOut 0.5s ease-in-out 0s forwards;
+}
+
+@media screen and (max-width: 768px) {
+      .fontSize {
+            font-size: 14px;
+      }
+
+}
+
+@media screen and (max-width: 1000px) and (min-width: 768px) {
+      .fontSize {
+            font-size: 15px;
+      }
+
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1000px) {
+      .fontSize {
+            font-size: 16px;
+      }
+
+}
+
+@media screen and (min-width: 1200px) {
+      .fontSize {
+            font-size: 18px;
+      }
+
 }

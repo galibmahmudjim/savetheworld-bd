@@ -55,6 +55,34 @@
       color: #fff;
 }
 
+@media screen and (max-width: 768px) {
+      .HomeFigure .right {
+            font-size: 20px;
+      }
+
+}
+
+@media screen and (max-width: 1000px) and (min-width: 768px) {
+      .HomeFigure .right {
+            font-size: 23px;
+      }
+
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1000px) {
+      .HomeFigure .right {
+            font-size: 25px;
+      }
+
+}
+
+@media screen and (max-width: 1400px) and (min-width: 1200px) {
+      .HomeFigure .right {
+            font-size: 27px;
+      }
+
+}
+
 .HomeFigure .right {
       background-color: transparent;
       text-align: start;
@@ -64,9 +92,7 @@
       justify-items: start;
 
       color: #fff;
-      margin: 10px;
       padding-left: 8%;
-      padding-right: 10%;
 
       @keyframes textUptoDownAppear {
             0% {

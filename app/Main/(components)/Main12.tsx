@@ -43,7 +43,24 @@ const CarouselComponent = () => {
             </div >
       )
 }
-const Main10 = () => {
+//   <div className="rightHomeMain text-justify">
+//                                                 Recycling includes recovery of energy (Waste to Energy, WtE) and resources or products (waste to products, WtP)<br />
+
+//                                           </div>
+<div className="rightHomeMainDown justify-start ">
+
+      <br />
+      <h2 className='mt-[30px] text-[700] text-[22px] cursor-pointer moreMain  ml-2 hover:underline'
+            onClick={() => {
+                  router.push('/Home');
+            }}
+      >   (more)...</h2>
+</div>
+
+
+const Description = 'Recycling includes recovery of energy (Waste to Energy, WtE) and resources or products (waste to products, WtP)'
+
+const Main12 = () => {
 
       // const [isVisible, setIsVisible] = useState(false);
       const [clickedGraph, setClickedGraph] = useState(0);
@@ -82,6 +99,7 @@ const Main10 = () => {
             , [leftGrow]);
 
 
+
       return (
             <>
 
@@ -97,22 +115,20 @@ const Main10 = () => {
 
                                     </div>
                               </div>
-                              <div className='w-full h-full mb-8 mt-[3%]'>
-                                    <div id="rightFigHome " className=" right w-full gap-3 flex flex-col justify-start items-start ">
-                                          <div className="rightHomeMain text-justify">
-                                                Recycling includes recovery of energy (Waste to Energy, WtE) and resources or products (waste to products, WtP)<br />
+                              <div className='w-full h-full flex flex-col justify-center items-start ml-[1%] mr-[3%]'>
+                                    <div id="rightFigHome " className=" right gap-10   ">
+                                          <div className="rightHomeMain">{Description} </div>
 
-                                          </div>
-                                          <div className="rightHomeMainDown justify-start ">
-                                                WtE: Almost 50% of total plastic waste will be curated by incineration by 2050<br />Bangladesh government has a National Action Plan: for Reduce, Reuse and Recycle of plastic<br />
-                                                Targets: include recycling 50% of plastics by 2025, Phasing out single-use plastic by 90% by 2026, and 2030, reducing plastic waste generation by 30%
-                                                <br />
-                                                <h2 className='mt-[30px] text-[700] text-[22px] cursor-pointer moreMain  ml-2 hover:underline'
-                                                      onClick={() => {
-                                                            router.push('/Home');
-                                                      }}
-                                                >   (more)...</h2>
-                                          </div>
+
+                                    </div>
+                                    <div className="rightHomeMainDown w-full mt-5">
+                                          <div className=" text-justify ">
+                                                <ul className="w-full flex  mt-1 flex-col justify-end text-justify items-start list-disc">
+                                                      <li> WtE: Almost 50% of total plastic waste will be curated by incineration by 2050</li>
+                                                      <li>Bangladesh government has a National Action Plan: for Reduce, Reuse and Recycle of plastic</li>
+                                                      <li> Targets: include recycling 50% of plastics by 2025, Phasing out single-use plastic by 90% by 2026, and 2030, reducing plastic waste generation by 30%
+                                                            <span onClick={() => router.push('/Home')} className="cursor-pointer">  .....</span></li>
+                                                </ul></div>
 
                                     </div>
                               </div>
@@ -124,4 +140,4 @@ const Main10 = () => {
       );
 }
 
-export default Main10;
+export default Main12;
