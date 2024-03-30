@@ -1,12 +1,14 @@
-import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
+
+
+import { TbPointFilled } from "react-icons/tb";
 const LifePlastics = () => {
       return (
             <div className="w-full h-full text-[23px] more">
-                  <ul className="ulHome">
-                        <li className="checkmarks">  <HiOutlineClipboardDocumentList color="#3565BE" size={25} /> Plastic bags: 20 years</li>
-                        <li className="checkmarks">  <HiOutlineClipboardDocumentList color="#3565BE" size={25} />Plastic bottles: 450 years</li>
-                        <li className="checkmarks">  <HiOutlineClipboardDocumentList color="#3565BE" size={25} />Fishing line: 600 years</li>
-                  </ul>
+                  <div className="ulHome">
+                        <div className="checkmarks">  <TbPointFilled color="#03070E" size={25} /> <p>Plastic bags: 20 years</p></div>
+                        <div className="checkmarks">  <TbPointFilled color="#03070E" size={25} /><p>Plastic bottles: 450 years</p></div>
+                        <div className="checkmarks">  <TbPointFilled color="#03070E" size={25} /><div>Fishing line: 600 years</div></div>
+                  </div>
             </div>
       )
 }

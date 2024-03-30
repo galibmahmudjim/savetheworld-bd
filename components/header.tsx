@@ -4,6 +4,7 @@ import "../styles/header.css";
 import "../app/globals.css";
 import { useEffect } from 'react';
 import Image from 'next/image';
+import { TbPointFilled } from "react-icons/tb";
 
 function handleClick() {
       alert('Image clicked!');
@@ -55,7 +56,7 @@ const Headers = (): JSX.Element => {
                         <div id='center-header' className="center" onClick={() => { }}>
                               <div className="title-h1 text-[#23336A]">A Plastic Pollution Awareness Portal</div>
                         </div>
-                        <div id='right-header' className="right" >
+                        <div id='right-header' className="right " >
                               <div className="w-full h-[55%] gap-2 flex flex-row justify-around items-end ">
                                     <a href="https://www.du.ac.bd" target="_blank" className='w-full flex-1 flex flex-row justify-end '>
                                           <img className="du" src="/du.png" alt="university-logo" />
@@ -63,6 +64,19 @@ const Headers = (): JSX.Element => {
                                     <a href="https://www.ewubd.edu/" target="_blank" className='w-full flex flex-1 flex-row justify-start'>
                                           <img className="ewu" src="/ewu.png" alt="East West university" />
                                     </a>
+                              </div>
+                              <div className="w-full h-[35%] mt-2 gap-2 flex flex-row justify-around items-end ">
+                                    <div className='w-full h-full flex flex-row justify-center items-center gap-2'>
+                                          <div className='font-RocknRoll text-[20px] font-bold text-[#000000] flex flex-row justify-center items-center  cursor-pointer'>
+                                                <TbPointFilled color="#03070E" size={22} />
+                                                বাংলা
+                                          </div>
+                                          <div className='font-RocknRoll text-[20px] font-bold text-[#000000] flex flex-row justify-center items-center  cursor-pointer'>
+                                                <TbPointFilled color="#03070E" size={22} />
+                                                English
+                                          </div>
+
+                                    </div>
                               </div>
                         </div>
                   </div>

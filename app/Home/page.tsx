@@ -4,15 +4,15 @@ import Image from "next/image";
 import "./home.css";
 import { IoArrowBack } from "react-icons/io5";
 import Link from "next/link";
+import { FiMinusSquare } from "react-icons/fi";
 import { useRouter, useSearchParams, usePathname } from 'next/navigation';
 import AboutPlastic from "./aboutPlastic";
 import PlasticComprises from "./PlasticComprises";
 import LifePlastics from "./LifePlastics";
+import { BiAddToQueue } from "react-icons/bi";
 import { BsSignIntersection, BsSignIntersectionY } from "react-icons/bs";
 import GlobalPlastic from "./GlobalPlastic";
 import CovidPlastic from "./CovidPlastic";
-import { FaMinusCircle } from "react-icons/fa";
-import { FaPlusCircle } from "react-icons/fa";
 
 type Props = {
       onCallback: (value: string) => void;
@@ -31,7 +31,7 @@ const Home = () => {
 
 
 
-      const Description = "Save The World, Bangladesh is a plastic pollution awareness portal is developed as part of a research collaborative initiative between the University of Dhaka and East West University, Bangladesh. This portal is dedicated to creating awareness among people from all walks of life and industries about the detrimental effects of plastic pollution on the environment and promoting sustainable solutions to reduce plastic waste. Plastic pollution poses a serious threat to the environment, wildlife, and human health, and contributes to global warming and climate change. Now, it is high time to take action to protect our mother Earth from further plastic pollution. "
+      const Description = " is a plastic pollution awareness portal is developed as part of a research collaborative initiative between the University of Dhaka and East West University, Bangladesh.This portal is dedicated to creating awareness among people from all walks of life and industries about the detrimental effects of plastic pollution on the environment and promoting sustainable solutions to reduce plastic waste. Plastic pollution poses a serious threat to the environment, wildlife, and human health, and contributes to global warming and climate change.Now, it is high time to take action to protect our mother Earth from further plastic pollution."
 
       const [indexs, setIndexs] = useState(0);
 
@@ -81,8 +81,8 @@ const Home = () => {
                                     <div id="rightFigHome" className=" body " >
 
                                           <div className='Description'>
-                                                <h1 className=" mb-3 titled">Bangladesh | Save The World </h1>
-                                                <p className="text-[24px]  font-[300]">{Description}</p>
+                                                <h1 className="text-[#23336A] mb-3 titled">Bangladesh | Save The World </h1>
+                                                <p className="text-[24px] font-RocknRoll  font-[300]"><span className="font-bold">Save The World, </span>{Description}</p>
                                           </div>
 
 
@@ -100,7 +100,7 @@ const Home = () => {
 
                                                             }}
                                                       >
-                                                            About Plastics{indexs !== 1 ? <FaPlusCircle /> : <FaMinusCircle />}
+                                                            About Plastics{indexs !== 1 ? <BiAddToQueue /> : <FiMinusSquare />}
                                                       </div>
 
                                                       {indexs === 1 ? <AboutPlastic /> : null}
@@ -119,7 +119,7 @@ const Home = () => {
 
                                                             }}
                                                       >
-                                                            Plastic wastes{indexs !== 2 ? <FaPlusCircle className="font-extrabold" /> : <FaMinusCircle />}
+                                                            Plastic wastes{indexs !== 2 ? <BiAddToQueue className="font-extrabold" /> : <FiMinusSquare />}
                                                       </div>
 
                                                       {indexs === 2 ? <PlasticComprises /> : null}
@@ -137,7 +137,7 @@ const Home = () => {
 
                                                             }}
                                                       >
-                                                            Life of plastics{indexs !== 3 ? <FaPlusCircle /> : <FaMinusCircle />}
+                                                            Life of plastics{indexs !== 3 ? <BiAddToQueue /> : <FiMinusSquare />}
                                                       </div>
 
                                                       {indexs === 3 ? <LifePlastics /> : null}
@@ -155,7 +155,7 @@ const Home = () => {
 
                                                             }}
                                                       >
-                                                            Global Top Plastic Producers{indexs !== 4 ? <FaPlusCircle /> : <FaMinusCircle />}
+                                                            Global Top Plastic Producers{indexs !== 4 ? <BiAddToQueue /> : <FiMinusSquare />}
                                                       </div>
 
                                                       {indexs === 4 ? <GlobalPlastic /> : null}
@@ -173,7 +173,7 @@ const Home = () => {
 
                                                             }}
                                                       >
-                                                            COVID-19 & Plastic{indexs !== 5 ? <FaPlusCircle /> : <FaMinusCircle />}
+                                                            COVID-19 & Plastic{indexs !== 5 ? <BiAddToQueue /> : <FiMinusSquare />}
                                                       </div>
 
                                                       {indexs === 5 ? <CovidPlastic /> : null}

@@ -95,7 +95,7 @@ function NavTab() {
                                     <div className="nav-item  rounded-[10px] border-r-2  border-white rounded-r-none w-full gap-3  flex flex-row justify-center items-center dropdown ">
                                           <a className={`nav-link   bg-transparent ${activeKey === '3' ? 'active shadow-blue-400' : 'active'} dropdown-toggle `} data-bs-toggle="dropdown" href="/Home" role="button" aria-expanded="false">Home</a>
                                           <div className='dropdown-menu bg-transparent border-0'>
-                                                <div className="bg-[#0f1398] pt-[7%] w-full h-full rounded-[10px] p-1 flex flex-col justify-center items-start " >
+                                                <div className="bg-[#23336A] pt-[7%] w-full h-full rounded-[10px] p-1 flex flex-col justify-center items-start " >
                                                       <div className='dropdown-item bg-transparent hover:scale-105'><Link className=" nav_drop no-underline w-full" href="/Home?index=1" shallow>About Plastics</Link></div>
                                                       <div className='dropdown-item bg-transparent hover:scale-105'><Link className="nav_drop no-underline" href="/Home?index=2" shallow={true}>Plastic Waste</Link></div>
                                                       <div className='dropdown-item bg-transparent hover:scale-105'><Link className="nav_drop no-underline" href="/Home?index=3" shallow={true}>Life of plastics</Link></div>
@@ -111,7 +111,7 @@ function NavTab() {
                                     <div className="nav-item border-r-2 w-full gap-3  flex flex-row justify-center items-center dropdown ">
                                           <a className={`nav-link  bg-transparent ${activeKey === '3' ? 'active shadow-blue-400' : 'active'} dropdown-toggle `} data-bs-toggle="dropdown" href="/FactsFigures" role="button" aria-expanded="false">Facts &amp; Figures</a>
                                           <div className='dropdown-menu bg-transparent border-0'>
-                                                <div className="bg-[#0f1398] pt-[7%] w-full h-full rounded-[10px] p-1 flex flex-col justify-center items-start " >
+                                                <div className="bg-[#23336A] pt-[7%] w-full h-full rounded-[10px] p-1 flex flex-col justify-center items-start " >
                                                       <div className='dropdown-item bg-transparent hover:scale-105'><Link className=" nav_drop no-underline w-full" href="//FactFigures" shallow>Global plastic waste generation</Link></div>
                                                       <div className='dropdown-item bg-transparent hover:scale-105'><Link className="nav_drop no-underline" href="/FactsFigures" shallow={true}>Plastic in Bangladesh Statistics</Link></div>
                                                       <div className='dropdown-item bg-transparent hover:scale-105'><Link className="nav_drop no-underline" href="/FactsFigures" shallow={true}>Plastic Industries &amp; Revenue (Industrial Impact)</Link></div>
