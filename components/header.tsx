@@ -45,11 +45,11 @@ const Headers = (): JSX.Element => {
                   <div className="header-1">
                         <div className="left h-full ">
                               <img onClick={() => {
-                                    router.push("/");
+                                    router.push("/Main");
                                     router.refresh();
                               }}
 
-                                    className="logo h-[70%]   hover:w-96" src="/LogoFigma.svg" alt="logo">
+                                    className="logo h-[70%]  " src="/LogoFigma.svg" alt="logo">
                               </img>
 
                         </div>

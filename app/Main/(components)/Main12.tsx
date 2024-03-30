@@ -43,20 +43,6 @@ const CarouselComponent = () => {
             </div >
       )
 }
-//   <div className="rightHomeMain text-justify">
-//                                                 Recycling includes recovery of energy (Waste to Energy, WtE) and resources or products (waste to products, WtP)<br />
-
-//                                           </div>
-<div className="rightHomeMainDown justify-start ">
-
-      <br />
-      <h2 className='mt-[30px] text-[700] text-[22px] cursor-pointer moreMain  ml-2 hover:underline'
-            onClick={() => {
-                  router.push('/Home');
-            }}
-      >   (more)...</h2>
-</div>
-
 
 const Description = 'Recycling includes recovery of energy (Waste to Energy, WtE) and resources or products (waste to products, WtP)'
 
