@@ -17,7 +17,7 @@
       transition: var(--background-start-rgb) 0.1s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
       margin-top: 0px;
       padding: 0px 0px 0px 0px;
-      height: 20vh;
+      height: 23vh;
       width: 100vw;
       padding-left: 6%;
       padding-right: 6%;
@@ -44,7 +44,7 @@
       align-items: center;
       justify-content: flex-start;
       width: 100%;
-      height: auto;
+      height: 100%;
 
       /* padding: 0px; */
 }
@@ -83,7 +83,7 @@
       width: 100%;
       padding-right: 40px;
       padding-bottom: 25px;
-      margin-left: 3%;
+      margin-left: 1.5%;
       flex-wrap: nowrap;
 }
 
@@ -112,7 +112,7 @@
       justify-items: flex-end;
       width: 100%;
       margin-left: 0px;
-      margin-top: 15px;
+      margin-top: 2.5%;
 }
 
 .header .header-1 .right .duewu {
@@ -240,4 +240,45 @@
             font-size: 18px;
       }
 
+}
+
+.banlangicon:hover .banglaselect {
+      display: block;
+}
+
+.banlangicon:hover .banglanoselect {
+      display: none;
+}
+
+.banlangicon .banglanoselect {
+      display: block;
+}
+
+.banlangicon .banglaselect {
+      display: none;
+}
+
+.banlangicon:hover {
+      color: #0131cc;
+}
+
+
+.englangicon:hover .banglaselect {
+      display: block;
+}
+
+.englangicon:hover .banglanoselect {
+      display: none;
+}
+
+.englangicon .banglanoselect {
+      display: block;
+}
+
+.englangicon .banglaselect {
+      display: none;
+}
+
+.englangicon:hover {
+      color: #0131cc;
 }

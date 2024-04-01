@@ -109,7 +109,7 @@ const Main6 = () => {
 
                                     </div>
                                     <div className="rightHomeMainDown w-full mt-2">
-                                          <div className=" text-justify">Around 36 tons of <p>CO<sup>2</sup></p> gas was emitted from facemask production and Medical masks used by the USA was 89 million/year UK used near 24 billion/year Dhaka city alone disposed 3039 tons of hand gloves, 1592 tons of medical masks and 900 tons of hand sanitiser bottles<span onClick={() => router.push('/Home')} className="cursor-pointer">  .....</span></div>
+                                          <div className=" text-justify">Around 36 tons of <p>CO<sub>2</sub></p> gas was emitted from facemask production and medical masks used by the USA was 89 million/year UK used near 24 billion/year Dhaka city alone disposed 3039 tons of hand gloves, 1592 tons of medical masks and 900 tons of hand sanitiser bottles<span onClick={() => router.push('/Home')} className="cursor-pointer">  .....</span></div>
 
                                     </div>
                               </div>

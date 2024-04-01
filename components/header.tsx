@@ -4,7 +4,7 @@ import "../styles/header.css";
 import "../app/globals.css";
 import { useEffect } from 'react';
 import Image from 'next/image';
-import { TbPointFilled } from "react-icons/tb";
+import { TbPoint, TbPointFilled } from "react-icons/tb";
 
 function handleClick() {
       alert('Image clicked!');
@@ -49,7 +49,7 @@ const Headers = (): JSX.Element => {
                                     router.refresh();
                               }}
 
-                                    className="logo h-[70%]  " src="/LogoFigma.svg" alt="logo">
+                                    className="logo h-[100%]  " src="/LogoFigma.svg" alt="logo">
                               </img>
 
                         </div>
@@ -67,14 +67,16 @@ const Headers = (): JSX.Element => {
                                     </a> */}
 
                               </div>
-                              <div className="w-full h-[25%] mt-2 gap-2 flex flex-row justify-around items-end ">
+                              <div className="w-full h-[25%] mt-3 gap-2 flex flex-row justify-around items-end ">
                                     <div className='w-full h-full flex flex-row justify-end items-center gap-2'>
-                                          <div className='font-RocknRoll fontSize font-bold text-[#000000] flex flex-row justify-end items-center  cursor-pointer'>
-                                                <TbPointFilled color="#03070E" size={20} />
+                                          <div className='font-sans fontSize font-bold text-[#23336A] flex flex-row justify-end items-center  cursor-pointer on banlangicon' >
+                                                <TbPoint className='banglanoselect' color="#23336A" size={20} />
+                                                <TbPointFilled className='banglaselect' color="#0131cc" size={20} />
                                                 বাংলা
                                           </div>
-                                          <div className='font-RocknRoll  font-bold text-[#000000] flex flex-row justify-center items-center  cursor-pointer'>
-                                                <TbPointFilled color="#03070E" size={20} />
+                                          <div className='font-sans  font-bold text-[#23336A] flex flex-row justify-center items-center  cursor-pointer englangicon'>
+                                                <TbPoint className='banglanoselect' color="#23336A" size={20} />
+                                                <TbPointFilled className='banglaselect' color="#0131cc" size={20} />
                                                 English
                                           </div>
 

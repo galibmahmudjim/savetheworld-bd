@@ -55,7 +55,7 @@ const CarouselComponent = () => {
             </div >
       )
 }
-const Description = 'More than 80% of Plastic waste ended up inland and Only around 10% of total world plastic is recycled'
+const Description = <div>More than 80% of Plastic waste ended up inland  Only around 10% of total world plastic is recycled'</div>
 const Main3 = () => {
 
       // const [isVisible, setIsVisible] = useState(false);
@@ -113,9 +113,15 @@ const Main3 = () => {
                               </div>
                               <div className='w-full h-full flex flex-col justify-center items-center ml-[3%] mr-[3%]'>
                                     <div id="rightFigHome " className=" right gap-10   ">
-                                          <div className="rightHomeMain">{Description} <span onClick={() => router.push('/Home')} className="cursor-pointer">
-                                                .....</span></div>
+                                          <div className="rightHomeMainDown w-full mt-2">
 
+                                                <ul className="w-full flex mt-2 flex-col justify-end text-justify items-start list-disc">
+                                                      <li>More than 80% of Plastic waste ended up inland</li>
+                                                      <li>Only around 10% of total world plastic is recycled<span onClick={() => router.push('/Home')} className="cursor-pointer">  .....</span></li>
+
+                                                </ul>
+
+                                          </div>
 
                                     </div>
                               </div>

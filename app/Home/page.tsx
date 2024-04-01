@@ -82,7 +82,7 @@ const Home = () => {
 
                                           <div className='Description'>
                                                 <h1 className="text-[#23336A] mb-3 titled">Bangladesh | Save The World </h1>
-                                                <p className="text-[24px] font-RocknRoll  font-[300]"><span className="font-bold">Save The World, </span>{Description}</p>
+                                                <p className="text-[24px] font-sans  font-[300]"><span className="font-bold">Save The World, </span>{Description}</p>
                                           </div>
 
 

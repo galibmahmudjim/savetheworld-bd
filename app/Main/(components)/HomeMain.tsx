@@ -94,7 +94,7 @@ const HomeMain = () => {
       }
             , [leftGrow]);
 
-      const Description = "A portal is dedicated to creating awareness among people from all walks of life about the detrimental effects of plastic pollution on the environment and promoting sustainable solutions to reduce plastic waste"
+      const Description = "This portal is dedicated to creating awareness among people from all walks of life about the detrimental effects of plastic pollution on the environment and promoting sustainable solutions to reduce plastic waste"
 
 
       return (

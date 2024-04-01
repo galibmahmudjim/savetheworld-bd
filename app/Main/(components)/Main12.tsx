@@ -27,7 +27,7 @@ const CarouselComponent = () => {
 
 
                   >
-                        <div id="leftFigHome" className=" w-full absolute h-full flex top-0 flex-col justify-center items-center " >
+                        <div id="leftFigHome" className=" w-[60%] left-[20%] absolute h-full flex top-0 flex-col justify-center items-center " >
 
                               <Image
                                     fill
@@ -44,7 +44,7 @@ const CarouselComponent = () => {
       )
 }
 
-const Description = 'Recycling includes recovery of energy (Waste to Energy, WtE) and resources or products (waste to products, WtP)'
+const Description = 'Recycling includes: Waste to Energy, WtE and waste to products'
 
 const Main12 = () => {
 
@@ -107,13 +107,12 @@ const Main12 = () => {
 
 
                                     </div>
-                                    <div className="rightHomeMainDown w-full mt-5">
+                                    <div className="rightHomeMainDown w-full mt-3">
                                           <div className=" text-justify ">
                                                 <ul className="w-full flex  mt-1 flex-col justify-end text-justify items-start list-disc">
                                                       <li> WtE: Almost 50% of total plastic waste will be curated by incineration by 2050</li>
-                                                      <li>Bangladesh government has a National Action Plan: for Reduce, Reuse and Recycle of plastic</li>
-                                                      <li> Targets: include recycling 50% of plastics by 2025, Phasing out single-use plastic by 90% by 2026, and 2030, reducing plastic waste generation by 30%
-                                                            <span onClick={() => router.push('/Home')} className="cursor-pointer">  .....</span></li>
+                                                      <li>Bangladesh government has a National Action Plan: for Reduce, Reuse and Recycle of plastic<span onClick={() => router.push('/Home')} className="cursor-pointer">  .....</span></li>
+
                                                 </ul></div>
 
                                     </div>

@@ -161,7 +161,7 @@ ul {
       list-style-type: none;
       margin-right: 2%;
       margin-top: 0px;
-      font-family: "RocknRoll One", sans-serif;
+      font-family: "Inter", sans-serif;
       font-size: 23px;
       margin-left: 0%;
       width: 100%;
@@ -231,5 +231,5 @@ ul {
       font-weight: 600;
       margin-bottom: 20px;
       color: rgb(28, 22, 22);
-      font-family: "RocknRoll One", sans-serif;
+      font-family: "Inter", sans-serif;
 }

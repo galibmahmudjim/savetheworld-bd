@@ -110,7 +110,7 @@ const Main5 = () => {
                                     <div className="rightHomeMainDown w-full mt-2">
                                           <ul className="w-full flex  mt-2 flex-col justify-end text-justify items-start list-disc">
                                                 <li>China produces ~ 30.0%, of the Worlds demand</li>
-                                                <li>Europe ~ 19%</li>
+                                                <li>Europe~19%</li>
                                                 <li>North America 18%<span onClick={() => router.push('/Home')} className="cursor-pointer">  .....</span></li>
                                           </ul>
 
