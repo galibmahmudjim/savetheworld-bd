@@ -1,6 +1,7 @@
 
 
 import { TbPointFilled } from "react-icons/tb";
+import "../home.css"
 const Join = () => {
       return (
             <div className="sub more my-2">

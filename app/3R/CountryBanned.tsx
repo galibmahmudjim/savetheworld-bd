@@ -1,5 +1,6 @@
 
 import { TbPointFilled } from "react-icons/tb";
+import "../home.css"
 const CountryBanned = () => {
       return (
             <div className="sub more mt-0">

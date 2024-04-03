@@ -1,5 +1,4 @@
-
-
+import "../home.css"
 import { TbPointFilled } from "react-icons/tb";
 const PlasticIndust = () => {
       return (

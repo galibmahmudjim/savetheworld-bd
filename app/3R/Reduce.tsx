@@ -1,5 +1,5 @@
 
-
+import "../home.css";
 import { TbPointFilled } from "react-icons/tb";
 const Reduce = () => {
       return (

@@ -1,4 +1,5 @@
 import { TbPointFilled } from "react-icons/tb";
+import "../home.css"
 const Humanhealth = () => {
       return (
             <div className="sub more">
