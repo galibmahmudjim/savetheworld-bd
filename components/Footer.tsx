@@ -1,5 +1,8 @@
+'use client';
+import { useRouter } from "next/navigation";
 
 const Footer = () => {
+      const router = useRouter();
       return (
             <div className="w-full h-full font-['Inter', sans-serif] ">
                   <div className="flex-nowrap text-nowrap h-full flex flex-row justify-center gap-[10%] w-full items-start mt-[20vh] font-semibold">
@@ -27,20 +30,34 @@ const Footer = () => {
                               </div>
                               <div className="flex-nowrap text-nowrap h-full flex flex-col justify-start items-start">
                                     <h3 className="font-bold text-white text-[25px] mb-4">Quick Links</h3>
-                                    <div className=" font-semibold text-white text-[20px] mb-3">Home</div>
-                                    <div className=" font-semibold text-white text-[20px] mb-3">Plastic Threat</div>
-                                    <div className=" font-semibold text-white text-[20px] mb-3">Facts & Figures</div>
+                                    <div className=" font-semibold text-white text-[20px] mb-3" onClick={() => {
+                                          router.push('/Home');
+                                    }}>Home</div>
+                                    <div className=" font-semibold text-white text-[20px] mb-3" onClick={() => {
+                                          router.push('/Plastic-threat');
+                                    }}>Plastic Threat</div>
+                                    <div className=" font-semibold text-white text-[20px] mb-3" >Facts & Figures</div>
                                     <div className=" font-semibold text-white text-[20px] mb-3">Reduce, Reuse, Recycle (3R)</div>
                                     <div className=" font-semibold text-white text-[20px] mb-3">Kids’ Corner</div>
                                     <div className=" font-semibold text-white text-[20px] mb-3">Media</div>
                                     <div className=" font-semibold text-white text-[20px] mb-3">FAQs</div>
                               </div>
-                              <div className=" h-full flex flex-col justify-start items-start flex-nowrap text-nowrap text-2xl">
-                                    <h3 className="font-bold text-white text-[25px] mb-4">Social Media:</h3>
-                                    <div className="flex flex-row justify-around gap-[4px] mt-1 w-full items-center ">
-                                          <img src="/facebook.png" alt="" className="w-[40px]" />
-
+                              <div className=" h-full flex flex-col justify-start items-start flex-nowrap text-nowrap text-[30px] text-white  font-semibold font-sans gap-3 mt-5">
+                                    <div className="flex flex-row justify-around gap-[20px] mt-1 w-full items-center  hover:scale-105">
+                                          <img src="/fb.png" alt="" className="w-[40px]" />
+                                          <div className="w-full justify-center items-start">Facebook</div>
+                                    </div>
+                                    <div className="flex flex-row justify-around gap-[20px] mt-1 w-full items-center  hover:scale-105">
+                                          <img src="/youtube.png" alt="" className="w-[40px]" />
+                                          <div className="w-full justify-center items-start">YouTube</div>
+                                    </div>
+                                    <div className="flex flex-row justify-around gap-[20px] mt-1 w-full items-center  hover:scale-105">
                                           <img src="/twitter.png" alt="" className="w-[40px]" />
+                                          <div className="w-full justify-center items-start">Twitter</div>
+                                    </div>
+                                    <div className="flex flex-row justify-around gap-[20px] mt-1 w-full items-center  hover:scale-105">
+                                          <img src="/insta.png" alt="" className="w-[40px]" />
+                                          <div className="w-full justify-center items-start">Instagram</div>
                                     </div>
                               </div>
                         </div>

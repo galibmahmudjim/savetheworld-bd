@@ -44,7 +44,6 @@ const CarouselComponent = () => {
       )
 }
 
-const Description = 'Recycling includes: Waste to Energy, WtE and waste to products'
 
 const Main12 = () => {
 
@@ -84,44 +83,36 @@ const Main12 = () => {
       }
             , [leftGrow]);
 
+      const Description = <p>Recycling includes: Waste to Energy (WtE) and waste to products.</p>
+      const M12Down = () =>
+            < div className="rightHomeMainDown w-full mt-2" >
+                  <div className=" text-justify ">
+                        <ul className="w-full flex  mt-1 flex-col justify-end text-justify items-start list-disc">
+                              <li> WtE: Almost 50% of total plastic waste will be curated by incineration by 2050</li>
+                              <li>Bangladesh government has a National Action Plan: for Reduce, Reuse and Recycle of plastic<span onClick={() => router.push('/Home')} className="cursor-pointer">  .....</span></li>
 
+                        </ul></div>
+
+            </div >
 
       return (
-            <>
-
-
-                  <div className="HomeFigure ">
-                        <div className=" box-container  bg-[#fcfffc5f] ">
-
-
-                              <div className='widthGrowHome w-full'>
-                                    <div id="leftFigHome" className=" left " >
-
-                                          <CarouselComponent />
-
-                                    </div>
+            <div className="HomeFigure ">
+                  <div className=" box-container  bg-[#fcfffc5f] ">
+                        <div className='widthGrowHome w-full'>
+                              <div className=" left " >
+                                    <CarouselComponent />
                               </div>
-                              <div className='w-full h-full flex flex-col justify-center items-start ml-[1%] mr-[3%]'>
-                                    <div id="rightFigHome " className=" right gap-10   ">
-                                          <div className="rightHomeMain">{Description} </div>
-
-
-                                    </div>
-                                    <div className="rightHomeMainDown w-full mt-3">
-                                          <div className=" text-justify ">
-                                                <ul className="w-full flex  mt-1 flex-col justify-end text-justify items-start list-disc">
-                                                      <li> WtE: Almost 50% of total plastic waste will be curated by incineration by 2050</li>
-                                                      <li>Bangladesh government has a National Action Plan: for Reduce, Reuse and Recycle of plastic<span onClick={() => router.push('/Home')} className="cursor-pointer">  .....</span></li>
-
-                                                </ul></div>
-
-                                    </div>
+                        </div>
+                        <div className='w-full h-full flex flex-col justify-start items-start mt-[7%]'>
+                              <div className=" right">
+                                    <div className="rightHomeMain">{Description} </div>
+                                    <M12Down />
                               </div>
+                        </div>
 
-                        </div >
                   </div >
+            </div >
 
-            </>
       );
 }
 

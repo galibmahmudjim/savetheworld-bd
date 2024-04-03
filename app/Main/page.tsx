@@ -4,7 +4,6 @@ import React from 'react';
 import Carousel from 'react-material-ui-carousel'
 import { Paper, Button } from '@mui/material'
 import { GrFormNextLink } from "react-icons/gr";
-import HomeDetails from './(components)/HomeDetails'
 import ReactLoading from 'react-loading';
 import HomeMain from './(components)/HomeMain';
 import Main2 from './(components)/Main2';
@@ -24,7 +23,6 @@ const Main: React.FC = () => {
 
       const [index, setIndex] = useState(0);
       const components = [<HomeMain />, <Main2 />, <Main3 />, <Main4 />, <Main5 />, <Main6 />, <Main7 />, <Main8 />, <Main9 />, <Main10 />, <Main11 />, <Main12 />];
-      const imageUrls = ["/path/to/image1.jpg", "/path/to/image2.jpg"]; // Array of image URLs
       const [allComponentsLoaded, setAllComponentsLoaded] = useState(false);
 
       useEffect(() => {
@@ -54,7 +52,7 @@ const Main: React.FC = () => {
                         swipe={true}
                         animation="slide"
                         indicators={false}
-                        interval={15000}
+                        interval={150000}
                         index={0}
                         navButtonsProps={{
                               style: {

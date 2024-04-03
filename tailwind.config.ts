@@ -16,7 +16,7 @@ const config: Config = withMT({
       },
       fontFamily: {
         RocknRoll: ["RocknRoll One", "cursive"],
-        // Add more custom font families as needed
+        sans: ['"Source Sans Pro"', '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
       },
     },
   },

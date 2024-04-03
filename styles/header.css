@@ -77,13 +77,14 @@
       display: flex;
       flex: 3;
       flex-direction: row;
-      align-items: flex-end;
+      align-items: center;
       justify-content: flex-start;
       justify-items: end;
       width: 100%;
       padding-right: 40px;
       padding-bottom: 25px;
       margin-left: 1.5%;
+      margin-top: 5%;
       flex-wrap: nowrap;
 }
 

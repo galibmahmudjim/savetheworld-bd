@@ -27,7 +27,7 @@ const CarouselComponent = () => {
 
 
                   >
-                        <div id="leftFigHome" className=" mt-[7%] w-full absolute h-full flex flex-col  justify-start items-center " >
+                        <div className=" mt-[7%] w-full absolute h-full flex flex-col  justify-start items-center " >
 
                               <img
                                     width={"60%"}
@@ -39,7 +39,7 @@ const CarouselComponent = () => {
 
 
                         </div>
-                        <div id="leftFigHome" className=" w-full absolute h-full flex  flex-col justify-center items-center " >
+                        <div className=" w-full absolute h-full flex  flex-col justify-center items-center " >
 
                               <Image
                                     fill
@@ -58,8 +58,6 @@ const CarouselComponent = () => {
 }
 const HomeMain = () => {
 
-      // const [isVisible, setIsVisible] = useState(false);
-      const [clickedGraph, setClickedGraph] = useState(0);
       const [leftGrow, setLeftGrow] = useState(0);
       const [fact, setFact] = useState(false);
 
@@ -67,64 +65,32 @@ const HomeMain = () => {
       const pathname = usePathname();
       const resetState = () => {
             setLeftGrow(1);
-            setClickedGraph(0);
             setFact(false);
       }
-      useEffect(() => {
 
-      }
-            , []);
-
-
-
-      useEffect(() => {
-            const leftelement = document.getElementById("leftFigHome")!;
-
-            if (leftGrow === 1) {
-                  if (leftelement) {
-                        leftelement.classList.add("leftgrow");
-                        leftelement.classList.remove("leftshrink");
-                  }
-            } else if (leftGrow === 2) {
-                  if (leftelement) {
-                        leftelement.classList.add("leftshrink");
-                        leftelement.classList.remove("leftgrow");
-                  }
-            }
-      }
-            , [leftGrow]);
-
-      const Description = "This portal is dedicated to creating awareness among people from all walks of life about the detrimental effects of plastic pollution on the environment and promoting sustainable solutions to reduce plastic waste"
+      const Description = "This portal is dedicated to raising awareness among people from all walks of life about the detrimental effects of plastic pollution on the environment, and it promotes sustainable solutions to reduce plastic waste"
 
 
       return (
-            <>
-
-
-                  <div className="HomeFigure ">
-                        <div className=" box-container  bg-[#fcfffc5f] ">
-
-
-                              <div className='widthGrowHome w-full'>
-                                    <div id="leftFigHome" className=" left " >
-
-                                          <CarouselComponent />
-
-                                    </div>
+            <div className="HomeFigure ">
+                  <div className=" box-container  bg-[#fcfffc5f] ">
+                        <div className='widthGrowHome w-full'>
+                              <div className=" left " >
+                                    <CarouselComponent />
                               </div>
-                              <div className='w-full h-full flex flex-col justify-center items-center pl-[4%]'>
-                                    <div id="rightFigHome " className=" right gap-10   ">
-                                          <div className="rightHomeMain">{Description} <span onClick={() => router.push('/Home')} className="cursor-pointer">
-                                                .....</span></div>
+                        </div>
+                        <div className='w-full h-full flex flex-col justify-start items-start mt-[7%]'>
+                              <div className=" right">
+                                    <div className="rightHomeMain">{Description} <span onClick={() => router.push('/Home')} className="cursor-pointer">
+                                          .....</span></div>
 
 
-                                    </div>
                               </div>
+                        </div>
 
-                        </div >
                   </div >
+            </div >
 
-            </>
       );
 }
 

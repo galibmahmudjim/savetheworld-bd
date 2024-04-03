@@ -43,7 +43,8 @@ const CarouselComponent = () => {
             </div >
       )
 }
-const Description = 'River Pollution Soars from Plastics'
+
+
 
 const Main10 = () => {
 
@@ -83,45 +84,37 @@ const Main10 = () => {
       }
             , [leftGrow]);
 
+      const Description = <p>Global Action Against Plastic Pollution</p>
+
+      const M10Down = () =>
+            < div className="rightHomeMainDown w-full mt-2" >
+                  <div className=" text-justify ">
+                        People throughout the world and our country are not aware of the consequences of plastic pollution. We have to become more aware and create more awareness around us as much as we can so that we can save our environment from plastic pollution and for a better future for the next generation
+                        <span onClick={() => router.push('/Home')} className="cursor-pointer">  .....</span>
+                  </div >
+            </div >
+
 
 
       return (
-            <>
-
-
-                  <div className="HomeFigure ">
-                        <div className=" box-container  bg-[#fcfffc5f] ">
-
-
-                              <div className='widthGrowHome w-full'>
-                                    <div id="leftFigHome" className=" left " >
-
-                                          <CarouselComponent />
-
-                                    </div>
+            <div className="HomeFigure ">
+                  <div className=" box-container  bg-[#fcfffc5f] ">
+                        <div className='widthGrowHome w-full'>
+                              <div className=" left " >
+                                    <CarouselComponent />
                               </div>
-                              <div className='w-full h-full flex flex-col justify-center items-start ml-[4%] mr-[3%]'>
-                                    <div id="rightFigHome " className=" right gap-10   ">
-                                          <div className="rightHomeMain">{Description} </div>
+                        </div>
+                        <div className='w-full h-full flex flex-col justify-start items-start mt-[7%]'>
+                              <div className=" right">
+                                    <div className="rightHomeMain">{Description}</div>
 
-
-                                    </div>
-                                    <div className="rightHomeMainDown w-full mt-5">
-                                          <div className=" text-justify ">
-                                                <ul className="w-full flex  mt-2 flex-col justify-end text-justify items-start list-disc">
-                                                      <li>More than 73,000 tonnes (40%) of plastic waste enter the Bay of Bengal through the Padma, Meghna and Jamuna rivers</li>
-                                                      <li>60% of foreign Plastic Waste reaches Bangladeshi waters through sea channels from India, Thailand, Sri Lanka and Myanmar</li>
-                                                      <li>Plastic particles were found in the stomachs of fish in the Bay of Bengal and in salt
-                                                            <span onClick={() => router.push('/Home')} className="cursor-pointer">  .....</span></li>
-                                                </ul></div>
-
-                                    </div>
+                                    <M10Down />
                               </div>
+                        </div>
 
-                        </div >
                   </div >
+            </div >
 
-            </>
       );
 }
 

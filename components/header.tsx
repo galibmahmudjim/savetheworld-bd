@@ -9,6 +9,24 @@ import { TbPoint, TbPointFilled } from "react-icons/tb";
 function handleClick() {
       alert('Image clicked!');
 }
+
+const LanguageSelect = () => {
+      return (
+            <div className='w-full h-full flex flex-row justify-end items-center gap-2 text-[20px]'>
+                  <div className='font-sans fontSize font-bold text-[#23336A] flex flex-row justify-end items-start  cursor-pointer on banlangicon' >
+                        <TbPoint className='banglanoselect' color="#23336A" size={20} />
+                        <TbPointFilled className='banglaselect' color="#0131cc" size={20} />
+                        বাংলা
+                  </div>
+                  <div className='font-sans  font-bold text-[#23336A] flex flex-row justify-center items-center cursor-pointer englangicon'>
+                        <TbPoint className='banglanoselect' color="#23336A" size={20} />
+                        <TbPointFilled className='banglaselect' color="#0131cc" size={20} />
+                        English
+                  </div>
+
+            </div>
+      );
+}
 const Headers = (): JSX.Element => {
       const router = useRouter();
       useEffect(() => {
@@ -43,11 +61,11 @@ const Headers = (): JSX.Element => {
       return (
             <div className="header justify-center items-center ">
                   <div className="header-1">
-                        <div className="left h-full ">
-                              <img onClick={() => {
-                                    router.push("/Main");
-                                    router.refresh();
-                              }}
+                        <div className="left h-full " onClick={() => {
+                              router.push("/main");
+                              router.refresh();
+                        }}>
+                              <img
 
                                     className="logo h-[100%]  " src="/LogoFigma.svg" alt="logo">
                               </img>
@@ -59,28 +77,9 @@ const Headers = (): JSX.Element => {
                         <div id='right-header' className="right " >
                               <div className="w-full h-[55%] gap-2 flex flex-row justify-end items-end ">
                                     <img className="duewu " src="/duewu.png" alt="university-logo" />
-                                    {/* <a href="https://www.du.ac.bd" target="_blank" className='w-full  flex-1 flex flex-row justify-end'>
-                                          <img className="du " src="/du.png" alt="university-logo" />
-                                    </a>
-                                    <a href="https://www.ewubd.edu/" target="_blank" className='w-full flex flex-1 flex-row justify-end'>
-                                          <img className="ewu" src="/ewu.png" alt="East West university" />
-                                    </a> */}
-
                               </div>
                               <div className="w-full h-[25%] mt-3 gap-2 flex flex-row justify-around items-end ">
-                                    <div className='w-full h-full flex flex-row justify-end items-center gap-2'>
-                                          <div className='font-sans fontSize font-bold text-[#23336A] flex flex-row justify-end items-center  cursor-pointer on banlangicon' >
-                                                <TbPoint className='banglanoselect' color="#23336A" size={20} />
-                                                <TbPointFilled className='banglaselect' color="#0131cc" size={20} />
-                                                বাংলা
-                                          </div>
-                                          <div className='font-sans  font-bold text-[#23336A] flex flex-row justify-center items-center  cursor-pointer englangicon'>
-                                                <TbPoint className='banglanoselect' color="#23336A" size={20} />
-                                                <TbPointFilled className='banglaselect' color="#0131cc" size={20} />
-                                                English
-                                          </div>
-
-                                    </div>
+                                    <LanguageSelect />
                               </div>
                         </div>
                   </div>

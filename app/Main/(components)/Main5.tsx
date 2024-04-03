@@ -44,8 +44,6 @@ const CarouselComponent = () => {
       )
 }
 
-
-const Description = 'Global Top Plastic Producers:'
 const Main5 = () => {
 
       // const [isVisible, setIsVisible] = useState(false);
@@ -84,44 +82,49 @@ const Main5 = () => {
       }
             , [leftGrow]);
 
+      const Description = <p>Global Top Plastic Producers:</p>
+      const M5Down = () => <div className="rightHomeMainDown w-full mt-2">
+            <ul className="w-full flex  mt-2 flex-col justify-end text-justify items-start list-disc">
+                  <li>China: ~30% of the world's plastic demand</li>
+                  <li>Europe: ~19% of the world's plastic demand</li>
+                  <li>North America: 18% of the world's plastic demand<span onClick={() => router.push('/Home')} className="cursor-pointer">  .....</span></li>
+            </ul>
 
+      </div>
 
       return (
-            <>
-
-
-                  <div className="HomeFigure ">
-                        <div className=" box-container  bg-[#fcfffc5f] ">
-
-
-                              <div className='widthGrowHome w-full'>
-                                    <div id="leftFigHome" className=" left " >
-
-                                          <CarouselComponent />
-
-                                    </div>
+            <div className="HomeFigure ">
+                  <div className=" box-container  bg-[#fcfffc5f] ">
+                        <div className='widthGrowHome w-full'>
+                              <div className=" left " >
+                                    <CarouselComponent />
                               </div>
-                              <div className='w-full h-full flex flex-col justify-center items-start ml-[4%] mr-[3%]'>
-                                    <div id="rightFigHome " className=" right gap-10   ">
-                                          <div className="rightHomeMain">{Description} </div>
+                        </div>
+                        <div className='w-full h-full flex flex-col justify-start items-start mt-[7%]'>
+                              <div className=" right">
+                                    <div className="rightHomeMain">{Description}</div>
 
-
-                                    </div>
-                                    <div className="rightHomeMainDown w-full mt-2">
-                                          <ul className="w-full flex  mt-2 flex-col justify-end text-justify items-start list-disc">
-                                                <li>China produces ~ 30.0%, of the Worlds demand</li>
-                                                <li>Europe~19%</li>
-                                                <li>North America 18%<span onClick={() => router.push('/Home')} className="cursor-pointer">  .....</span></li>
-                                          </ul>
-
-                                    </div>
+                                    <M5Down />
                               </div>
+                        </div>
 
-                        </div >
                   </div >
+            </div >
 
-            </>
       );
 }
 
 export default Main5;
+
+
+
+
+// const Description = 'Global Top Plastic Producers:'
+{/* <div className="rightHomeMainDown w-full mt-2">
+<ul className="w-full flex  mt-2 flex-col justify-end text-justify items-start list-disc">
+      <li>China produces ~ 30.0%, of the Worlds demand</li>
+      <li>Europe~19%</li>
+      <li>North America 18%<span onClick={() => router.push('/Home')} className="cursor-pointer">  .....</span></li>
+</ul>
+
+</div> */}

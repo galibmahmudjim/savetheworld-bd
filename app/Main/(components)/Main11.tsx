@@ -45,7 +45,6 @@ const CarouselComponent = () => {
 }
 
 
-const Description = 'Mostly the middle - income and low - income countries suffer from plastic burden of the World'
 
 const Main11 = () => {
 
@@ -85,36 +84,29 @@ const Main11 = () => {
       }
             , [leftGrow]);
 
+      const Description = <p>Primarily, middle-income and low-income countries suffer from the world's plastic burden.</p>
+
+
+
 
 
       return (
-            <>
-
-
-                  <div className="HomeFigure ">
-                        <div className=" box-container  bg-[#fcfffc5f] ">
-
-
-                              <div className='widthGrowHome w-full'>
-                                    <div id="leftFigHome" className=" left " >
-
-                                          <CarouselComponent />
-
-                                    </div>
+            <div className="HomeFigure ">
+                  <div className=" box-container  bg-[#fcfffc5f] ">
+                        <div className='widthGrowHome w-full'>
+                              <div className=" left " >
+                                    <CarouselComponent />
                               </div>
-                              <div className='w-full h-full flex flex-col justify-center items-start ml-[4%] mr-[3%]'>
-                                    <div id="rightFigHome " className=" right gap-10   ">
-                                          <div className="rightHomeMain">{Description}  <span onClick={() => router.push('/Home')} className="cursor-pointer">  .....</span></div>
-
-
-                                    </div>
-
+                        </div>
+                        <div className='w-full h-full flex flex-col justify-start items-start mt-[7%]'>
+                              <div className=" right">
+                                    <div className="rightHomeMain">{Description}  <span onClick={() => router.push('/Home')} className="cursor-pointer">  .....</span></div>
                               </div>
                         </div>
 
                   </div >
+            </div >
 
-            </>
       );
 }
 

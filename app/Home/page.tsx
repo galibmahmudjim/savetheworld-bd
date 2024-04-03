@@ -31,7 +31,7 @@ const Home = () => {
 
 
 
-      const Description = " is a plastic pollution awareness portal is developed as part of a research collaborative initiative between the University of Dhaka and East West University, Bangladesh.This portal is dedicated to creating awareness among people from all walks of life and industries about the detrimental effects of plastic pollution on the environment and promoting sustainable solutions to reduce plastic waste. Plastic pollution poses a serious threat to the environment, wildlife, and human health, and contributes to global warming and climate change.Now, it is high time to take action to protect our mother Earth from further plastic pollution."
+      const Description = () => <p className="sub">Save The World, a plastic pollution awareness portal, has been developed as part of a research collaborative initiative between the University of Dhaka and East West University, Bangladesh. This portal is dedicated to creating awareness among people from all walks of life and industries about the detrimental effects of plastic pollution on the environment and to promoting sustainable solutions to reduce plastic waste. Plastic pollution poses a serious threat to the environment, wildlife, and human health, and contributes to global warming and climate change. Now, it is high time to take action to protect our Mother Earth from further plastic pollution.</p>
 
       const [indexs, setIndexs] = useState(0);
 
@@ -69,128 +69,120 @@ const Home = () => {
       const loading = <div>Loading...</div>;
 
       return (
-            <>
 
 
-                  <div className="HomeBody">
-
-                        <div className=" box-container mt-[7vh] bg-[#fcfffc5f] ">
-
-
-                              <div className='w-full h-full mb-8 mt-[3%]'>
-                                    <div id="rightFigHome" className=" body " >
-
-                                          <div className='Description'>
-                                                <h1 className="text-[#23336A] mb-3 titled">Bangladesh | Save The World </h1>
-                                                <p className="text-[24px] font-sans  font-[300]"><span className="font-bold">Save The World, </span>{Description}</p>
-                                          </div>
-
-
-                                          <div className='contains'>
-
-                                                <div id="Home1idx" className="flex flex-col w-full  h-full ml-1">
-                                                      <div className="   flex flex-row justify-start items-center align-middle gap-3 h4Sub text-[#4a218b] cursor-pointer"
-                                                            onClick={() => {
-                                                                  if (indexs === 1) {
-                                                                        setIndexs(0);
-                                                                  }
-                                                                  else {
-                                                                        setIndexs(1);
-                                                                  }
-
-                                                            }}
-                                                      >
-                                                            About Plastics{indexs !== 1 ? <BiAddToQueue /> : <FiMinusSquare />}
-                                                      </div>
-
-                                                      {indexs === 1 ? <AboutPlastic /> : null}
-
-                                                </div>
-
-                                                <div id="Home2idx" className="flex flex-col w-full h-full ml-1">
-                                                      <div className="   flex flex-row justify-start items-center align-middle gap-3 h4Sub text-[#4a218b] cursor-pointer"
-                                                            onClick={() => {
-                                                                  if (indexs === 2) {
-                                                                        setIndexs(0);
-                                                                  }
-                                                                  else {
-                                                                        setIndexs(2);
-                                                                  }
-
-                                                            }}
-                                                      >
-                                                            Plastic wastes{indexs !== 2 ? <BiAddToQueue className="font-extrabold" /> : <FiMinusSquare />}
-                                                      </div>
-
-                                                      {indexs === 2 ? <PlasticComprises /> : null}
-
-                                                </div>
-                                                <div id="Home3idx" className="flex flex-col w-full h-full ml-1">
-                                                      <div className="   flex flex-row justify-start items-center align-middle gap-3 h4Sub text-[#4a218b] cursor-pointer"
-                                                            onClick={() => {
-                                                                  if (indexs === 3) {
-                                                                        setIndexs(0);
-                                                                  }
-                                                                  else {
-                                                                        setIndexs(3);
-                                                                  }
-
-                                                            }}
-                                                      >
-                                                            Life of plastics{indexs !== 3 ? <BiAddToQueue /> : <FiMinusSquare />}
-                                                      </div>
-
-                                                      {indexs === 3 ? <LifePlastics /> : null}
-
-                                                </div>
-                                                <div id="Home4idx" className="flex flex-col w-full  h-full ml-1">
-                                                      <div className="   flex flex-row justify-start items-center align-middle gap-3 h4Sub text-[#4a218b] cursor-pointer"
-                                                            onClick={() => {
-                                                                  if (indexs === 4) {
-                                                                        setIndexs(0);
-                                                                  }
-                                                                  else {
-                                                                        setIndexs(4);
-                                                                  }
-
-                                                            }}
-                                                      >
-                                                            Global Top Plastic Producers{indexs !== 4 ? <BiAddToQueue /> : <FiMinusSquare />}
-                                                      </div>
-
-                                                      {indexs === 4 ? <GlobalPlastic /> : null}
-
-                                                </div>
-                                                <div id="Home5idx" className="flex flex-col w-full  h-full ml-1">
-                                                      <div className="   flex flex-row justify-start items-center align-middle gap-3 h4Sub text-[#4a218b] cursor-pointer"
-                                                            onClick={() => {
-                                                                  if (indexs === 5) {
-                                                                        setIndexs(0);
-                                                                  }
-                                                                  else {
-                                                                        setIndexs(5);
-                                                                  }
-
-                                                            }}
-                                                      >
-                                                            COVID-19 & Plastic{indexs !== 5 ? <BiAddToQueue /> : <FiMinusSquare />}
-                                                      </div>
-
-                                                      {indexs === 5 ? <CovidPlastic /> : null}
-
-                                                </div>
-                                          </div>
-
-
-
-
+            <div className="HomeBody">
+                  <div className=" box-container mt-[7vh] bg-[#fcfffc5f] ">
+                        <div className='w-full h-full mb-8 mt-[3%]'>
+                              <div id="rightFigHome" className=" body " >
+                                    <div className='Description'>
+                                          <h1 className="  titled">Bangladesh | Save The World </h1>
+                                          <Description />
                                     </div>
+                                    <div className='contains'>
+
+                                          <div id="Home1idx" className="options ">
+                                                <div className="  h4Sub"
+                                                      onClick={() => {
+                                                            if (indexs === 1) {
+                                                                  setIndexs(0);
+                                                            }
+                                                            else {
+                                                                  setIndexs(1);
+                                                            }
+
+                                                      }}
+                                                >
+                                                      About Plastics{indexs !== 1 ? <BiAddToQueue /> : <FiMinusSquare />}
+                                                </div>
+
+                                                {indexs === 1 ? <AboutPlastic /> : null}
+
+                                          </div>
+
+                                          <div id="Home2idx" className="options">
+                                                <div className="   h4Sub "
+                                                      onClick={() => {
+                                                            if (indexs === 2) {
+                                                                  setIndexs(0);
+                                                            }
+                                                            else {
+                                                                  setIndexs(2);
+                                                            }
+
+                                                      }}
+                                                >
+                                                      Plastic wastes{indexs !== 2 ? <BiAddToQueue className="font-extrabold" /> : <FiMinusSquare />}
+                                                </div>
+
+                                                {indexs === 2 ? <PlasticComprises /> : null}
+
+                                          </div>
+                                          <div id="Home3idx" className="options">
+                                                <div className="   h4Sub "
+                                                      onClick={() => {
+                                                            if (indexs === 3) {
+                                                                  setIndexs(0);
+                                                            }
+                                                            else {
+                                                                  setIndexs(3);
+                                                            }
+
+                                                      }}
+                                                >
+                                                      Life of plastics{indexs !== 3 ? <BiAddToQueue /> : <FiMinusSquare />}
+                                                </div>
+
+                                                {indexs === 3 ? <LifePlastics /> : null}
+
+                                          </div>
+                                          <div id="Home4idx" className="options">
+                                                <div className=" h4Sub "
+                                                      onClick={() => {
+                                                            if (indexs === 4) {
+                                                                  setIndexs(0);
+                                                            }
+                                                            else {
+                                                                  setIndexs(4);
+                                                            }
+
+                                                      }}
+                                                >
+                                                      Global Top Plastic Producers{indexs !== 4 ? <BiAddToQueue /> : <FiMinusSquare />}
+                                                </div>
+
+                                                {indexs === 4 ? <GlobalPlastic /> : null}
+
+                                          </div>
+                                          <div id="Home5idx" className="options">
+                                                <div className="   h4Sub "
+                                                      onClick={() => {
+                                                            if (indexs === 5) {
+                                                                  setIndexs(0);
+                                                            }
+                                                            else {
+                                                                  setIndexs(5);
+                                                            }
+
+                                                      }}
+                                                >
+                                                      COVID-19 & Plastic{indexs !== 5 ? <BiAddToQueue /> : <FiMinusSquare />}
+                                                </div>
+
+                                                {indexs === 5 ? <CovidPlastic /> : null}
+
+                                          </div>
+                                    </div>
+
+
+
+
                               </div>
+                        </div>
 
-                        </div >
                   </div >
+            </div >
 
-            </>
       );
 }
 

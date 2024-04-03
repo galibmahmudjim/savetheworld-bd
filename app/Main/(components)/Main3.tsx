@@ -55,7 +55,8 @@ const CarouselComponent = () => {
             </div >
       )
 }
-const Description = <div>More than 80% of Plastic waste ended up inland  Only around 10% of total world plastic is recycled'</div>
+
+
 const Main3 = () => {
 
       // const [isVisible, setIsVisible] = useState(false);
@@ -95,41 +96,30 @@ const Main3 = () => {
             , [leftGrow]);
 
 
+      const Description = <ul className="w-full flex mt-2 flex-col justify-end text-justify items-start list-disc">
+            <li>More than 80% of plastic waste ends up inland</li>
+            <li>Only around 10% of total world plastic is recycled<span onClick={() => router.push('/Home')} className="cursor-pointer">  .....</span></li>
 
+      </ul>
       return (
-            <>
-
-
-                  <div className="HomeFigure ">
-                        <div className=" box-container  bg-[#fcfffc5f] ">
-
-
-                              <div className='widthGrowHome w-full'>
-                                    <div id="leftFigHome" className=" left " >
-
-                                          <CarouselComponent />
-
-                                    </div>
+            <div className="HomeFigure ">
+                  <div className=" box-container  bg-[#fcfffc5f] ">
+                        <div className='widthGrowHome w-full'>
+                              <div className=" left " >
+                                    <CarouselComponent />
                               </div>
-                              <div className='w-full h-full flex flex-col justify-center items-center ml-[3%] mr-[3%]'>
-                                    <div id="rightFigHome " className=" right gap-10   ">
-                                          <div className="rightHomeMainDown w-full mt-2">
+                        </div>
+                        <div className='w-full h-full flex flex-col justify-start items-start mt-[7%]'>
+                              <div className=" right">
+                                    <div className="rightHomeMain">{Description} </div>
 
-                                                <ul className="w-full flex mt-2 flex-col justify-end text-justify items-start list-disc">
-                                                      <li>More than 80% of Plastic waste ended up inland</li>
-                                                      <li>Only around 10% of total world plastic is recycled<span onClick={() => router.push('/Home')} className="cursor-pointer">  .....</span></li>
 
-                                                </ul>
-
-                                          </div>
-
-                                    </div>
                               </div>
+                        </div>
 
-                        </div >
                   </div >
+            </div >
 
-            </>
       );
 }
 

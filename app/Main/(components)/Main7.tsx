@@ -52,7 +52,7 @@ const CarouselComponent = () => {
             </div >
       )
 }
-const Description = 'River Pollution Soars from Plastics'
+
 
 const Main7 = () => {
 
@@ -92,45 +92,35 @@ const Main7 = () => {
       }
             , [leftGrow]);
 
+      const Description = <p>River Pollution Soars from Plastics</p>
+      const M7Down = () => <div className="rightHomeMainDown w-full mt-2">
+            <div className="text-justify">
+                  <p>Rivers in Bangladesh receive 24 times more plastic waste from neighboring countries than what the country itself contributes. This influx poses a serious threat to river ecosystems, waterways, human health, and maritime biodiversity.</p>
+                  <span onClick={() => router.push('/Home')} className="cursor-pointer">...</span>
+            </div>
+      </div>
+
 
 
       return (
-            <>
-
-
-                  <div className="HomeFigure ">
-                        <div className=" box-container  bg-[#fcfffc5f] ">
-
-
-                              <div className='widthGrowHome w-full'>
-                                    <div id="leftFigHome" className=" left " >
-
-                                          <CarouselComponent />
-
-                                    </div>
+            <div className="HomeFigure ">
+                  <div className=" box-container  bg-[#fcfffc5f] ">
+                        <div className='widthGrowHome w-full'>
+                              <div className=" left " >
+                                    <CarouselComponent />
                               </div>
-                              <div className='w-full h-full flex flex-col justify-center items-start ml-[4%] mr-[3%]'>
-                                    <div id="rightFigHome " className=" right gap-10   ">
-                                          <div className="rightHomeMain">{Description} </div>
+                        </div>
+                        <div className='w-full h-full flex flex-col justify-start items-start mt-[7%]'>
+                              <div className=" right">
+                                    <div className="rightHomeMain">{Description}</div>
 
-
-                                    </div>
-                                    <div className="rightHomeMainDown w-full mt-5">
-                                          <div className=" text-justify">
-                                                <ul className="w-full flex  mt-2 flex-col justify-end text-justify items-start list-disc">
-                                                      <li>By 2050, there will be more plastic in the ocean than fish</li>
-                                                      <li>51 trillion floating microplastics in the sea, are consumed by marine animals and humans </li>
-                                                      <li>Over 8 million tons of plastic waste annually enters the oceans
-                                                            <span onClick={() => router.push('/Home')} className="cursor-pointer">  .....</span></li>
-                                                </ul></div>
-
-                                    </div>
+                                    <M7Down />
                               </div>
+                        </div>
 
-                        </div >
                   </div >
+            </div >
 
-            </>
       );
 }
 

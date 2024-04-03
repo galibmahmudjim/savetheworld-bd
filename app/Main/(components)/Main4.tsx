@@ -55,8 +55,6 @@ const CarouselComponent = () => {
             </div >
       )
 }
-
-const Description = 'Plastic is not biodegradable'
 const Main4 = () => {
 
       // const [isVisible, setIsVisible] = useState(false);
@@ -95,45 +93,52 @@ const Main4 = () => {
       }
             , [leftGrow]);
 
+      const Description = <p>Plastic is not biodegradable</p>
+      const M4Down = () => <div className="rightHomeMainDown w-full mt-2">
+            <div className="">Life of plastics:</div>
+            <ul className="w-full flex mt-2 flex-col justify-end text-justify items-start list-disc">
+                  <li>Plastic bags last for 20 years</li>
+                  <li>Plastic bottles last for 450 years</li>
+                  <li>Fishing line lasts for 600 years<span onClick={() => router.push('/Home')} className="cursor-pointer">  .....</span></li>
+            </ul>
 
+      </div>
 
       return (
-            <>
-
-
-                  <div className="HomeFigure ">
-                        <div className=" box-container  bg-[#fcfffc5f] ">
-
-
-                              <div className='widthGrowHome w-full'>
-                                    <div id="leftFigHome" className=" left " >
-
-                                          <CarouselComponent />
-
-                                    </div>
+            <div className="HomeFigure ">
+                  <div className=" box-container  bg-[#fcfffc5f] ">
+                        <div className='widthGrowHome w-full'>
+                              <div className=" left " >
+                                    <CarouselComponent />
                               </div>
-                              <div className='w-full h-full flex flex-col justify-center items-start ml-[4%] mr-[3%] '>
-                                    <div id="rightFigHome " className=" right gap-10   ">
-                                          <div className="rightHomeMain">{Description} </div>
+                        </div>
+                        <div className='w-full h-full flex flex-col justify-start items-start mt-[7%]'>
+                              <div className=" right">
+                                    <div className="rightHomeMain">{Description}</div>
 
-
-                                    </div>
-                                    <div className="rightHomeMainDown w-full mt-2">
-                                          <div className="">Life of plastics:</div>
-                                          <ul className="w-full flex mt-2 flex-col justify-end text-justify items-start list-disc">
-                                                <li>Plastic bags last for: 20 Years</li>
-                                                <li>Plastic bottles: 450 Years</li>
-                                                <li>Fishing line: 600 years<span onClick={() => router.push('/Home')} className="cursor-pointer">  .....</span></li>
-                                          </ul>
-
-                                    </div>
+                                    <M4Down />
                               </div>
+                        </div>
 
-                        </div >
                   </div >
+            </div >
 
-            </>
       );
 }
 
 export default Main4;
+
+
+
+
+
+// const Description = 'Plastic is not biodegradable'
+// const M4Down = () => <div className="rightHomeMainDown w-full mt-2">
+//       <div className="">Life of plastics:</div>
+//       <ul className="w-full flex mt-2 flex-col justify-end text-justify items-start list-disc">
+//             <li>Plastic bags last for: 20 Years</li>
+//             <li>Plastic bottles: 450 Years</li>
+//             <li>Fishing line: 600 years<span onClick={() => router.push('/Home')} className="cursor-pointer">  .....</span></li>
+//       </ul>
+
+// </div>
