@@ -62,7 +62,7 @@ const Headers = (): JSX.Element => {
             <div className="header justify-center items-center ">
                   <div className="header-1">
                         <div className="left h-full " onClick={() => {
-                              router.push("/main");
+                              router.push("/Main");
                               router.refresh();
                         }}>
                               <img
