@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState, PureComponent, Suspense } from "react";
 import Image from "next/image";
-import "./home.css";
+import "../home.css";
 import { IoArrowBack } from "react-icons/io5";
 import Link from "next/link";
 import { FiMinusSquare } from "react-icons/fi";

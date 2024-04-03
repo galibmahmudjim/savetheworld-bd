@@ -1,6 +1,7 @@
 
 
 import { TbPointFilled } from "react-icons/tb";
+import "../home.css"
 const GlobalPlastic = () => {
       return (
             <div className="sub more mt-0">
