@@ -21,7 +21,7 @@ const Footer = () => {
                   <footer className="w-full h-full flex flex-col my-[15vh] mt-[15vh]  justify-start items-start">
                         <div className="w-full h-full flex flex-row justify-around items-start">
                               <div className="flex-nowrap text-nowrap h-full flex  flex-col justify-start items-start">
-                                    <div className="text-[25px] font-bold text-white mb-4">Contact:</div>
+                                    <div className="text-[25px] font-bold text-white mb-4">Contact</div>
                                     <div className=" font-semibold text-white text-[20px] mb-3">jesmin@du.ac.bd</div>
                                     <div className=" font-semibold text-white text-[20px] mb-3">Dept. of Genetic Engg., & Biotechnology</div>
                                     <div className=" font-semibold text-white text-[20px] mb-3">University of Dhaka, Bangladesh</div>
@@ -42,22 +42,22 @@ const Footer = () => {
                                     <div className=" font-semibold text-white text-[20px] mb-3">Media</div>
                                     <div className=" font-semibold text-white text-[20px] mb-3">FAQs</div>
                               </div>
-                              <div className=" h-full flex flex-col justify-start items-start flex-nowrap text-nowrap text-[30px] text-white  font-semibold font-sans gap-3 mt-5">
+                              <div className=" h-full flex flex-col justify-start items-start flex-nowrap text-nowrap text-[30px] text-white  font-semibold font-sans gap-3 ">
                                     <div className="flex flex-row justify-around gap-[20px] mt-1 w-full items-center  hover:scale-105">
-                                          <img src="/fb.png" alt="" className="w-[40px]" />
-                                          <div className="w-full justify-center items-start">Facebook</div>
+                                          <img src="/fb.png" alt="" className="w-[18px]" />
+                                          <div className="w-full justify-center items-start text-[20px]">Facebook</div>
                                     </div>
                                     <div className="flex flex-row justify-around gap-[20px] mt-1 w-full items-center  hover:scale-105">
-                                          <img src="/youtube.png" alt="" className="w-[40px]" />
-                                          <div className="w-full justify-center items-start">YouTube</div>
+                                          <img src="/youtube.png" alt="" className="w-[18px]" />
+                                          <div className="w-full justify-center items-start text-[20px]">YouTube</div>
                                     </div>
                                     <div className="flex flex-row justify-around gap-[20px] mt-1 w-full items-center  hover:scale-105">
-                                          <img src="/twitter.png" alt="" className="w-[40px]" />
-                                          <div className="w-full justify-center items-start">Twitter</div>
+                                          <img src="/twitter.png" alt="" className="w-[18px]" />
+                                          <div className="w-full justify-center items-start  text-[20px]">Twitter</div>
                                     </div>
                                     <div className="flex flex-row justify-around gap-[20px] mt-1 w-full items-center  hover:scale-105">
-                                          <img src="/insta.png" alt="" className="w-[40px]" />
-                                          <div className="w-full justify-center items-start">Instagram</div>
+                                          <img src="/insta.png" alt="" className="w-[18px]" />
+                                          <div className="w-full justify-center items-start text-[20px]">Instagram</div>
                                     </div>
                               </div>
                         </div>

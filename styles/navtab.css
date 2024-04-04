@@ -176,12 +176,12 @@ p {
       @keyframes widthShrink {
             0% {
                   width: 100vw;
-                  font-size: calc(24px - 6px);
+                  font-size: 15px;
             }
 
             100% {
                   width: 80vw;
-                  font-size: calc(24px - 60px);
+                  font-size: 13px;
 
 
             }
@@ -190,12 +190,12 @@ p {
       @keyframes widthGrow {
             0% {
                   width: 80vw;
-                  font-size: calc(24px - 60px);
+                  font-size: 13px;
             }
 
             100% {
                   width: 100vw;
-                  font-size: calc(24px - 6px);
+                  font-size: 15px;
             }
       }
 
@@ -216,7 +216,7 @@ p {
             justify-content: center;
             align-items: center;
             position: fixed;
-            font-size: calc(24px - 6px);
+            font-size: 15px;
       }
 
       .NavigationMenuRoot {
@@ -226,7 +226,7 @@ p {
             font-family: 'Inter', sans-serif;
             position: relative;
             font-weight: 700;
-            font-size: calc(24px - 6px);
+            font-size: 15px;
             z-index: 100;
       }
 }
@@ -235,12 +235,12 @@ p {
       @keyframes widthShrink {
             0% {
                   width: 100vw;
-                  font-size: calc(24px - 6px);
+                  font-size: 15px;
             }
 
             100% {
                   width: 80vw;
-                  font-size: calc(24px - 60px);
+                  font-size: 13px;
 
 
             }
@@ -249,12 +249,12 @@ p {
       @keyframes widthGrow {
             0% {
                   width: 80vw;
-                  font-size: calc(24px - 60px);
+                  font-size: 13px;
             }
 
             100% {
                   width: 100vw;
-                  font-size: calc(24px - 6px);
+                  font-size: 15px;
             }
       }
 
@@ -275,7 +275,7 @@ p {
             justify-content: center;
             align-items: center;
             position: fixed;
-            font-size: calc(24px - 6px);
+            font-size: 15px;
       }
 
       .NavigationMenuRoot {
@@ -285,7 +285,7 @@ p {
             font-family: 'Inter', sans-serif;
             position: relative;
             font-weight: 700;
-            font-size: calc(24px - 6px);
+            /* font-size: calc(24px - 6px); */
             z-index: 100;
       }
 }
@@ -295,12 +295,12 @@ p {
       @keyframes widthShrink {
             0% {
                   width: 100vw;
-                  font-size: calc(24px - 6px);
+                  font-size: 20px;
             }
 
             100% {
                   width: 80vw;
-                  font-size: calc(24px - 6px);
+                  font-size: 18px;
 
 
             }
@@ -309,12 +309,12 @@ p {
       @keyframes widthGrow {
             0% {
                   width: 80vw;
-                  font-size: calc(24px - 6px);
+                  font-size: 18px;
             }
 
             100% {
                   width: 100vw;
-                  font-size: calc(24px - 6px);
+                  font-size: 20px;
             }
       }
 
@@ -335,7 +335,7 @@ p {
             justify-content: center;
             align-items: center;
             position: fixed;
-            font-size: calc(24px - 6px);
+            font-size: 20px;
       }
 
       .NavigationMenuRoot {
@@ -345,12 +345,12 @@ p {
             font-family: 'Inter', sans-serif;
             position: relative;
             font-weight: 700;
-            font-size: calc(24px - 6px);
+            /* font-size: calc(24px - 2px); */
             z-index: 100;
       }
 }
 
-/* @media screen and (max-width: 1445px) and (min-width: 1300px) {
+@media screen and (max-width: 1445px) and (min-width: 1300px) {
       @keyframes widthShrink {
             0% {
                   width: 100vw;
@@ -525,7 +525,7 @@ p {
             font-size: 20px;
             z-index: 100;
       }
-} */
+}
 
 #navbarlist.widthshrink {
       animation: widthShrink 0.5s ease-in-out 0s forwards;
@@ -592,9 +592,5 @@ p {
 }
 
 /* .nav-link {
-      font-size: 1px;
-} */
-
-.navfont {
-      font-size: 10px;
-}
+      font-size: 1px; 
+}*/

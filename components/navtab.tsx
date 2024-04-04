@@ -153,7 +153,7 @@ function NavTab() {
                                     <div className="nav-item w-full  border-r-2 flex flex-row justify-center items-center ">
                                           <a className={`nav-link bg-transparent active`} href="#">Media</a>
                                     </div>
-                                    <div className="nav-item border-r-2 w-full gap-3  flex flex-row justify-center items-center dropdown ">
+                                    <div className="nav-item w-full gap-3  flex flex-row justify-center items-center dropdown ">
                                           <a className={`nav-link  bg-transparent active dropdown-toggle `} data-bs-toggle="dropdown" href="/FAQ" role="button" aria-expanded="false">FAQ</a>
                                           <div className='dropdown-menu bg-transparent border-0'>
                                                 <div className="bg-[#23336A] pt-[7%] w-full h-full rounded-[10px] p-1 flex flex-col justify-center items-start " >
