@@ -17,7 +17,7 @@
       transition: var(--background-start-rgb) 0.1s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
       margin-top: 0px;
       padding: 0px 0px 0px 0px;
-      height: 23vh;
+      height: 21vh;
       width: 100vw;
       padding-left: 6%;
       padding-right: 6%;
@@ -82,9 +82,9 @@
       justify-items: end;
       width: 100%;
       padding-right: 40px;
-      padding-bottom: 25px;
+      padding-bottom: 20px;
       margin-left: 1.5%;
-      margin-top: 5%;
+      margin-top: 8%;
       flex-wrap: nowrap;
 }
 

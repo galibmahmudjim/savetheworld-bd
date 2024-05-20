@@ -372,7 +372,7 @@
 @media screen and (max-width: 1299px) {
       .rightHomeMain {
             width: 100%;
-            font-size: 24px;
+            font-size: 29px;
             font-weight: 700;
             color: rgba(55, 55, 55, 1);
             text-shadow: rgba(53, 44, 44, 0.43) 1px 1px 0px;
@@ -385,8 +385,8 @@
 
       .rightHomeMainDown {
 
-            font-size: 20px;
-            font-weight: 500;
+            font-size: 25px;
+            font-weight: 700;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -417,8 +417,8 @@
 
       .rightHomeMainDown {
 
-            font-size: 24px;
-            font-weight: 500;
+            font-size: 27px;
+            font-weight: 700;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;

@@ -14,6 +14,7 @@ import { BsSignIntersection, BsSignIntersectionY } from "react-icons/bs";
 import GlobalPlastic from "./GlobalPlastic";
 import CovidPlastic from "./CovidPlastic";
 import Mission from "./Mission";
+import BackButton from "@/components/Back";
 
 type Props = {
       onCallback: (value: string) => void;
@@ -76,6 +77,9 @@ const Home = () => {
                   <div className=" box-container mt-[7vh] bg-[#fcfffc5f] ">
                         <div className='w-full h-full mb-8 mt-[3%]'>
                               <div id="rightFigHome" className=" body " >
+                                    <div className="back ">
+                                          <BackButton />
+                                    </div>
                                     <div className='Description'>
                                           <h1 className="  titled">Frequently Asked Questions(FAQs)  </h1>
                                           {/* <Description /> */}
@@ -94,10 +98,10 @@ const Home = () => {
 
                                                       }}
                                                 >
-                                                      Who we are?{indexs !== 1 ? <BiAddToQueue /> : <FiMinusSquare />}
+                                                      Our Missions
+                                                      {indexs !== 1 ? <BiAddToQueue /> : <FiMinusSquare />}
                                                 </div>
-
-                                                {indexs === 1 ? <We /> : null}
+                                                {indexs === 1 ? < Mission /> : null}
 
                                           </div>
 
@@ -113,10 +117,10 @@ const Home = () => {
 
                                                       }}
                                                 >
-                                                      Our Missions{indexs !== 2 ? <BiAddToQueue className="font-extrabold" /> : <FiMinusSquare />}
+                                                      Who we are?{indexs !== 2 ? <BiAddToQueue className="font-extrabold" /> : <FiMinusSquare />}
                                                 </div>
 
-                                                {indexs === 2 ? <Mission /> : null}
+                                                {indexs === 2 ? < We /> : null}
 
                                           </div>
                                           <div id="Home3idx" className="options">

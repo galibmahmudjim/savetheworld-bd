@@ -157,8 +157,8 @@ function NavTab() {
                                           <a className={`nav-link  bg-transparent active dropdown-toggle `} data-bs-toggle="dropdown" href="/FAQ" role="button" aria-expanded="false">FAQ</a>
                                           <div className='dropdown-menu bg-transparent border-0'>
                                                 <div className="bg-[#23336A] pt-[7%] w-full h-full rounded-[10px] p-1 flex flex-col justify-center items-start " >
-                                                      <div className='dropdown-item bg-transparent hover:scale-105'><Link className=" nav_drop no-underline w-full" href="/FAQ?index=1" shallow>Who we are?</Link></div>
-                                                      <div className='dropdown-item bg-transparent hover:scale-105'><Link className="nav_drop no-underline" href="/FAQ?index=2" shallow={true}>Our Missions</Link></div>
+                                                      <div className='dropdown-item bg-transparent hover:scale-105'><Link className=" nav_drop no-underline w-full" href="/FAQ?index=1" shallow>Our Missions</Link></div>
+                                                      <div className='dropdown-item bg-transparent hover:scale-105'><Link className="nav_drop no-underline" href="/FAQ?index=2" shallow={true}>Who we are?</Link></div>
                                                       <div className='dropdown-item bg-transparent hover:scale-105'><Link className="nav_drop no-underline" href="/FAQ?index=3" shallow={true}>Want to join us? </Link></div>
                                                       <div className='dropdown-item bg-transparent hover:scale-105'><Link className="nav_drop no-underline" href="/FAQ?index=4" shallow={true}>Upcoming Events</Link></div>
                                                       <div className='dropdown-item bg-transparent hover:scale-105'><Link className="nav_drop no-underline" href="/FAQ?index=5" shallow={true}>Want to be a part of the survey?</Link></div>

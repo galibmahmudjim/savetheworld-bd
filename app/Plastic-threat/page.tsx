@@ -12,6 +12,7 @@ import Humanhealth from "./Humanhealth";
 import Climatechange from "./Climatechange";
 import Social from "./Social";
 import Econ from "./Econ";
+import BackButton from "@/components/Back";
 
 type Props = {
       onCallback: (value: string) => void;
@@ -82,8 +83,11 @@ const PlasticThreat = () => {
 
             <div className="HomeBody">
                   <div className=" box-container mt-[7vh] bg-[#fcfffc5f] ">
-                        <div className='w-full h-full mb-8 mt-[3%]'>
+                        <div className='w-full h-full mb-8'>
                               <div id="rightFigHome" className=" body " >
+                                    <div className="back ">
+                                          <BackButton />
+                                    </div>
                                     <div className='Description'>
                                           <h1 className="  titled">Plastic Threat</h1>
                                           <Description />

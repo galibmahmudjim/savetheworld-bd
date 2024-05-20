@@ -13,6 +13,7 @@ import { BiAddToQueue } from "react-icons/bi";
 import { BsSignIntersection, BsSignIntersectionY } from "react-icons/bs";
 import GlobalPlastic from "./GlobalPlastic";
 import CovidPlastic from "./CovidPlastic";
+import BackButton from "@/components/Back";
 
 type Props = {
       onCallback: (value: string) => void;
@@ -31,7 +32,7 @@ const Home = () => {
 
 
 
-      const Description = () => <p className="sub">Save The World, a plastic pollution awareness portal, has been developed as part of a research collaborative initiative between the University of Dhaka and East West University, Bangladesh. This portal is dedicated to creating awareness among people from all walks of life and industries about the detrimental effects of plastic pollution on the environment and to promoting sustainable solutions to reduce plastic waste. Plastic pollution poses a serious threat to the environment, wildlife, and human health, and contributes to global warming and climate change. Now, it is high time to take action to protect our Mother Earth from further plastic pollution.</p>
+      const Description = () => <p className="sub mt-10">Save The World, a plastic pollution awareness portal, has been developed as part of a research collaborative initiative between the University of Dhaka and East West University, Bangladesh. This portal is dedicated to creating awareness among people from all walks of life and industries about the detrimental effects of plastic pollution on the environment and to promoting sustainable solutions to reduce plastic waste. Plastic pollution poses a serious threat to the environment, wildlife, and human health, and contributes to global warming and climate change. Now, it is high time to take action to protect our Mother Earth from further plastic pollution.</p>
 
       const [indexs, setIndexs] = useState(0);
 
@@ -72,11 +73,16 @@ const Home = () => {
 
 
             <div className="HomeBody">
+
                   <div className=" box-container mt-[7vh] bg-[#fcfffc5f] ">
-                        <div className='w-full h-full mb-8 mt-[3%]'>
+                        <div className='w-full h-full mb-8 '>
                               <div id="rightFigHome" className=" body " >
+
+                                    <div className="back ">
+                                          <BackButton />
+                                    </div>
                                     <div className='Description'>
-                                          <h1 className="  titled">Bangladesh | Save The World </h1>
+                                          <div className="  titled">Bangladesh | Save The World </div>
                                           <Description />
                                     </div>
                                     <div className='contains'>

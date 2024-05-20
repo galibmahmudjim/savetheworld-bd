@@ -6,6 +6,7 @@ import { IoArrowBack } from "react-icons/io5";
 import Link from "next/link";
 import { useRouter, usePathname } from 'next/navigation';
 import Carousel from "react-material-ui-carousel";
+import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 
 
@@ -111,7 +112,7 @@ const HomeDetails = () => {
                                                       onClick={() => {
                                                             router.push('/Home');
                                                       }}
-                                                >   More</h2>
+                                                >    <IoIosArrowDroprightCircle className="inline" /></h2>
                                           </div>
                                           <div className=" flex flex-row h-full justify-end justify-items-start align-top items-start mt-[-100px">
 

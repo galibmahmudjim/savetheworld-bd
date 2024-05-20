@@ -11,6 +11,7 @@ import RR from "./RR";
 import Plasticalt from "./Plsticalt";
 import BD3r from "./BD3r";
 import Sol from "./Sol";
+import BackButton from "@/components/Back";
 
 type Props = {
       onCallback: (value: string) => void;
@@ -73,15 +74,18 @@ const Home = () => {
 
             <div className="HomeBody">
                   <div className=" box-container mt-[7vh] bg-[#fcfffc5f] ">
-                        <div className='w-full h-full mb-8 mt-[3%]'>
+                        <div className='w-full h-full mb-8 '>
                               <div id="rightFigHome" className=" body " >
+                                    <div className="back ">
+                                          <BackButton />
+                                    </div>
                                     <div className='Description'>
                                           <div className="  titled">Reduce, Reuse, Recycle (3R) </div>
                                           {/* <div className="text-[30px] mt-10 font-bold  tex-[#212223] ">Reduce</div>
                                           <div className="sub mt-3">One of the main reasons behind plastic pollution is the lack of awareness. People throughout the world and our country are not aware of the consequences of plastic pollution. We have to become more aware and create more awareness around us as much as we can so that we can save our environment from plastic pollution and for a better future for the next generation.
                                           </div> */}
                                     </div>
-                                    <div className='contains'>
+                                    <div className='contains mt-0'>
 
                                           <div id="Home1idx" className="options ">
                                                 <div className="  h4Sub"

@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useRouter, usePathname } from 'next/navigation';
 import HomeDetails from "./HomeDetails";
 import Carousel from "react-material-ui-carousel";
+import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 
 
@@ -99,8 +100,8 @@ const Main8 = () => {
                         <ul className="w-full flex gap-1 mt-2 flex-col justify-end text-justify items-start list-disc">
                               <li>Plastics below 5 millimetres in size are classified as “microplastics.”</li>
                               <li>Microplastics can enter the human body via ingestion or inhalation, leading to various health issues.</li>
-                              <li>Over 8 million tons of plastic waste enter the oceans annually.
-                                    <span onClick={() => router.push('/Home')} className="cursor-pointer">...</span></li>
+                              <li>Over 8 million tons of plastic waste enter the oceans annually
+                                    <span onClick={() => router.push('/Home')} className="cursor-pointer"> <IoIosArrowDroprightCircle className="inline" /></span></li>
                         </ul>
                   </div>
             </div>

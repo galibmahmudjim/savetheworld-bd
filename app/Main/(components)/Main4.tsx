@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useRouter, usePathname } from 'next/navigation';
 import HomeDetails from "./HomeDetails";
 import Carousel from "react-material-ui-carousel";
+import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 
 
@@ -99,7 +100,7 @@ const Main4 = () => {
             <ul className="w-full flex mt-2 flex-col justify-end text-justify items-start list-disc">
                   <li>Plastic bags last for 20 years</li>
                   <li>Plastic bottles last for 450 years</li>
-                  <li>Fishing line lasts for 600 years<span onClick={() => router.push('/Home')} className="cursor-pointer">  .....</span></li>
+                  <li>Fishing line lasts for 600 years<span onClick={() => router.push('/Home')} className="cursor-pointer">   <IoIosArrowDroprightCircle className="inline" /></span></li>
             </ul>
 
       </div>

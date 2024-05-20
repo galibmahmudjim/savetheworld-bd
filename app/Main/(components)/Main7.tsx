@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useRouter, usePathname } from 'next/navigation';
 import HomeDetails from "./HomeDetails";
 import Carousel from "react-material-ui-carousel";
+import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 
 
@@ -95,8 +96,8 @@ const Main7 = () => {
       const Description = <p>River Pollution Soars from Plastics</p>
       const M7Down = () => <div className="rightHomeMainDown w-full mt-2">
             <div className="text-justify">
-                  <p>Rivers in Bangladesh receive 24 times more plastic waste from neighboring countries than what the country itself contributes. This influx poses a serious threat to river ecosystems, waterways, human health, and maritime biodiversity.</p>
-                  <span onClick={() => router.push('/Home')} className="cursor-pointer">...</span>
+                  <p>Rivers in Bangladesh receive 24 times more plastic waste from neighboring countries than what the country itself contributes. This influx poses a serious threat to river ecosystems, waterways, human health, and maritime biodiversity</p>
+                  <span onClick={() => router.push('/Home')} className="cursor-pointer"> <IoIosArrowDroprightCircle className="inline" /></span>
             </div>
       </div>
 

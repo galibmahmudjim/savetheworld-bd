@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useRouter, usePathname } from 'next/navigation';
 import HomeDetails from "./HomeDetails";
 import Carousel from "react-material-ui-carousel";
+import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 
 
@@ -90,7 +91,7 @@ const Main10 = () => {
             < div className="rightHomeMainDown w-full mt-2" >
                   <div className=" text-justify ">
                         People throughout the world and our country are not aware of the consequences of plastic pollution. We have to become more aware and create more awareness around us as much as we can so that we can save our environment from plastic pollution and for a better future for the next generation
-                        <span onClick={() => router.push('/Home')} className="cursor-pointer">  .....</span>
+                        <span onClick={() => router.push('/Home')} className="cursor-pointer">  <IoIosArrowDroprightCircle className="inline" /></span>
                   </div >
             </div >
 

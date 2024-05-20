@@ -7,6 +7,8 @@ import Link from "next/link";
 import { useRouter, usePathname } from 'next/navigation';
 import HomeDetails from "./HomeDetails";
 import Carousel from "react-material-ui-carousel";
+import More from "@/components/more";
+import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 
 
@@ -81,8 +83,8 @@ const HomeMain = () => {
                         </div>
                         <div className='w-full h-full flex flex-col justify-start items-start mt-[7%]'>
                               <div className=" right">
-                                    <div className="rightHomeMain">{Description} <span onClick={() => router.push('/Home')} className="cursor-pointer">
-                                          .....</span></div>
+                                    <div className="rightHomeMain inline">{Description} <span onClick={() => router.push('/Home')} className="cursor-pointer">
+                                          <IoIosArrowDroprightCircle className="inline" /> </span></div>
 
 
                               </div>

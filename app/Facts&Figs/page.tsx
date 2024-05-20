@@ -8,6 +8,7 @@ import GlobalPlastic from "./GlobalPlastic";
 import PlasticBangladesh from "./PlasticBangladesh";
 import PlasticIndust from "./PlasticIndust";
 import PlasticIndustPoll from "./PlasticIndustPoll";
+import BackButton from "@/components/Back";
 
 type Props = {
       onCallback: (value: string) => void;
@@ -68,8 +69,11 @@ const FactsFigs = () => {
 
             <div className="HomeBody">
                   <div className=" box-container mt-[7vh] bg-[#fcfffc5f] ">
-                        <div className='w-full h-full mb-8 mt-[3%]'>
+                        <div className='w-full h-full mb-8 '>
                               <div id="rightFigHome" className=" body " >
+                                    <div className="back ">
+                                          <BackButton />
+                                    </div>
                                     <div className='Description'>
                                           <h1 className="  titled">Facts & Figures
                                           </h1>

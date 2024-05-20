@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useRouter, usePathname } from 'next/navigation';
 import HomeDetails from "./HomeDetails";
 import Carousel from "react-material-ui-carousel";
+import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 
 
@@ -84,7 +85,7 @@ const Main11 = () => {
       }
             , [leftGrow]);
 
-      const Description = <p>Primarily, middle-income and low-income countries suffer from the world's plastic burden.</p>
+      const Description = <p>Primarily, middle-income and low-income countries suffer from the world's plastic burden</p>
 
 
 
@@ -100,7 +101,7 @@ const Main11 = () => {
                         </div>
                         <div className='w-full h-full flex flex-col justify-start items-start mt-[7%]'>
                               <div className=" right">
-                                    <div className="rightHomeMain">{Description}  <span onClick={() => router.push('/Home')} className="cursor-pointer">  .....</span></div>
+                                    <div className="rightHomeMain">{Description}  <span onClick={() => router.push('/Home')} className="cursor-pointer">   <IoIosArrowDroprightCircle className="inline" /></span></div>
                               </div>
                         </div>
 

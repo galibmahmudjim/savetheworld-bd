@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useRouter, usePathname } from 'next/navigation';
 import HomeDetails from "./HomeDetails";
 import Carousel from "react-material-ui-carousel";
+import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 
 
@@ -98,7 +99,7 @@ const Main3 = () => {
 
       const Description = <ul className="w-full flex mt-2 flex-col justify-end text-justify items-start list-disc">
             <li>More than 80% of plastic waste ends up inland</li>
-            <li>Only around 10% of total world plastic is recycled<span onClick={() => router.push('/Home')} className="cursor-pointer">  .....</span></li>
+            <li>Only around 10% of total world plastic is recycled<span onClick={() => router.push('/Home')} className="cursor-pointer">   <IoIosArrowDroprightCircle className="inline" /> </span></li>
 
       </ul>
       return (

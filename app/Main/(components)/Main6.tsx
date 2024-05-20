@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useRouter, usePathname } from 'next/navigation';
 import HomeDetails from "./HomeDetails";
 import Carousel from "react-material-ui-carousel";
+import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 
 
@@ -88,7 +89,7 @@ const Main6 = () => {
       const M6Down = () => <div className="rightHomeMainDown w-full mt-2">
             <div className="text-justify">
                   <p>Around 36 tons of CO<sub>2</sub> gas were emitted from facemask production. In the USA, approximately 89 million medical masks were used per year. The UK used nearly 24 billion masks per year. Dhaka city alone disposed of 3039 tons of hand gloves, 1592 tons of medical masks, and 900 tons of hand sanitiser bottles.</p>
-                  <span onClick={() => router.push('/Home')} className="cursor-pointer">...</span>
+                  <span onClick={() => router.push('/Home')} className="cursor-pointer"> <IoIosArrowDroprightCircle className="inline" /></span>
             </div>
       </div>
 
