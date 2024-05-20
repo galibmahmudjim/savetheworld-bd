@@ -75,7 +75,7 @@ const Home = () => {
 
             <div className="HomeBody">
                   <div className=" box-container mt-[7vh] bg-[#fcfffc5f] ">
-                        <div className='w-full h-full mb-8 mt-[3%]'>
+                        <div className='w-full h-full mb-8 '>
                               <div id="rightFigHome" className=" body " >
                                     <div className="back ">
                                           <BackButton />
@@ -84,7 +84,7 @@ const Home = () => {
                                           <h1 className="  titled">Frequently Asked Questions(FAQs)  </h1>
                                           {/* <Description /> */}
                                     </div>
-                                    <div className='contains'>
+                                    <div className='contains mt-0'>
 
                                           <div id="Home1idx" className="options ">
                                                 <div className="  h4Sub"

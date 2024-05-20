@@ -372,7 +372,7 @@
 @media screen and (max-width: 1299px) {
       .rightHomeMain {
             width: 100%;
-            font-size: 29px;
+            font-size: 30px;
             font-weight: 700;
             color: rgba(55, 55, 55, 1);
             text-shadow: rgba(53, 44, 44, 0.43) 1px 1px 0px;
@@ -385,7 +385,7 @@
 
       .rightHomeMainDown {
 
-            font-size: 25px;
+            font-size: 28px;
             font-weight: 700;
             display: flex;
             flex-direction: column;
@@ -405,7 +405,7 @@
 @media screen and (max-width: 1500px) and (min-width: 1300px) {
       .rightHomeMain {
             width: 100%;
-            font-size: 30px;
+            font-size: 32px;
             font-weight: 700;
             color: rgba(55, 55, 55, 1);
             text-shadow: rgba(53, 44, 44, 0.43) 1px 1px 0px;
@@ -417,7 +417,7 @@
 
       .rightHomeMainDown {
 
-            font-size: 27px;
+            font-size: 29px;
             font-weight: 700;
             display: flex;
             flex-direction: column;
@@ -436,7 +436,7 @@
 
 @media screen and (min-width: 1501px) {
       .rightHomeMain {
-            font-size: 35px;
+            font-size: 37px;
             font-weight: 700;
             color: rgba(55, 55, 55, 1);
             text-shadow: rgba(53, 44, 44, 0.43) 1px 1px 0px;
@@ -447,7 +447,7 @@
       }
 
       .rightHomeMainDown {
-            font-size: 30px;
+            font-size: 32px;
             font-weight: 700;
             display: flex;
             flex-direction: column;
