@@ -151,7 +151,7 @@ function NavTab() {
                                           <a className={`text-nowrap nav-link bg-transparent active`} href="/Kidscorner">Kids’ Corner</a>
                                     </div>
                                     <div className="nav-item w-full  border-r-2 flex flex-row justify-center items-center ">
-                                          <a className={`nav-link bg-transparent active`} href="#">Media</a>
+                                          <a className={`nav-link bg-transparent active`} href="/media">Media</a>
                                     </div>
                                     <div className="nav-item w-full gap-3  flex flex-row justify-center items-center dropdown ">
                                           <a className={`nav-link  bg-transparent active dropdown-toggle `} data-bs-toggle="dropdown" href="/FAQ" role="button" aria-expanded="false">FAQ</a>
