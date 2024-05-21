@@ -7,18 +7,27 @@ import Image from 'next/image';
 import { TbPoint, TbPointFilled } from "react-icons/tb";
 
 function handleClick() {
-      alert('Image clicked!');
 }
 
 const LanguageSelect = () => {
+      const router = useRouter();
       return (
             <div className='w-full h-full flex flex-row justify-end items-center gap-2 text-[20px]'>
-                  <div className='font-sans fontSize font-bold text-[#23336A] flex flex-row justify-end items-start  cursor-pointer on banlangicon' >
+                  <div className='font-sans fontSize font-bold text-[#23336A] flex flex-row justify-end items-start  cursor-pointer on banlangicon' onClick={() => {
+                        localStorage.setItem('language', 'bangla');
+                        router.push('/Main');
+
+                  }
+                  }>
                         <TbPoint className='banglanoselect' color="#23336A" size={20} />
                         <TbPointFilled className='banglaselect' color="#0131cc" size={20} />
                         বাংলা
                   </div>
-                  <div className='font-sans  font-bold text-[#23336A] flex flex-row justify-center items-center cursor-pointer englangicon'>
+                  <div className='font-sans  font-bold text-[#23336A] flex flex-row justify-center items-center cursor-pointer englangicon' onClick={() => {
+                        localStorage.setItem('language', 'english');
+                        router.push('/Main');
+                  }
+                  }>
                         <TbPoint className='banglanoselect' color="#23336A" size={20} />
                         <TbPointFilled className='banglaselect' color="#0131cc" size={20} />
                         English

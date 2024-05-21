@@ -17,6 +17,7 @@ const config: Config = withMT({
       fontFamily: {
         RocknRoll: ["RocknRoll One", "cursive"],
         sans: ['"Source Sans Pro"', '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+        Kalpurush: ['Kalpurush', 'Arial', 'sans-serif']
       },
     },
   },
